@@ -1,6 +1,6 @@
 <img width="300" height="300" alt="בינוני" src="https://github.com/user-attachments/assets/7eaa4b0d-a27c-4dda-a7e2-3c060124bf1f" />
 
-# Otzarya-Unofficial-Books
+# Otzarya-Unofficial-Books - מאגר ספרים לא רשמיים לאוצריא
 **מאגר ספרים מותאמים אישית לתוכנת אוצריא**
 
 מאגר זה מרכז קבצים שעברו התאמה טכנית לשימוש בתוכנת **אוצריא**. המטרה היא יצירת ספרייה קהילתית, מאורגנת ונוחה לשימוש אישי.
