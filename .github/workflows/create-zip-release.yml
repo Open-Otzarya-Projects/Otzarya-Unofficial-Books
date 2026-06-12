@@ -6,7 +6,7 @@ on:
     paths:
       - 'ספרים/**'
   workflow_dispatch:
-  
+
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -21,12 +21,24 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
-          fetch-depth: 2
-          
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
       - name: Build ZIPs and Manifest
+        env:
+          COMMITS_JSON: ${{ toJson(github.event.commits) }}
         run: |
           python3 - <<'PYEOF'
-          import os, json, zipfile
+          import os, json, zipfile, hashlib
 
           os.makedirs('dist', exist_ok=True)
 
@@ -50,11 +62,48 @@ jobs:
           if not os.path.isdir('ספרים'):
               raise SystemExit("תיקיית 'ספרים' לא נמצאה!")
 
-          # ZIP של כל המאגר
-          make_zip('ספרים', 'dist/full-library.zip')
-          print(f"Created full-library.zip ({fmt_size(os.path.getsize('dist/full-library.zip'))})")
+          # קביעת אילו קבצים השתנו מתוך נתוני ה-push
+          commits_raw = os.environ.get('COMMITS_JSON', '[]')
+          try:
+              commits = json.loads(commits_raw)
+          except:
+              commits = []
 
-          # אסוף תיקיות ממוינות לפי עומק ואלפבית
+          if commits:
+              changed_files = set()
+              for commit in commits:
+                  for f in commit.get('added', []) + commit.get('modified', []) + commit.get('removed', []):
+                      changed_files.add(f)
+              print(f"קבצים שהשתנו: {len(changed_files)}")
+          else:
+              changed_files = None  # workflow_dispatch או ריצה ראשונה → בנה הכל
+              print("בנייה מלאה (workflow_dispatch או ריצה ראשונה)")
+
+          def is_folder_changed(folder_rel_path):
+              """ZIP של תיקייה צריך להיבנות מחדש אם כל קובץ בתוכה (כולל תת-תיקיות) השתנה."""
+              if changed_files is None:
+                  return True
+              prefix = f'ספרים/{folder_rel_path}/'
+              return any(f.startswith(prefix) for f in changed_files)
+
+          # טעינת manifest קודם לשמות ZIP יציבים ולנתוני תיקיות ללא שינוי
+          prev_by_path = {}
+          if os.path.exists('manifest.json'):
+              with open('manifest.json', encoding='utf-8') as f:
+                  for item in json.load(f):
+                      prev_by_path[item['path']] = item
+
+          max_counter = 0
+          for item in prev_by_path.values():
+              z = item.get('zip', '')
+              if z.startswith('folder_') and z.endswith('.zip'):
+                  try:
+                      n = int(z[7:-4])
+                      max_counter = max(max_counter, n)
+                  except:
+                      pass
+          counter = max_counter + 1
+
           all_dirs = []
           for root, dirs, files in os.walk('ספרים'):
               dirs.sort()
@@ -65,7 +114,6 @@ jobs:
               all_dirs.append((depth, rel, root))
           all_dirs.sort(key=lambda x: (x[0], x[1]))
 
-          # תיקיות שמקבלות ZIP אחד בלבד — ללא ZIPים לתת-תיקיות שלהן
           NO_SUBZIP = [
               'תלמוד ומפרשיו/תלמוד בבלי/שס וגשל',
               'כללים ומערכות/אנציקלופדיה תלמודית',
@@ -78,7 +126,7 @@ jobs:
               return False
 
           manifest = []
-          counter = 1
+          rebuilt_zips = []
 
           for depth, rel, abs_path in all_dirs:
               if not has_files(abs_path):
@@ -86,38 +134,69 @@ jobs:
               if is_excluded(rel):
                   continue
 
-              # שם קובץ ASCII בלבד — GitHub לא תומך בעברית בשם הנכס
-              zip_name = f"folder_{counter:04d}.zip"
-              counter += 1
+              # שם ZIP יציב: שימוש חוזר בשם הקודם או הקצאת שם חדש
+              if rel in prev_by_path:
+                  zip_name = prev_by_path[rel]['zip']
+              else:
+                  zip_name = f"folder_{counter:04d}.zip"
+                  counter += 1
 
-              zip_path = os.path.join('dist', zip_name)
-              make_zip(abs_path, zip_path)
-              size_str = fmt_size(os.path.getsize(zip_path))
-              print(f"Created {zip_name} = {rel} ({size_str})")
+              if is_folder_changed(rel):
+                  zip_path = os.path.join('dist', zip_name)
+                  make_zip(abs_path, zip_path)
+                  size_str = fmt_size(os.path.getsize(zip_path))
+                  with open(zip_path, 'rb') as zf:
+                      zip_hash = hashlib.md5(zf.read()).hexdigest()
+                  rebuilt_zips.append(zip_name)
+                  print(f"[נבנה מחדש] {zip_name} = {rel} ({size_str}) [{zip_hash[:8]}]")
+                  entry = {
+                      "name":   os.path.basename(abs_path),
+                      "path":   rel,
+                      "zip":    zip_name,
+                      "label":  os.path.basename(abs_path),
+                      "parent": '/'.join(rel.split('/')[:-1]),
+                      "size":   size_str,
+                      "depth":  depth,
+                      "hash":   zip_hash
+                  }
+              elif rel in prev_by_path:
+                  # תיקייה ללא שינוי — שמירת נתונים קודמים כולל hash
+                  entry = prev_by_path[rel]
+                  print(f"[דולג]      {zip_name} = {rel} (ללא שינוי)")
+              else:
+                  # תיקייה חדשה שלא זוהתה כ"השתנתה" — בנה בכל זאת
+                  zip_path = os.path.join('dist', zip_name)
+                  make_zip(abs_path, zip_path)
+                  size_str = fmt_size(os.path.getsize(zip_path))
+                  with open(zip_path, 'rb') as zf:
+                      zip_hash = hashlib.md5(zf.read()).hexdigest()
+                  rebuilt_zips.append(zip_name)
+                  print(f"[חדש]       {zip_name} = {rel} ({size_str})")
+                  entry = {
+                      "name":   os.path.basename(abs_path),
+                      "path":   rel,
+                      "zip":    zip_name,
+                      "label":  os.path.basename(abs_path),
+                      "parent": '/'.join(rel.split('/')[:-1]),
+                      "size":   size_str,
+                      "depth":  depth,
+                      "hash":   zip_hash
+                  }
 
-              parts = rel.split('/')
-              parent = '/'.join(parts[:-1])
-
-              manifest.append({
-                  "name":  os.path.basename(abs_path),   # שם עברי לתצוגה
-                  "path":  rel,
-                  "zip":   zip_name,                      # שם ASCII להורדה
-                  "label": os.path.basename(abs_path),   # label לגיטאב
-                  "parent": parent,
-                  "size":  size_str,
-                  "depth": depth
-              })
+              manifest.append(entry)
 
           with open('dist/manifest.json', 'w', encoding='utf-8') as f:
               json.dump(manifest, f, ensure_ascii=False, indent=2)
 
-          # צור books_data.js עבור התוסף (ללא network access)
-          import json as json2
-          books_js = 'const BOOKS_DATA = ' + json2.dumps(manifest, ensure_ascii=False) + ';\n'
+          books_js = 'const BOOKS_DATA = ' + json.dumps(manifest, ensure_ascii=False) + ';\n'
           with open('dist/books_data.js', 'w', encoding='utf-8') as f:
               f.write(books_js)
 
+          with open('dist/rebuilt_zips.txt', 'w') as f:
+              f.write('\n'.join(rebuilt_zips))
+
           print(f"\nmanifest.json נוצר עם {len(manifest)} ערכים")
+          print(f"נבנו מחדש: {len(rebuilt_zips)} ZIPs (מתוך {len(manifest)} סה\"כ)")
           PYEOF
 
       - name: Commit manifest to repo
@@ -131,49 +210,56 @@ jobs:
           git pull --rebase origin main
           git push
 
-      - name: Create Release
+      - name: Create or Update Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           CURRENT_TIME=$(TZ='Asia/Jerusalem' date +'%d.%m.%Y בשעה %H:%M')
-          TAG="v$(date +'%Y%m%d-%H%M%S')"
-
-          gh release create "$TAG" \
-            --title "עדכון מאגר ספרים — $CURRENT_TIME" \
-            --notes "$(printf '## מאגר ספרים המותאם לאוצריא\n\nעדכון אוטומטי מתאריך **%s**' "$CURRENT_TIME")" \
+          gh release view latest >/dev/null 2>&1 \
+            || gh release create latest --title "מאגר ספרים עדכני" --notes "initial" --latest
+          gh release edit latest \
+            --title "מאגר ספרים עדכני" \
+            --notes "$(printf '## עדכון אוטומטי\n\nתאריך: **%s**' "$CURRENT_TIME")" \
             --latest
-
-          echo "TAG=$TAG" >> "$GITHUB_ENV"
 
       - name: Upload Assets
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
-          export TAG="${{ env.TAG }}"
-
           python3 - <<'PYEOF'
           import os, json, sys, urllib.parse, urllib.request, subprocess
 
           token = os.environ['GITHUB_TOKEN']
           repo  = os.environ['REPO']
-          tag   = os.environ['TAG']
 
-          # שליפת numeric release ID
+          with open('dist/rebuilt_zips.txt') as f:
+              rebuilt = set(line.strip() for line in f if line.strip())
+
           req = urllib.request.Request(
-              f"https://api.github.com/repos/{repo}/releases/tags/{tag}",
+              f"https://api.github.com/repos/{repo}/releases/tags/latest",
               headers={'Authorization': f'token {token}',
                        'Accept': 'application/vnd.github+json',
                        'User-Agent': 'otzaria-uploader'}
           )
           with urllib.request.urlopen(req) as resp:
-              release_id = json.loads(resp.read())['id']
-          print(f"Release ID: {release_id}", flush=True)
+              release = json.loads(resp.read())
+              release_id = release['id']
+
+          # מחיקה רק של assets שנבנו מחדש + manifest.json
+          for asset in release.get('assets', []):
+              if asset['name'] in rebuilt or asset['name'] == 'manifest.json':
+                  del_req = urllib.request.Request(
+                      f"https://api.github.com/repos/{repo}/releases/assets/{asset['id']}",
+                      headers={'Authorization': f'token {token}'},
+                      method='DELETE'
+                  )
+                  urllib.request.urlopen(del_req)
+                  print(f"נמחק: {asset['name']}", flush=True)
 
           def upload(fpath, fname, label='', ctype='application/zip'):
-              print(f"Uploading: {fname} ({label})", flush=True)
-              # name חייב להיות ASCII — GitHub לא מקבל עברית
+              print(f"מעלה: {fname}", flush=True)
               url = f"https://uploads.github.com/repos/{repo}/releases/{release_id}/assets?name={fname}"
               if label:
                   url += f"&label={urllib.parse.quote(label)}"
@@ -186,62 +272,45 @@ jobs:
                   url
               ])
               if r.returncode != 0:
-                  print(f"FAIL: {fname}", flush=True)
+                  print(f"נכשל: {fname}", flush=True)
                   sys.exit(1)
-              print(f"Done: {fname}", flush=True)
+              print(f"הושלם: {fname}", flush=True)
 
-          # טען manifest כדי לדעת מה label של כל zip
           with open('dist/manifest.json', encoding='utf-8') as f:
               manifest = json.load(f)
-          label_map = {item['zip']: item['label'] for item in manifest}
 
-          # 1. המאגר המלא
-          upload('dist/full-library.zip', 'full-library.zip', 'המאגר המלא')
-
-          # 2. manifest.json
+          # manifest.json תמיד עולה מחדש
           upload('dist/manifest.json', 'manifest.json', '', 'application/json')
 
-          # 3. תיקיות ראשיות (folder_XXXX.zip ללא תת-תיקיות)
-          top_zips = sorted([item for item in manifest if item['depth'] == 0],
-                            key=lambda x: x['zip'])
-          for item in top_zips:
+          for item in sorted([i for i in manifest if i['zip'] in rebuilt and i['depth'] == 0], key=lambda x: x['zip']):
               upload(f"dist/{item['zip']}", item['zip'], item['label'])
 
-          # 4. תתי-תיקיות לפי עומק עולה
-          sub_zips = sorted([item for item in manifest if item['depth'] > 0],
-                            key=lambda x: (x['depth'], x['zip']))
-          for item in sub_zips:
+          for item in sorted([i for i in manifest if i['zip'] in rebuilt and i['depth'] > 0], key=lambda x: (x['depth'], x['zip'])):
               upload(f"dist/{item['zip']}", item['zip'], item['label'])
+
+          print(f"\nהועלו {len(rebuilt)} ZIPs")
           PYEOF
 
       - name: Cleanup Old Releases
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          OLD=$(gh release list --limit 100 --json tagName --jq '.[].tagName' | tail -n +3)
+          OLD=$(gh release list --limit 100 --json tagName --jq '.[].tagName' | grep -v '^latest$' || true)
           if [ -n "$OLD" ]; then
             for tag in $OLD; do
               gh release delete "$tag" --yes --cleanup-tag
             done
           fi
-      - name: Set up Python for Bot
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install Bot Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
 
       - name: Run Update Script
         env:
           BEFORE_SHA: ${{ github.event.before }}
-          AFTER_SHA: ${{ github.event.after }}
-          USER_NAME: ${{ secrets.USER_NAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
-          TAG: ${{ env.TAG }}
+          AFTER_SHA:  ${{ github.event.after }}
+          USER_NAME:  ${{ secrets.USER_NAME }}
+          PASSWORD:   ${{ secrets.PASSWORD }}
+          TAG: latest
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           git config core.quotePath false
           python send_update.py
