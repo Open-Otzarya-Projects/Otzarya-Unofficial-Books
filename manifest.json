@@ -6,7 +6,8 @@
     "label": "הלכה",
     "parent": "",
     "size": "167.5 MB",
-    "depth": 0
+    "depth": 0,
+    "hash": "a7234109cc0b46a76e23c18d05682783"
   },
   {
     "name": "מילונים וספרי יעץ",
@@ -16,7 +17,7 @@
     "parent": "",
     "size": "21.0 MB",
     "depth": 0,
-    "hash": "a08af384323f31da9c573c66c4f8e437"
+    "hash": "bc28d13f972adb486b6a888a8f6503ce"
   },
   {
     "name": "סדר התפילה",
@@ -26,7 +27,7 @@
     "parent": "",
     "size": "27 KB",
     "depth": 0,
-    "hash": "941edf968d71717a2bdba8ef369100ce"
+    "hash": "6770d7f0dedb6f4301a7f34a67a0757e"
   },
   {
     "name": "ספרי מוסר",
@@ -36,7 +37,7 @@
     "parent": "",
     "size": "697 KB",
     "depth": 0,
-    "hash": "bdc8f354b89c4c023bef35bbd2db6bfe"
+    "hash": "458b33d129bbb060c9b3c44a73806e3c"
   },
   {
     "name": "ספרים - ריבית",
@@ -45,7 +46,8 @@
     "label": "ספרים - ריבית",
     "parent": "",
     "size": "248 KB",
-    "depth": 0
+    "depth": 0,
+    "hash": "e1ed2ed4bc049a8906f6677d7eb476dc"
   },
   {
     "name": "ספרים שאינם מותאמים לאוצריא",
@@ -53,8 +55,9 @@
     "zip": "folder_0005.zip",
     "label": "ספרים שאינם מותאמים לאוצריא",
     "parent": "",
-    "size": "56.8 MB",
-    "depth": 0
+    "size": "52.2 MB",
+    "depth": 0,
+    "hash": "473924d38aaa5c5f62e781b2d1e5fadb"
   },
   {
     "name": "שו''ת",
@@ -64,7 +67,7 @@
     "parent": "",
     "size": "40.8 MB",
     "depth": 0,
-    "hash": "ca15bbd57a04fadd6128d72c39153c8e"
+    "hash": "26f62c2e4a876961831c32fd89f88a9d"
   },
   {
     "name": "תלמוד בבלי",
@@ -72,9 +75,9 @@
     "zip": "folder_0060.zip",
     "label": "תלמוד בבלי",
     "parent": "",
-    "size": "573.8 MB",
+    "size": "574.0 MB",
     "depth": 0,
-    "hash": "4bb2f789bb96fd7bcb70c839f1cef3bd"
+    "hash": "237f9c822474752353da39360677fd0c"
   },
   {
     "name": "אחרונים",
@@ -84,7 +87,7 @@
     "parent": "הלכה",
     "size": "1.8 MB",
     "depth": 1,
-    "hash": "ff9cd1fc01d3a0dde03fb53e7cfd7f7b"
+    "hash": "50084cb4aae3475072c122b73cd87697"
   },
   {
     "name": "מחברי זמננו",
@@ -94,7 +97,7 @@
     "parent": "הלכה",
     "size": "966 KB",
     "depth": 1,
-    "hash": "0106c2a1f10eebc5c355c64801123a2f"
+    "hash": "ea6e471dea1be53074a01d017b5c19d8"
   },
   {
     "name": "משנה תורה",
@@ -104,7 +107,7 @@
     "parent": "הלכה",
     "size": "11 KB",
     "depth": 1,
-    "hash": "9107ac196f5112d1386ced41e8df9223"
+    "hash": "f4970b1871b0b5cc4169a3801cbb4bec"
   },
   {
     "name": "ראשונים",
@@ -114,7 +117,7 @@
     "parent": "הלכה",
     "size": "54 KB",
     "depth": 1,
-    "hash": "b6ed90293837d4f18aba1ee052e067f7"
+    "hash": "4cdcc2790861d0bb11fc61f40c60534e"
   },
   {
     "name": "שולחן ערוך",
@@ -124,7 +127,7 @@
     "parent": "הלכה",
     "size": "164.7 MB",
     "depth": 1,
-    "hash": "7928e1a075c9de0a98c5b18b5df6dc96"
+    "hash": "446c886ebd56ccb8b74fff2581a9b122"
   },
   {
     "name": "אנציקלופדיות",
@@ -134,7 +137,7 @@
     "parent": "מילונים וספרי יעץ",
     "size": "20.9 MB",
     "depth": 1,
-    "hash": "0d4373b7ddeaae158f5daf482de0da11"
+    "hash": "6c94bb6b72f021a6b283ff70434f174b"
   },
   {
     "name": "כללים ומערכות",
@@ -144,7 +147,7 @@
     "parent": "מילונים וספרי יעץ",
     "size": "91 KB",
     "depth": 1,
-    "hash": "4439299dfbebebead4df2e1e8c06a3b4"
+    "hash": "f3ec47a2d25357c8e669106e0ccec68e"
   },
   {
     "name": "הגדה",
@@ -154,7 +157,7 @@
     "parent": "סדר התפילה",
     "size": "27 KB",
     "depth": 1,
-    "hash": "160198165e1288cfbea854ccb286bd64"
+    "hash": "7248d161a254077e820847ef53e7fb19"
   },
   {
     "name": "מחברי זמננו",
@@ -164,7 +167,7 @@
     "parent": "ספרי מוסר",
     "size": "697 KB",
     "depth": 1,
-    "hash": "e22f82e5a67d29f80b571f61127bba9c"
+    "hash": "13a64d45f0d0025c8589aecce367e98b"
   },
   {
     "name": "אחרונים",
@@ -172,8 +175,9 @@
     "zip": "folder_0016.zip",
     "label": "אחרונים",
     "parent": "ספרים שאינם מותאמים לאוצריא",
-    "size": "8.1 MB",
-    "depth": 1
+    "size": "965 KB",
+    "depth": 1,
+    "hash": "908bfa75f6b2c3d91bed8eac0f77c7a9"
   },
   {
     "name": "מוסר",
@@ -182,7 +186,8 @@
     "label": "מוסר",
     "parent": "ספרים שאינם מותאמים לאוצריא",
     "size": "3.8 MB",
-    "depth": 1
+    "depth": 1,
+    "hash": "832f4d831001e584902fd4910cf019a4"
   },
   {
     "name": "מחברי זמננו",
@@ -192,7 +197,7 @@
     "parent": "ספרים שאינם מותאמים לאוצריא",
     "size": "600 KB",
     "depth": 1,
-    "hash": "92972369fe0af577a937ab2e2fcebbe4"
+    "hash": "33717e36896d29bab0e3835268f91665"
   },
   {
     "name": "ראשונים",
@@ -200,8 +205,9 @@
     "zip": "folder_0018.zip",
     "label": "ראשונים",
     "parent": "ספרים שאינם מותאמים לאוצריא",
-    "size": "20.4 MB",
-    "depth": 1
+    "size": "11.4 MB",
+    "depth": 1,
+    "hash": "1547bd35daf6e535077f12a2f766a6d7"
   },
   {
     "name": "שו''ת",
@@ -211,7 +217,7 @@
     "parent": "ספרים שאינם מותאמים לאוצריא",
     "size": "24.4 MB",
     "depth": 1,
-    "hash": "727a6fba168db8ac4732523f805947ff"
+    "hash": "d6e457e9c2d5d853331620f675cfe7ce"
   },
   {
     "name": "תלמוד בבלי",
@@ -221,7 +227,7 @@
     "parent": "ספרים שאינם מותאמים לאוצריא",
     "size": "11.1 MB",
     "depth": 1,
-    "hash": "b3c1dbb9f61b87e4b5c6df7b6951bbb9"
+    "hash": "bc8931fcc27e527c30bfcbef0fbb8ac6"
   },
   {
     "name": "אחרונים",
@@ -231,7 +237,7 @@
     "parent": "שו''ת",
     "size": "12.6 MB",
     "depth": 1,
-    "hash": "42c90d53e26287f8db5bce0243f87e8f"
+    "hash": "b18480b5a8bbae7c832995f673ffa086"
   },
   {
     "name": "מחברי זמננו",
@@ -241,7 +247,7 @@
     "parent": "שו''ת",
     "size": "18.3 MB",
     "depth": 1,
-    "hash": "a6f69a3ef0177f9c615a35232d6075d7"
+    "hash": "10d73f46f386ae32a767b21013b9eaad"
   },
   {
     "name": "ראשונים",
@@ -251,7 +257,7 @@
     "parent": "שו''ת",
     "size": "9.9 MB",
     "depth": 1,
-    "hash": "d1e9f39e5801303515cd1aa44eb26c6f"
+    "hash": "6b3b643cac2e966b1345d43051adf880"
   },
   {
     "name": "אחרונים",
@@ -261,7 +267,7 @@
     "parent": "תלמוד בבלי",
     "size": "1.5 MB",
     "depth": 1,
-    "hash": "1c11ff653a038c524760d5a08a0e9c17"
+    "hash": "3e13f8f2737c4cf5f5c71144ccaa1f1e"
   },
   {
     "name": "מחברי זמננו",
@@ -271,7 +277,7 @@
     "parent": "תלמוד בבלי",
     "size": "11.1 MB",
     "depth": 1,
-    "hash": "831e5cfee12afb78b009c8a1a49b4ec8"
+    "hash": "519749ef25619e7c66e813dd9429828e"
   },
   {
     "name": "ראשונים",
@@ -279,9 +285,9 @@
     "zip": "folder_0077.zip",
     "label": "ראשונים",
     "parent": "תלמוד בבלי",
-    "size": "86.1 MB",
+    "size": "86.3 MB",
     "depth": 1,
-    "hash": "4ccf3eebedd553aa7bed4d0d2712294f"
+    "hash": "c531bcad2a2e03202cb477195c3d04c6"
   },
   {
     "name": "שס וגשל",
@@ -291,7 +297,7 @@
     "parent": "תלמוד בבלי",
     "size": "475.1 MB",
     "depth": 1,
-    "hash": "53eea7d84d5eb8e46bbff080ee226e63"
+    "hash": "c8fbcc82546001bcea97d64220087c6f"
   },
   {
     "name": "שונה הלכות",
@@ -301,7 +307,7 @@
     "parent": "הלכה/מחברי זמננו",
     "size": "748 KB",
     "depth": 2,
-    "hash": "e6181e7b3e22ca1e4827652dae040a42"
+    "hash": "d13f0db4f984cfb15a3a4c38821e7bb5"
   },
   {
     "name": "תשובות עיון ההלכה",
@@ -311,7 +317,7 @@
     "parent": "הלכה/מחברי זמננו",
     "size": "215 KB",
     "depth": 2,
-    "hash": "fd5caca1df89588e7b9fab618e7c0f82"
+    "hash": "4da9b4d4e1d9a822f96d21cb88b41502"
   },
   {
     "name": "מפרשים",
@@ -321,7 +327,7 @@
     "parent": "הלכה/משנה תורה",
     "size": "11 KB",
     "depth": 2,
-    "hash": "743abccc720a5003cf7a79ec54f2be34"
+    "hash": "74199f02f5a6f1709b76c8c231046c27"
   },
   {
     "name": "הלכות בכורות וחלה להרמבן",
@@ -331,7 +337,7 @@
     "parent": "הלכה/ראשונים",
     "size": "54 KB",
     "depth": 2,
-    "hash": "5fd63910ac1878686f2049e6738d865f"
+    "hash": "81f4d9a5be568fba85748f68e85b001b"
   },
   {
     "name": "מפרשים",
@@ -341,7 +347,7 @@
     "parent": "הלכה/שולחן ערוך",
     "size": "164.7 MB",
     "depth": 2,
-    "hash": "2ea667bb7ed2b16d4f92ee4b51ba374d"
+    "hash": "e5e92ebf88c633b33a41c7de6153eb81"
   },
   {
     "name": "אנציקלופדיה תלמודית",
@@ -351,7 +357,7 @@
     "parent": "מילונים וספרי יעץ/אנציקלופדיות",
     "size": "20.9 MB",
     "depth": 2,
-    "hash": "099f2011bec8279aadc8c242b646864d"
+    "hash": "4a3a7f961507006038fe24c69dbd3e15"
   },
   {
     "name": "מפרשים",
@@ -361,7 +367,7 @@
     "parent": "סדר התפילה/הגדה",
     "size": "27 KB",
     "depth": 2,
-    "hash": "93c14d854f964299db8d5b59c075015f"
+    "hash": "568739f10d11c7752b2b50eadf15c698"
   },
   {
     "name": "חזו''א קובץ אגרות א- ג",
@@ -371,7 +377,7 @@
     "parent": "ספרי מוסר/מחברי זמננו",
     "size": "696 KB",
     "depth": 2,
-    "hash": "9bf3cc9adf2801d88a004786cb5b762b"
+    "hash": "74de617e904bc0b85fbbc86501209d7f"
   },
   {
     "name": "אחרונים",
@@ -381,7 +387,7 @@
     "parent": "ספרים שאינם מותאמים לאוצריא/שו''ת",
     "size": "8.2 MB",
     "depth": 2,
-    "hash": "4761379ac6907b2979383924e45370bc"
+    "hash": "a9e9a30fdeead9a5e109db84edc0f8e3"
   },
   {
     "name": "גאונים",
@@ -391,7 +397,7 @@
     "parent": "ספרים שאינם מותאמים לאוצריא/שו''ת",
     "size": "404 KB",
     "depth": 2,
-    "hash": "8ebb6d90d4aac0fb3ad8f43c321bf896"
+    "hash": "17ef01e1094dd92457901b86fb8be5fd"
   },
   {
     "name": "מחברי זמננו",
@@ -401,7 +407,7 @@
     "parent": "ספרים שאינם מותאמים לאוצריא/שו''ת",
     "size": "11.9 MB",
     "depth": 2,
-    "hash": "994c7be533240195a5ebd425aea45ac9"
+    "hash": "9cd15db30ef9e97e0c247ebef79eb49c"
   },
   {
     "name": "ראשונים",
@@ -411,7 +417,7 @@
     "parent": "ספרים שאינם מותאמים לאוצריא/שו''ת",
     "size": "3.9 MB",
     "depth": 2,
-    "hash": "70324ddb7713c73be322545c6d2ee506"
+    "hash": "2d01602ee63f503da61991e519a02884"
   },
   {
     "name": "אחרונים",
@@ -421,7 +427,7 @@
     "parent": "ספרים שאינם מותאמים לאוצריא/תלמוד בבלי",
     "size": "2.1 MB",
     "depth": 2,
-    "hash": "81a28700a5eb35d29683551bd962f368"
+    "hash": "48aca0f80c7a80b66293fd4b094bc0b2"
   },
   {
     "name": "ראשונים",
@@ -431,7 +437,7 @@
     "parent": "ספרים שאינם מותאמים לאוצריא/תלמוד בבלי",
     "size": "9.0 MB",
     "depth": 2,
-    "hash": "3246b3a257947e9e113980de0bc97039"
+    "hash": "ea763879019305d04cee6d51daf80743"
   },
   {
     "name": "מהרשם",
@@ -441,7 +447,7 @@
     "parent": "שו''ת/אחרונים",
     "size": "3.8 MB",
     "depth": 2,
-    "hash": "7fed84511f59e196f4a6371cf99a7fe5"
+    "hash": "53ae07669ecea50f9045ba35998ce71d"
   },
   {
     "name": "אגרות משה",
@@ -451,7 +457,7 @@
     "parent": "שו''ת/מחברי זמננו",
     "size": "5.0 MB",
     "depth": 2,
-    "hash": "77a87e81f38945c256056623a38f4017"
+    "hash": "f3b809c377a948f94728076c13cf62e5"
   },
   {
     "name": "יביע אומר",
@@ -461,7 +467,7 @@
     "parent": "שו''ת/מחברי זמננו",
     "size": "8.4 MB",
     "depth": 2,
-    "hash": "3cb7413a68746b4597de215435ab6d47"
+    "hash": "ce10d197ad6958febe29d643391fb074"
   },
   {
     "name": "יחווה דעת",
@@ -471,7 +477,7 @@
     "parent": "שו''ת/מחברי זמננו",
     "size": "1.6 MB",
     "depth": 2,
-    "hash": "9dfb0ab56b31021b6524b70c56453974"
+    "hash": "8048a77e80f953059fc534b0cb51bfa5"
   },
   {
     "name": "שבט הלוי",
@@ -481,7 +487,7 @@
     "parent": "שו''ת/מחברי זמננו",
     "size": "3.3 MB",
     "depth": 2,
-    "hash": "c4e815a9aedcf97308f05c87a17f967d"
+    "hash": "b88f126f4ea43a05e81eb1314485e65f"
   },
   {
     "name": "רדבז",
@@ -491,7 +497,7 @@
     "parent": "שו''ת/ראשונים",
     "size": "2.2 MB",
     "depth": 2,
-    "hash": "ad549e60da066d16978d5e925d3a135d"
+    "hash": "c67b548aad09c5e47fdd6978f61d18cd"
   },
   {
     "name": "רשבא",
@@ -501,7 +507,7 @@
     "parent": "שו''ת/ראשונים",
     "size": "3.1 MB",
     "depth": 2,
-    "hash": "df28cb5a3bada89ed042206d15142a54"
+    "hash": "5f91af4b9393763945568b723ebadf4b"
   },
   {
     "name": "ים של שלמה",
@@ -511,7 +517,7 @@
     "parent": "תלמוד בבלי/אחרונים",
     "size": "1.3 MB",
     "depth": 2,
-    "hash": "8303db982130bee2eeb6ab59a26be2d4"
+    "hash": "f1d679b571b6e95e4e5906bd161414be"
   },
   {
     "name": "חידושי הגרי''ד ענינים",
@@ -521,7 +527,7 @@
     "parent": "תלמוד בבלי/מחברי זמננו",
     "size": "45 KB",
     "depth": 2,
-    "hash": "3caee3d15de8d47bdd238e5fac068e9b"
+    "hash": "fc0f451d765b9789e842baf421073854"
   },
   {
     "name": "חידושים וביאורים - על השס, זרעים, או''ח ומועד, טהרות",
@@ -531,7 +537,7 @@
     "parent": "תלמוד בבלי/מחברי זמננו",
     "size": "10.4 MB",
     "depth": 2,
-    "hash": "1f162bed6ccf0afeb50096b854160289"
+    "hash": "e007b1acb09672b550b66672426d0983"
   },
   {
     "name": "שיעורי הגרמ''ד סאלאווציק - מנחות",
@@ -541,7 +547,7 @@
     "parent": "תלמוד בבלי/מחברי זמננו",
     "size": "312 KB",
     "depth": 2,
-    "hash": "4b849cc19aeddb425ab732091f7ccbe1"
+    "hash": "e402e7427235715f70e18ba60ecaa98e"
   },
   {
     "name": "הגהות אשרי",
@@ -551,7 +557,7 @@
     "parent": "תלמוד בבלי/ראשונים",
     "size": "465 KB",
     "depth": 2,
-    "hash": "5fcdcd2482c5b2675ed6c28f5cfbfeb7"
+    "hash": "a78ca88fece21e5a4e2fbd12e5ad745a"
   },
   {
     "name": "חידושי הריטבא",
@@ -561,7 +567,7 @@
     "parent": "תלמוד בבלי/ראשונים",
     "size": "556 KB",
     "depth": 2,
-    "hash": "ac6e9b000bac2d3083799b1b754bb2fc"
+    "hash": "1daec3f4cb6a1f1dab304c4bfd6f52fc"
   },
   {
     "name": "ספרים מתוך קובץ שיטות קמאי",
@@ -571,7 +577,7 @@
     "parent": "תלמוד בבלי/ראשונים",
     "size": "314 KB",
     "depth": 2,
-    "hash": "e9464ee668bf46e2b761608b1aaa2f55"
+    "hash": "f36d1b08a38bba7d302a08015b16f8bb"
   },
   {
     "name": "קובץ שיטות קמאי",
@@ -581,7 +587,7 @@
     "parent": "תלמוד בבלי/ראשונים",
     "size": "84.8 MB",
     "depth": 2,
-    "hash": "676b12870e56ea77c05c4ca1fcadba81"
+    "hash": "50b30cdc3edf18aec404145ae0668683"
   },
   {
     "name": "קונטרס הראיות לריא''ז",
@@ -591,7 +597,7 @@
     "parent": "תלמוד בבלי/ראשונים",
     "size": "246 KB",
     "depth": 2,
-    "hash": "6e97d9877b89d0f44c02abde9fc25107"
+    "hash": "33a0e2c130d6f2fcb06b12da42ec5f76"
   },
   {
     "name": "סדר זרעים",
@@ -601,7 +607,7 @@
     "parent": "תלמוד בבלי/שס וגשל",
     "size": "13.7 MB",
     "depth": 2,
-    "hash": "fb575418bada51daa354cd11c3bd3849"
+    "hash": "3d816945c88b8ac2aab1c8a0402c278c"
   },
   {
     "name": "סדר טהרות",
@@ -611,7 +617,7 @@
     "parent": "תלמוד בבלי/שס וגשל",
     "size": "10.7 MB",
     "depth": 2,
-    "hash": "6e3c28e1f1758c0e14082bda6c85e2c3"
+    "hash": "8556399bae22412bc6e993ed70032752"
   },
   {
     "name": "סדר מועד",
@@ -621,7 +627,7 @@
     "parent": "תלמוד בבלי/שס וגשל",
     "size": "134.6 MB",
     "depth": 2,
-    "hash": "eb90b839c94cdcacab9e559f8c3eac82"
+    "hash": "dd6e12b57aab3c81bf8aa6f3a770860f"
   },
   {
     "name": "סדר נזיקין",
@@ -631,7 +637,7 @@
     "parent": "תלמוד בבלי/שס וגשל",
     "size": "112.9 MB",
     "depth": 2,
-    "hash": "8deb6c9aef6cc9e5fee9e179cb3407b5"
+    "hash": "ffded224eb5f5b65a0aadc18750e0625"
   },
   {
     "name": "סדר נשים",
@@ -641,7 +647,7 @@
     "parent": "תלמוד בבלי/שס וגשל",
     "size": "107.0 MB",
     "depth": 2,
-    "hash": "77b9c86c63fcaa876b06ed8c2ae9c52b"
+    "hash": "dbdcb120f04cd0c6726bcd7277cc5eaa"
   },
   {
     "name": "סדר קדשים",
@@ -651,7 +657,7 @@
     "parent": "תלמוד בבלי/שס וגשל",
     "size": "96.2 MB",
     "depth": 2,
-    "hash": "0a85fd92f3cd37e146f6197f3ce1b92e"
+    "hash": "433f1e88691b19360c6de03e358ebaa5"
   },
   {
     "name": "PDF - משנה ברורה",
@@ -661,7 +667,7 @@
     "parent": "הלכה/שולחן ערוך/מפרשים",
     "size": "164.0 MB",
     "depth": 3,
-    "hash": "c1f82daff6ec1b999fddd75acc48253c"
+    "hash": "40ef16d78c4a21be888b938f78a5f5d6"
   },
   {
     "name": "links",
@@ -671,7 +677,7 @@
     "parent": "מילונים וספרי יעץ/אנציקלופדיות/אנציקלופדיה תלמודית",
     "size": "890 KB",
     "depth": 3,
-    "hash": "e1952e7e686e3b8fdeb24c76faee2bdb"
+    "hash": "81100c03c877538c72864051e190445d"
   },
   {
     "name": "הערות על אנציקלופדיה",
@@ -681,7 +687,7 @@
     "parent": "מילונים וספרי יעץ/אנציקלופדיות/אנציקלופדיה תלמודית",
     "size": "5.2 MB",
     "depth": 3,
-    "hash": "003f03440fa6a7905289554b79bf6dc2"
+    "hash": "cb2259fde4bef3550ae5a5b7b6ef468b"
   },
   {
     "name": "סדר נשים",
@@ -691,7 +697,7 @@
     "parent": "תלמוד בבלי/אחרונים/ים של שלמה",
     "size": "525 KB",
     "depth": 3,
-    "hash": "b34aa1bd915e8dc627f608a84e7a1edd"
+    "hash": "3fd7416f6c7f0a515843560d1d0afaf7"
   },
   {
     "name": "סדר זרעים",
@@ -701,7 +707,7 @@
     "parent": "תלמוד בבלי/ראשונים/קובץ שיטות קמאי",
     "size": "3.1 MB",
     "depth": 3,
-    "hash": "3e8b83fde82264346f8b89fb0aa7facd"
+    "hash": "7093aa5125f7f9893ace0bf754771ec9"
   },
   {
     "name": "סדר טהרות",
@@ -711,7 +717,7 @@
     "parent": "תלמוד בבלי/ראשונים/קובץ שיטות קמאי",
     "size": "2.0 MB",
     "depth": 3,
-    "hash": "9f15cc9f7486172dbf8a99fe5099f74a"
+    "hash": "19a7764c32ecf1b1838f3e42f2c85a8c"
   },
   {
     "name": "סדר מועד",
@@ -721,7 +727,7 @@
     "parent": "תלמוד בבלי/ראשונים/קובץ שיטות קמאי",
     "size": "21.1 MB",
     "depth": 3,
-    "hash": "7440c57d7fa59e27287f1623ba9422d6"
+    "hash": "a8f6e244261505148823d710abe84c73"
   },
   {
     "name": "סדר נזיקין",
@@ -731,7 +737,7 @@
     "parent": "תלמוד בבלי/ראשונים/קובץ שיטות קמאי",
     "size": "23.9 MB",
     "depth": 3,
-    "hash": "26fbd313a37525ec7a0d843c545a5d56"
+    "hash": "2a3848532932f8ddcde51f75f8ce4881"
   },
   {
     "name": "סדר נשים",
@@ -741,7 +747,7 @@
     "parent": "תלמוד בבלי/ראשונים/קובץ שיטות קמאי",
     "size": "18.7 MB",
     "depth": 3,
-    "hash": "678ee2b8eaf10b6ed498d470c1b191b3"
+    "hash": "92a2ecd831d4fff5eca11445a1b09e0b"
   },
   {
     "name": "סדר קדשים",
@@ -751,6 +757,6 @@
     "parent": "תלמוד בבלי/ראשונים/קובץ שיטות קמאי",
     "size": "15.9 MB",
     "depth": 3,
-    "hash": "03b9b676b0afd22813fa18ed1a901829"
+    "hash": "d4d3b246a316d532707718282f2a23aa"
   }
 ]
