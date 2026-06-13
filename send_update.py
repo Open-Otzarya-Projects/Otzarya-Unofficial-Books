@@ -20,14 +20,35 @@ def is_incompatible(filepath):
     parts = filepath[len("ספרים/"):].split('/')
     return parts[0] == INCOMPATIBLE_FOLDER
 
-def get_changed_books():
-    before_sha = os.environ.get("BEFORE_SHA")
-    after_sha = os.environ.get("AFTER_SHA")
+def _find_last_user_diff_cmd():
+    """למצוא את ה-commit האחרון שאינו commit אוטומטי ולהחזיר פקודת diff עבורו."""
+    try:
+        log_out = subprocess.check_output(
+            ["git", "log", "--format=%H %s", "-50"],
+            text=True, encoding="utf-8"
+        )
+    except subprocess.CalledProcessError:
+        return ["git", "diff", "--name-status", "-M90", "HEAD~1", "HEAD"]
 
-    if not before_sha or not after_sha or before_sha == "0000000000000000000000000000000000000000":
-        git_cmd = ["git", "diff", "--name-status", "-M90", "HEAD~1", "HEAD"]
-    else:
+    for line in log_out.strip().split('\n'):
+        if not line.strip():
+            continue
+        sha, _, msg = line.partition(' ')
+        if '[skip ci]' not in msg and sha:
+            return ["git", "diff", "--name-status", "-M90", f"{sha}^", sha]
+
+    return ["git", "diff", "--name-status", "-M90", "HEAD~1", "HEAD"]
+
+
+def get_changed_books():
+    before_sha = (os.environ.get("BEFORE_SHA") or "").strip()
+    after_sha = (os.environ.get("AFTER_SHA") or "").strip()
+
+    if before_sha and after_sha and before_sha != "0000000000000000000000000000000000000000":
         git_cmd = ["git", "diff", "--name-status", "-M90", before_sha, after_sha]
+    else:
+        # workflow_dispatch או ריצה ראשונה: מצא את ה-commit האחרון שאינו אוטומטי
+        git_cmd = _find_last_user_diff_cmd()
 
     try:
         output = subprocess.check_output(git_cmd, text=True, encoding="utf-8")
