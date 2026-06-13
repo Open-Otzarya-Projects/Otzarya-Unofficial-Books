@@ -21,20 +21,18 @@ def is_incompatible(filepath):
     return parts[0] == INCOMPATIBLE_FOLDER
 
 def _find_last_user_diff_cmd():
-    """למצוא את ה-commit האחרון שאינו commit אוטומטי ולהחזיר פקודת diff עבורו."""
+    """מוצא את ה-commit האחרון שנגע בקבצי ספרים/ ומחזיר פקודת diff עבורו."""
     try:
         log_out = subprocess.check_output(
-            ["git", "log", "--format=%H %s", "-50"],
+            ["git", "log", "--format=%H", "-50", "--", "ספרים/"],
             text=True, encoding="utf-8"
         )
     except subprocess.CalledProcessError:
         return ["git", "diff", "--name-status", "-M90", "HEAD~1", "HEAD"]
 
-    for line in log_out.strip().split('\n'):
-        if not line.strip():
-            continue
-        sha, _, msg = line.partition(' ')
-        if '[skip ci]' not in msg and sha:
+    for sha in log_out.strip().split('\n'):
+        sha = sha.strip()
+        if sha:
             return ["git", "diff", "--name-status", "-M90", f"{sha}^", sha]
 
     return ["git", "diff", "--name-status", "-M90", "HEAD~1", "HEAD"]
