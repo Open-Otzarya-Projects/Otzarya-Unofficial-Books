@@ -1,4 +1,7 @@
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+if ([System.Threading.Thread]::CurrentThread.ApartmentState -ne 'STA') {
+    powershell.exe -ExecutionPolicy Bypass -STA -File $MyInvocation.MyCommand.Path
+    exit
+}
 
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
