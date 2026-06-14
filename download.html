@@ -199,15 +199,26 @@ async function fetchWithFallback(url) {
     throw new Error('לא ניתן להגיע לגיטאב');
 }
 
+async function getAssetUrls() {
+    try {
+        const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/releases/latest`);
+        if (!res.ok) return {};
+        const json = await res.json();
+        const map = {};
+        for (const asset of json.assets || []) map[asset.name] = asset.browser_download_url;
+        return map;
+    } catch { return {}; }
+}
+
 async function boot() {
-    // נסה לקבל גרסה עדכנית מגיטאב; אם נכשל — השתמש ב-books_data.js המקומי
     let data = typeof BOOKS_DATA !== 'undefined' ? BOOKS_DATA : null;
     try {
-        const url = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/books_data.js`;
-        const res  = await fetchWithFallback(url);
-        const text = await res.text();
-        const json = text.replace(/^\s*const BOOKS_DATA\s*=\s*/, '').replace(/\s*;\s*$/, '');
-        data = JSON.parse(json);
+        const res = await fetch(`https://raw.githubusercontent.com/${GITHUB_REPO}/main/books_data.js`);
+        if (res.ok) {
+            const text = await res.text();
+            const json = text.replace(/^\s*const BOOKS_DATA\s*=\s*/, '').replace(/\s*;\s*$/, '');
+            data = JSON.parse(json);
+        }
     } catch {}
 
     if (!data || !data.length) {
@@ -216,7 +227,11 @@ async function boot() {
         return;
     }
 
-    currentManifest = data.map(item => ({ ...item, downloadUrl: LATEST_DL + item.zip }));
+    const assetUrls = await getAssetUrls();
+    currentManifest = data.map(item => ({
+        ...item,
+        downloadUrl: assetUrls[item.zip] || LATEST_DL + item.zip
+    }));
     hideLoading();
     document.getElementById('full-library-btn').style.display = 'inline-flex';
     renderTree(currentManifest);
