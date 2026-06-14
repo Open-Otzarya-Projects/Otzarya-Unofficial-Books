@@ -1,5 +1,9 @@
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+
 Add-Type -AssemblyName System.Windows.Forms
 Add-Type -AssemblyName System.Drawing
+
+try {
 
 $BASE = "https://github.com/Open-Otzarya-Projects/Otzarya-Unofficial-Books/releases/latest/download"
 
@@ -110,3 +114,9 @@ $btnDl.Add_Click({
 })
 $form.Controls.Add($btnDl)
 $form.ShowDialog() | Out-Null
+
+} catch {
+    $log = "$env:TEMP\otzarya_error.txt"
+    $_ | Out-File $log -Encoding UTF8
+    [System.Windows.Forms.MessageBox]::Show("Fatal error:`n$_`n`nLog: $log")
+}
