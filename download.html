@@ -6,92 +6,112 @@
 <title>הורדת ספרי אוצריא</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4ff;color:#222;min-height:100vh}
-header{background:#1a237e;color:#fff;padding:18px 24px;text-align:center}
-header h1{font-size:22px;font-weight:700}
-header p{font-size:13px;opacity:.8;margin-top:4px}
-.wrap{max-width:680px;margin:24px auto;padding:0 14px}
-.card{background:#fff;border-radius:10px;padding:20px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.09)}
-.card-title{font-size:15px;font-weight:700;color:#1a237e;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.step-num{background:#1a237e;color:#fff;border-radius:50%;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
-.book-list{list-style:none;max-height:260px;overflow-y:auto;border:1px solid #ddd;border-radius:6px;margin-top:4px}
-.book-list li{display:flex;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .1s}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4ff;color:#222}
+header{background:#1a237e;color:#fff;padding:16px 24px;text-align:center}
+header h1{font-size:20px}
+header p{font-size:12px;opacity:.75;margin-top:3px}
+.wrap{max-width:660px;margin:20px auto;padding:0 12px}
+.card{background:#fff;border-radius:10px;padding:18px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.card h2{font-size:14px;font-weight:700;color:#1a237e;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.num{background:#1a237e;color:#fff;border-radius:50%;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
+
+/* book list */
+.book-list{list-style:none;max-height:240px;overflow-y:auto;border:1px solid #dde;border-radius:6px}
+.book-list li{display:flex;align-items:center;gap:9px;padding:8px 11px;border-bottom:1px solid #f0f0f0;cursor:pointer}
 .book-list li:last-child{border-bottom:none}
 .book-list li:hover{background:#f0f4ff}
-.book-list input[type=checkbox]{width:17px;height:17px;cursor:pointer;accent-color:#1a237e}
-.book-name{flex:1;font-size:14px}
-.book-size{font-size:12px;color:#999;white-space:nowrap}
-.link-all{font-size:12px;color:#1a237e;cursor:pointer;text-decoration:underline;margin-bottom:6px;display:inline-block}
-#loading{color:#888;font-size:14px}
-.folder-box{display:flex;align-items:center;gap:10px;margin-top:6px;flex-wrap:wrap}
-.folder-name{flex:1;font-size:13px;color:#555;background:#f5f5f5;padding:7px 12px;border-radius:6px;min-height:34px;line-height:20px;word-break:break-all}
-button{padding:9px 20px;border:none;border-radius:7px;cursor:pointer;font-size:14px;font-family:inherit;transition:opacity .15s}
-.btn-blue{background:#1a237e;color:#fff}
-.btn-blue:hover{opacity:.88}
-.btn-blue:disabled{background:#b0b8d8;cursor:not-allowed}
-.btn-gray{background:#e8eaf6;color:#1a237e}
-.btn-gray:hover{background:#c5cae9}
-.btn-green{background:#2e7d32;color:#fff}
-.btn-green:hover{opacity:.88}
-.prog-list{list-style:none;margin-top:12px}
-.prog-list li{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:7px;margin-bottom:6px;font-size:13px;background:#f5f5f5}
-.prog-list li.waiting{background:#fff8e1}
-.prog-list li.working{background:#e3f2fd}
-.prog-list li.done{background:#e8f5e9}
-.prog-list li.error{background:#ffebee}
-.prog-list li .ico{font-size:16px;flex-shrink:0}
-.prog-bar-wrap{height:6px;background:#ddd;border-radius:3px;margin-top:8px;overflow:hidden;display:none}
-.prog-bar{height:6px;background:#1a237e;border-radius:3px;transition:width .3s;width:0}
-.fallback-box{margin-top:12px;padding:14px;background:#fff3cd;border-radius:7px;border:1px solid #ffe082;font-size:13px;display:none}
-.fallback-box h3{margin-bottom:8px;color:#856404}
+.book-list input[type=checkbox]{width:16px;height:16px;accent-color:#1a237e;cursor:pointer;flex-shrink:0}
+.bname{flex:1;font-size:13px}
+.bsize{font-size:11px;color:#aaa;white-space:nowrap}
+.sel-all{font-size:12px;color:#1a237e;cursor:pointer;text-decoration:underline;margin-bottom:6px;display:none}
+
+/* folder */
+.frow{display:flex;align-items:center;gap:9px;margin-top:6px;flex-wrap:wrap}
+.fname{flex:1;font-size:12px;color:#555;background:#f5f5f5;padding:6px 10px;border-radius:5px;min-height:30px;word-break:break-all}
+
+/* buttons */
+btn,button{padding:9px 20px;border:none;border-radius:7px;cursor:pointer;font-size:13px;font-family:inherit}
+.b-blue{background:#1a237e;color:#fff}
+.b-blue:hover{opacity:.88}
+.b-blue:disabled{background:#b0bbd8;cursor:not-allowed}
+.b-gray{background:#e8eaf6;color:#1a237e}
+.b-gray:hover{background:#c5cae9}
+
+/* drop zone */
+#dropZone{display:none;margin-top:14px;border:2px dashed #7986cb;border-radius:10px;padding:24px 16px;text-align:center;background:#f3f4fc;cursor:pointer;transition:background .2s}
+#dropZone.over{background:#dce0f8;border-color:#3949ab}
+#dropZone .dz-icon{font-size:36px;margin-bottom:8px}
+#dropZone .dz-main{font-size:15px;font-weight:600;color:#1a237e;margin-bottom:6px}
+#dropZone .dz-sub{font-size:12px;color:#888}
+#dropZone .dz-pick{color:#1a237e;text-decoration:underline;cursor:pointer}
+
+/* progress */
+.prog{list-style:none;margin-top:12px}
+.prog li{display:flex;align-items:center;gap:9px;padding:8px 11px;border-radius:7px;margin-bottom:5px;font-size:13px;background:#f5f5f5}
+.prog li.wait{background:#fff8e1}
+.prog li.work{background:#e3f2fd}
+.prog li.done{background:#e8f5e9}
+.prog li.fail{background:#ffebee}
+.prog-bar-wrap{height:5px;background:#ddd;border-radius:3px;margin-top:8px;overflow:hidden;display:none}
+.prog-bar{height:5px;background:#1a237e;border-radius:3px;transition:width .3s;width:0}
+
+/* info banner */
+.info{font-size:12px;color:#555;background:#e8eaf6;padding:8px 12px;border-radius:6px;margin-bottom:10px;line-height:1.6}
 </style>
 </head>
 <body>
 <header>
   <h1>📚 הורדת ספרי אוצריא</h1>
-  <p>הורדה ישירה לתיקיית הספרייה שלך</p>
+  <p>בחר ספרים, בחר תיקייה — ואחרי ההורדה גרור לכאן לחילוץ אוטומטי</p>
 </header>
 <div class="wrap">
 
   <div class="card">
-    <div class="card-title"><span class="step-num">1</span> בחירת ספרים</div>
-    <span class="link-all" id="linkAll" onclick="toggleAll()" style="display:none">✔ בחר הכל / בטל הכל</span>
-    <div id="loading">טוען רשימה...</div>
+    <h2><span class="num">1</span> בחירת ספרים</h2>
+    <span class="sel-all" id="selAll" onclick="toggleAll()">✔ בחר הכל / בטל הכל</span>
+    <div id="loading" style="color:#888;font-size:13px">טוען רשימה...</div>
     <ul class="book-list" id="bookList" style="display:none"></ul>
   </div>
 
   <div class="card">
-    <div class="card-title"><span class="step-num">2</span> תיקיית יעד</div>
-    <p style="font-size:13px;color:#666;margin-bottom:10px">בחר את תיקיית הספרייה של אוצריא — הספרים יחולצו לתוכה ישירות</p>
-    <div class="folder-box">
-      <button class="btn-gray" onclick="pickFolder()">📁 בחר תיקייה...</button>
-      <div class="folder-name" id="folderName">לא נבחרה עדיין</div>
+    <h2><span class="num">2</span> תיקיית יעד לחילוץ</h2>
+    <p style="font-size:12px;color:#666;margin-bottom:8px">בחר את תיקיית הספרייה של אוצריא — הספרים יחולצו ישירות לתוכה</p>
+    <div class="frow">
+      <button class="b-gray" onclick="pickFolder()">📁 בחר תיקייה...</button>
+      <div class="fname" id="folderName">לא נבחרה עדיין</div>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-title"><span class="step-num">3</span> הורדה וחילוץ</div>
-    <button class="btn-blue" id="btnGo" onclick="startAll()" disabled>⬇️ הורד וחלץ</button>
-    <div class="prog-bar-wrap" id="barWrap"><div class="prog-bar" id="bar"></div></div>
-    <ul class="prog-list" id="progList"></ul>
-    <div class="fallback-box" id="fallbackBox">
-      <h3>⬇️ חלק מהספרים הורדו לתיקיית ההורדות</h3>
-      <p>לאחר שההורדה הסתיימה, לחץ כאן כדי לחלץ אותם לתיקייה שבחרת:</p>
-      <br>
-      <button class="btn-green" onclick="pickAndExtract()">📦 בחר קבצי ZIP לחילוץ...</button>
+    <h2><span class="num">3</span> הורדה וחילוץ</h2>
+    <div class="info" id="dlInfo" style="display:none">
+      ⬇️ ההורדות מתחילות בתיקיית ההורדות של הדפדפן.<br>
+      כשכל קובץ יסיים — <strong>גרור אותו מסרגל ההורדות לתוך הריבוע הכחול למטה</strong> לחילוץ אוטומטי.
     </div>
+    <button class="b-blue" id="btnDl" onclick="startDownloads()" disabled>⬇️ התחל הורדות</button>
+
+    <div id="dropZone" ondragover="dzOver(event)" ondragleave="dzLeave()" ondrop="dzDrop(event)" onclick="pickFiles()">
+      <div class="dz-icon">📦</div>
+      <div class="dz-main">גרור לכאן קובץ ZIP שהורדת</div>
+      <div class="dz-sub">או <span class="dz-pick">לחץ לבחירה ידנית</span></div>
+    </div>
+
+    <div class="prog-bar-wrap" id="barWrap"><div class="prog-bar" id="bar"></div></div>
+    <ul class="prog" id="progList"></ul>
   </div>
 
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script>
-const REPO    = 'Open-Otzarya-Projects/Otzarya-Unofficial-Books';
+const REPO     = 'Open-Otzarya-Projects/Otzarya-Unofficial-Books';
 const MANIFEST = `https://raw.githubusercontent.com/${REPO}/main/manifest.json`;
 const DL_BASE  = `https://github.com/${REPO}/releases/latest/download`;
 
 let books = [], dirHandle = null, allChecked = false;
+let totalItems = 0, doneItems = 0;
 
+/* ── load manifest ── */
 async function init() {
   try {
     const r = await fetch(MANIFEST);
@@ -99,160 +119,135 @@ async function init() {
     books = data.filter(b => b.depth === 0).sort((a,b) => a.label.localeCompare(b.label,'he'));
     renderBooks();
   } catch(e) {
-    document.getElementById('loading').textContent = 'שגיאה בטעינת הרשימה: ' + e.message;
+    document.getElementById('loading').textContent = 'שגיאה: ' + e.message;
   }
 }
 
 function renderBooks() {
   const ul = document.getElementById('bookList');
   document.getElementById('loading').style.display = 'none';
-  document.getElementById('linkAll').style.display = 'inline';
+  document.getElementById('selAll').style.display = 'inline';
   ul.style.display = 'block';
-  books.forEach((b, i) => {
+  books.forEach((b,i) => {
     const li = document.createElement('li');
-    li.onclick = () => { const cb = document.getElementById('cb'+i); cb.checked=!cb.checked; updateBtn(); };
-    li.innerHTML = `<input type="checkbox" id="cb${i}" onclick="event.stopPropagation()" onchange="updateBtn()">
-      <span class="book-name">${b.label}</span><span class="book-size">${b.size}</span>`;
+    li.onclick = () => { const cb=document.getElementById('c'+i); cb.checked=!cb.checked; chk(); };
+    li.innerHTML = `<input type="checkbox" id="c${i}" onclick="event.stopPropagation()" onchange="chk()">
+      <span class="bname">${b.label}</span><span class="bsize">${b.size}</span>`;
     ul.appendChild(li);
   });
 }
 
 function toggleAll() {
   allChecked = !allChecked;
-  document.querySelectorAll('#bookList input').forEach(c => c.checked = allChecked);
-  updateBtn();
+  document.querySelectorAll('#bookList input').forEach(c=>c.checked=allChecked);
+  chk();
 }
-
-function updateBtn() {
-  const any = [...document.querySelectorAll('#bookList input')].some(c => c.checked);
-  document.getElementById('btnGo').disabled = !(any && dirHandle);
+function chk() {
+  const any = [...document.querySelectorAll('#bookList input')].some(c=>c.checked);
+  document.getElementById('btnDl').disabled = !(any && dirHandle);
 }
-
 function selected() {
-  return [...document.querySelectorAll('#bookList input')]
-    .map((c,i) => c.checked ? books[i] : null).filter(Boolean);
+  return [...document.querySelectorAll('#bookList input')].map((c,i)=>c.checked?books[i]:null).filter(Boolean);
 }
 
+/* ── folder picker ── */
 async function pickFolder() {
   try {
     dirHandle = await window.showDirectoryPicker({ mode:'readwrite' });
     document.getElementById('folderName').textContent = '📁 ' + dirHandle.name;
-    updateBtn();
+    chk();
   } catch(e) {
-    if (e.name !== 'AbortError')
-      document.getElementById('folderName').textContent = 'שגיאה: ' + e.message;
+    if (e.name!=='AbortError') document.getElementById('folderName').textContent = 'שגיאה: '+e.message;
   }
 }
 
-async function fetchViaProxy(zipName) {
-  const url = `${DL_BASE}/${zipName}`;
-  for (const p of [
-    `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
-    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
-  ]) {
-    try {
-      const r = await fetch(p);
-      if (!r.ok) continue;
-      const buf = await r.arrayBuffer();
-      if (buf.byteLength > 500) return buf;
-    } catch {}
-  }
-  return null;
+/* ── trigger browser downloads ── */
+function startDownloads() {
+  const sel = selected();
+  if (!sel.length || !dirHandle) return;
+  document.getElementById('progList').innerHTML = '';
+  document.getElementById('dlInfo').style.display = 'block';
+  document.getElementById('dropZone').style.display = 'block';
+  document.getElementById('barWrap').style.display = 'block';
+  totalItems = sel.length; doneItems = 0;
+  updBar();
+  sel.forEach(b => {
+    const a = document.createElement('a');
+    a.href = `${DL_BASE}/${b.zip}`; a.download = b.zip;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    addLi(b.zip, 'wait', '⏳', `ממתין: ${b.label} — גרור לכאן אחרי ההורדה`);
+  });
 }
 
-async function extractBuf(buf, book) {
-  const zip = await JSZip.loadAsync(buf);
-  const parts = book.path ? book.path.split('/').filter(Boolean) : [];
-  let cur = dirHandle;
-  for (const p of parts) cur = await cur.getDirectoryHandle(p, {create:true});
-  for (const [name, entry] of Object.entries(zip.files)) {
-    if (entry.dir) continue;
-    const segs = name.split('/'); const fname = segs.pop();
-    let d = cur;
-    for (const s of segs) d = await d.getDirectoryHandle(s, {create:true});
-    const fh = await d.getFileHandle(fname, {create:true});
-    const wr = await fh.createWritable();
-    await wr.write(await entry.async('blob'));
-    await wr.close();
+/* ── drag & drop ── */
+function dzOver(e) { e.preventDefault(); document.getElementById('dropZone').classList.add('over'); }
+function dzLeave()  { document.getElementById('dropZone').classList.remove('over'); }
+async function dzDrop(e) {
+  e.preventDefault(); dzLeave();
+  for (const file of e.dataTransfer.files) {
+    if (file.name.endsWith('.zip')) await handleZip(file);
   }
 }
 
-function nativeDl(zipName) {
-  const a = document.createElement('a');
-  a.href = `${DL_BASE}/${zipName}`; a.download = zipName;
-  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+/* ── manual file pick ── */
+async function pickFiles() {
+  if (!dirHandle) { alert('בחר תחילה תיקיית יעד (שלב 2)'); return; }
+  try {
+    const handles = await window.showOpenFilePicker({
+      multiple: true,
+      types: [{ description:'ZIP', accept:{'application/zip':['.zip']} }]
+    });
+    for (const h of handles) await handleZip(await h.getFile());
+  } catch {}
 }
 
-function mkLi(label) {
+/* ── process one zip file ── */
+async function handleZip(file) {
+  if (!dirHandle) { alert('בחר תחילה תיקיית יעד (שלב 2)'); return; }
+  const book = books.find(b => b.zip === file.name) || { label: file.name, path:'' };
+  const li = getLiByZip(file.name) || addLi(file.name,'work','⚙️',`מחלץ: ${book.label}...`);
+  setLi(li,'work','⚙️',`מחלץ: ${book.label}...`);
+  try {
+    const buf = await file.arrayBuffer();
+    const zip = await JSZip.loadAsync(buf);
+    const parts = book.path ? book.path.split('/').filter(Boolean) : [];
+    let cur = dirHandle;
+    for (const p of parts) cur = await cur.getDirectoryHandle(p, {create:true});
+    for (const [name, entry] of Object.entries(zip.files)) {
+      if (entry.dir) continue;
+      const segs = name.split('/'); const fname = segs.pop();
+      let d = cur;
+      for (const s of segs) d = await d.getDirectoryHandle(s, {create:true});
+      const fh = await d.getFileHandle(fname, {create:true});
+      const wr = await fh.createWritable();
+      await wr.write(await entry.async('blob'));
+      await wr.close();
+    }
+    setLi(li,'done','✅',`הושלם: ${book.label}`);
+    doneItems++; updBar();
+  } catch(e) {
+    setLi(li,'fail','❌',`שגיאה — ${book.label}: ${e.message}`);
+  }
+}
+
+/* ── progress helpers ── */
+function updBar() {
+  if (!totalItems) return;
+  document.getElementById('bar').style.width = `${Math.round(doneItems/totalItems*100)}%`;
+}
+function getLiByZip(zip) {
+  return [...document.querySelectorAll('#progList li')].find(li => li.dataset.zip === zip);
+}
+function addLi(zip, cls, ico, txt) {
   const li = document.createElement('li');
-  li.className = 'waiting';
-  li.innerHTML = `<span class="ico">⏳</span><span>${label}</span>`;
+  li.dataset.zip = zip; li.className = cls;
+  li.innerHTML = `<span>${ico}</span><span>${txt}</span>`;
   document.getElementById('progList').appendChild(li);
   return li;
 }
 function setLi(li, cls, ico, txt) {
   li.className = cls;
-  li.innerHTML = `<span class="ico">${ico}</span><span>${txt}</span>`;
-}
-
-async function startAll() {
-  const sel = selected();
-  if (!sel.length || !dirHandle) return;
-  document.getElementById('btnGo').disabled = true;
-  document.getElementById('progList').innerHTML = '';
-  document.getElementById('fallbackBox').style.display = 'none';
-  const barWrap = document.getElementById('barWrap');
-  const bar = document.getElementById('bar');
-  barWrap.style.display = 'block'; bar.style.width = '0';
-
-  let hasFallback = false;
-  const items = sel.map(b => ({ book:b, li:mkLi(b.label) }));
-
-  for (let i = 0; i < items.length; i++) {
-    const {book, li} = items[i];
-    setLi(li, 'working', '⚙️', `מוריד: ${book.label} (${book.size})...`);
-    try {
-      const buf = await fetchViaProxy(book.zip);
-      if (buf) {
-        setLi(li, 'working', '📦', `מחלץ: ${book.label}...`);
-        await extractBuf(buf, book);
-        setLi(li, 'done', '✅', `הושלם: ${book.label}`);
-      } else {
-        nativeDl(book.zip);
-        setLi(li, 'done', '⬇️', `${book.label} — הורד לתיקיית ההורדות (חלץ למטה)`);
-        hasFallback = true;
-      }
-    } catch(e) {
-      setLi(li, 'error', '❌', `שגיאה — ${book.label}: ${e.message}`);
-    }
-    bar.style.width = `${Math.round((i+1)/items.length*100)}%`;
-  }
-
-  if (hasFallback) document.getElementById('fallbackBox').style.display = 'block';
-  document.getElementById('btnGo').disabled = false;
-}
-
-async function pickAndExtract() {
-  if (!dirHandle) { alert('בחר תחילה תיקיית יעד (שלב 2)'); return; }
-  let files;
-  try {
-    files = await window.showOpenFilePicker({
-      multiple: true,
-      types: [{ description: 'ZIP files', accept: {'application/zip':['.zip']} }]
-    });
-  } catch { return; }
-  for (const fh of files) {
-    const book = books.find(b => b.zip === fh.name) || {label: fh.name, path:''};
-    const li = mkLi(book.label);
-    setLi(li, 'working', '📦', `מחלץ: ${book.label}...`);
-    try {
-      const buf = await (await fh.getFile()).arrayBuffer();
-      await extractBuf(buf, book);
-      setLi(li, 'done', '✅', `הושלם: ${book.label}`);
-    } catch(e) {
-      setLi(li, 'error', '❌', `שגיאה: ${e.message}`);
-    }
-  }
+  li.innerHTML = `<span>${ico}</span><span>${txt}</span>`;
 }
 
 init();
