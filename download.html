@@ -316,214 +316,96 @@ function toggleNode(path) {
     renderTree(currentManifest);
 }
 
-// ─── הורדה + חילוץ (ללא מגבלת זמן) ───────────────────────────────
+// ─── הורדה + חילוץ ────────────────────────────────────────────────
+// GitHub חוסם CORS על release downloads — לכן: הורדה ישירה ע"י הדפדפן
+// + חילוץ ע"י בחירת הקובץ שהורד (showOpenFilePicker)
 
-async function downloadZip(node, onProgress) {
-    // נסה דרך GitHub API asset URL: api.github.com מחזיר CORS headers גם על ה-redirect ל-CDN
-    if (node.assetInfo) {
-        try {
-            const response = await fetch(node.assetInfo.apiUrl, {
-                headers: { Accept: 'application/octet-stream' }
-            });
-            if (response.ok) {
-                const total = parseInt(response.headers.get('content-length') || '0');
-                let received = 0;
-                const chunks = [];
-                const reader = response.body.getReader();
-                while (true) {
-                    const { done, value } = await reader.read();
-                    if (done) break;
-                    chunks.push(value);
-                    received += value.length;
-                    if (total && onProgress) onProgress(received / total);
-                }
-                return new Blob(chunks).arrayBuffer();
-            }
-        } catch {}
+async function extractZip(zipFile, node, rootDir) {
+    showProgress(node.name, 0);
+    const buffer = await zipFile.arrayBuffer();
+    updateProgress(20, 'מחלץ...');
+    const zip = await JSZip.loadAsync(buffer);
+    const entries = Object.values(zip.files);
+    const pathParts = node.path.split('/');
+    let destDir = rootDir;
+    for (const part of pathParts) destDir = await destDir.getDirectoryHandle(part, { create: true });
+    let done2 = 0;
+    for (const entry of entries) {
+        const parts = entry.name.split('/').filter(Boolean);
+        if (!parts.length) continue;
+        if (entry.dir) {
+            let d = destDir;
+            for (const p of parts) d = await d.getDirectoryHandle(p, { create: true });
+        } else {
+            let d = destDir;
+            for (let i = 0; i < parts.length - 1; i++) d = await d.getDirectoryHandle(parts[i], { create: true });
+            const fh = await d.getFileHandle(parts[parts.length - 1], { create: true });
+            const w = await fh.createWritable();
+            await w.write(await entry.async('arraybuffer'));
+            await w.close();
+        }
+        done2++;
+        updateProgress(20 + Math.round((done2 / entries.length) * 78), 'מחלץ...');
     }
-    // Fallback: הורדה ישירה ע"י הדפדפן (ללא חילוץ אוטומטי)
-    const a = document.createElement('a');
-    a.href = node.downloadUrl;
-    a.target = '_blank';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    throw new Error('NATIVE_DOWNLOAD');
+    updateProgress(100, 'הושלם');
+    showSuccess(`"${node.name}" חולץ בהצלחה`);
+    setTimeout(hideProgress, 2000);
 }
 
 async function downloadAndExtract(node, btn) {
-    btn.disabled = true;
-    btn.textContent = '...';
-    showProgress(node.name, 0);
+    // שלב 1: הורדה ישירה ע"י הדפדפן (ללא CORS)
+    const dlUrl = (node.assetInfo && node.assetInfo.dlUrl) || node.downloadUrl;
+    window.open(dlUrl, '_blank');
 
-    // ─ נסה File System Access API (דורש HTTPS) ─
-    if (typeof window.showDirectoryPicker === 'function') {
-        let rootDir;
-        try {
-            rootDir = await window.showDirectoryPicker({ mode: 'readwrite' });
-        } catch (e) {
-            btn.disabled = false;
-            btn.textContent = 'הורד';
-            hideProgress();
-            if (e.name !== 'AbortError') showError('לא ניתן לבחור תיקייה: ' + (e.message || String(e)));
-            return;
-        }
-
-        try {
-            updateProgress(2, 'מוריד...');
-            const buffer = await downloadZip(node, p =>
-                updateProgress(2 + Math.round(p * 55), 'מוריד...'));
-
-            updateProgress(58, 'מחלץ...');
-            const zip = await JSZip.loadAsync(buffer);
-            const entries = Object.values(zip.files);
-
-            const pathParts = node.path.split('/');
-            let destDir = rootDir;
-            for (const part of pathParts) destDir = await destDir.getDirectoryHandle(part, { create: true });
-
-            let done2 = 0;
-            for (const entry of entries) {
-                const parts = entry.name.split('/').filter(Boolean);
-                if (!parts.length) continue;
-                if (entry.dir) {
-                    let d = destDir;
-                    for (const p of parts) d = await d.getDirectoryHandle(p, { create: true });
-                } else {
-                    let d = destDir;
-                    for (let i = 0; i < parts.length - 1; i++) d = await d.getDirectoryHandle(parts[i], { create: true });
-                    const fh = await d.getFileHandle(parts[parts.length - 1], { create: true });
-                    const w  = await fh.createWritable();
-                    await w.write(await entry.async('arraybuffer'));
-                    await w.close();
-                }
-                done2++;
-                updateProgress(58 + Math.round((done2 / entries.length) * 40), 'מחלץ...');
-            }
-            updateProgress(100, 'הושלם');
-            showSuccess(`"${node.name}" הורד וחולץ בהצלחה`);
-        } catch (e) {
-            if (e.message === 'NATIVE_DOWNLOAD') {
-                updateProgress(100, 'מוריד...');
-                showSuccess(`"${node.name}" מוריד — לאחר הורדה חלץ לתיקיית הספרים`);
-            } else {
-                showError('שגיאה: ' + e.message);
-            }
-        } finally {
-            btn.disabled = false;
-            btn.textContent = 'הורד';
-            setTimeout(hideProgress, 2000);
-        }
+    // שלב 2: בחירת תיקיית יעד
+    let rootDir;
+    try {
+        rootDir = await window.showDirectoryPicker({ mode: 'readwrite' });
+    } catch (e) {
+        if (e.name !== 'AbortError') showError('לא ניתן לבחור תיקייה');
         return;
     }
 
-    // ─ Fallback: הורדה ישירה ללא חילוץ אוטומטי ─
+    // שלב 3: בחירת קובץ ה-ZIP שהורד
+    btn.disabled = true;
+    btn.textContent = '...';
+    showSuccess('הקובץ מוריד — לאחר ההורדה בחר את קובץ ה-ZIP לחילוץ אוטומטי');
+
+    let zipFile;
     try {
-        updateProgress(5, 'מוריד...');
-        const buffer = await downloadZip(node, p =>
-            updateProgress(5 + Math.round(p * 88), 'מוריד...'));
-        updateProgress(95, 'מכין...');
-        const blob = new Blob([buffer], { type: 'application/zip' });
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = node.zip || (node.name + '.zip');
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(a.href);
-        updateProgress(100, 'הושלם');
-        showSuccess(`"${node.name}" הורד — חלץ את הקובץ לתיקיית הספרים של אוצריא`);
+        const [fh] = await window.showOpenFilePicker({
+            types: [{ description: 'ZIP', accept: { 'application/zip': ['.zip'] } }],
+            startIn: 'downloads'
+        });
+        zipFile = await fh.getFile();
     } catch (e) {
-        if (e.message === 'NATIVE_DOWNLOAD') {
-            showSuccess(`"${node.name}" מוריד — לאחר הורדה חלץ לתיקיית הספרים`);
-        } else {
-            showError('שגיאה: ' + e.message);
-        }
-    } finally {
         btn.disabled = false;
         btn.textContent = 'הורד';
-        setTimeout(hideProgress, 3000);
+        if (e.name !== 'AbortError') showError('לא נבחר קובץ');
+        return;
+    }
+
+    // שלב 4: חילוץ
+    btn.disabled = false;
+    btn.textContent = 'הורד';
+    try {
+        await extractZip(zipFile, node, rootDir);
+    } catch (e) {
+        showError('שגיאה בחילוץ: ' + e.message);
+        hideProgress();
     }
 }
 
 async function startDownloadAll(btn) {
     const rootItems = currentManifest.filter(i => i.depth === 0);
     if (!rootItems.length) return;
-
-    btn.disabled = true;
-    btn.textContent = '...';
-    const failed = [];
-
-    if (typeof window.showDirectoryPicker === 'function') {
-        let rootDir;
-        try {
-            rootDir = await window.showDirectoryPicker({ mode: 'readwrite' });
-        } catch (e) {
-            btn.disabled = false;
-            btn.textContent = 'הורד הכל';
-            if (e.name !== 'AbortError') showError('לא ניתן לבחור תיקייה: ' + (e.message || String(e)));
-            return;
-        }
-
-        for (let i = 0; i < rootItems.length; i++) {
-            const node = rootItems[i];
-            showProgress(`[${i+1}/${rootItems.length}] ${node.name}`, Math.round(i / rootItems.length * 100));
-            try {
-                const buffer = await downloadZip(node.downloadUrl, p =>
-                    updateProgress(Math.round((i + p * 0.7) / rootItems.length * 100), `מוריד... [${i+1}/${rootItems.length}]`));
-                updateProgress(Math.round((i + 0.7) / rootItems.length * 100), `מחלץ... [${i+1}/${rootItems.length}]`);
-                const zip = await JSZip.loadAsync(buffer);
-                const pathParts = node.path.split('/');
-                let destDir = rootDir;
-                for (const part of pathParts) destDir = await destDir.getDirectoryHandle(part, { create: true });
-                for (const entry of Object.values(zip.files)) {
-                    const parts = entry.name.split('/').filter(Boolean);
-                    if (!parts.length) continue;
-                    if (entry.dir) {
-                        let d = destDir;
-                        for (const p of parts) d = await d.getDirectoryHandle(p, { create: true });
-                    } else {
-                        let d = destDir;
-                        for (let j = 0; j < parts.length - 1; j++) d = await d.getDirectoryHandle(parts[j], { create: true });
-                        const fh = await d.getFileHandle(parts[parts.length - 1], { create: true });
-                        const w = await fh.createWritable();
-                        await w.write(await entry.async('arraybuffer'));
-                        await w.close();
-                    }
-                }
-            } catch (e) {
-                failed.push(node.name);
-            }
-        }
-    } else {
-        // Fallback: הורד ZIPs אחד אחד
-        for (let i = 0; i < rootItems.length; i++) {
-            const node = rootItems[i];
-            showProgress(`[${i+1}/${rootItems.length}] ${node.name}`, Math.round(i / rootItems.length * 100));
-            try {
-                const buffer = await downloadZip(node.downloadUrl, p =>
-                    updateProgress(Math.round((i + p) / rootItems.length * 100), `מוריד... [${i+1}/${rootItems.length}]`));
-                const blob = new Blob([buffer], { type: 'application/zip' });
-                const a = document.createElement('a');
-                a.href = URL.createObjectURL(blob);
-                a.download = node.zip || (node.name + '.zip');
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(a.href);
-                await new Promise(r => setTimeout(r, 800));
-            } catch (e) {
-                failed.push(node.name);
-            }
-        }
+    // פתח את כל ה-ZIPs להורדה ישירה
+    for (const node of rootItems) {
+        const dlUrl = (node.assetInfo && node.assetInfo.dlUrl) || node.downloadUrl;
+        window.open(dlUrl, '_blank');
+        await new Promise(r => setTimeout(r, 600));
     }
-
-    updateProgress(100, 'הושלם');
-    if (failed.length) showError(`נכשלו: ${failed.join(', ')}`);
-    else showSuccess(`המאגר המלא הורד בהצלחה — ${rootItems.length} תיקיות`);
-    btn.disabled = false;
-    btn.textContent = 'הורד הכל';
-    setTimeout(hideProgress, 2000);
+    showSuccess(`${rootItems.length} קבצים מורדים — לאחר ההורדה לחץ "הורד" על כל ספר לחילוץ`);
 }
 
 // ─── חיפוש ─────────────────────────────────────────────────────────
