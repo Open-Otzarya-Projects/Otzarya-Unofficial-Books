@@ -205,7 +205,9 @@ async function getAssetUrls() {
         if (!res.ok) return {};
         const json = await res.json();
         const map = {};
-        for (const asset of json.assets || []) map[asset.name] = asset.browser_download_url;
+        // asset.url = https://api.github.com/repos/.../releases/assets/{id}
+        // fetching it with Accept:application/octet-stream redirects to CDN with CORS headers
+        for (const asset of json.assets || []) map[asset.name] = { apiUrl: asset.url, dlUrl: asset.browser_download_url };
         return map;
     } catch { return {}; }
 }
@@ -230,7 +232,8 @@ async function boot() {
     const assetUrls = await getAssetUrls();
     currentManifest = data.map(item => ({
         ...item,
-        downloadUrl: assetUrls[item.zip] || LATEST_DL + item.zip
+        assetInfo: assetUrls[item.zip] || null,
+        downloadUrl: LATEST_DL + item.zip
     }));
     hideLoading();
     document.getElementById('full-library-btn').style.display = 'inline-flex';
@@ -315,21 +318,37 @@ function toggleNode(path) {
 
 // ─── הורדה + חילוץ (ללא מגבלת זמן) ───────────────────────────────
 
-async function downloadZip(url, onProgress) {
-    const response = await fetchWithFallback(url);
-    if (!response.ok) throw new Error('שגיאת רשת ' + response.status);
-    const total = parseInt(response.headers.get('content-length') || '0');
-    let received = 0;
-    const chunks = [];
-    const reader = response.body.getReader();
-    while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        chunks.push(value);
-        received += value.length;
-        if (total && onProgress) onProgress(received / total);
+async function downloadZip(node, onProgress) {
+    // נסה דרך GitHub API asset URL: api.github.com מחזיר CORS headers גם על ה-redirect ל-CDN
+    if (node.assetInfo) {
+        try {
+            const response = await fetch(node.assetInfo.apiUrl, {
+                headers: { Accept: 'application/octet-stream' }
+            });
+            if (response.ok) {
+                const total = parseInt(response.headers.get('content-length') || '0');
+                let received = 0;
+                const chunks = [];
+                const reader = response.body.getReader();
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+                    chunks.push(value);
+                    received += value.length;
+                    if (total && onProgress) onProgress(received / total);
+                }
+                return new Blob(chunks).arrayBuffer();
+            }
+        } catch {}
     }
-    return new Blob(chunks).arrayBuffer();
+    // Fallback: הורדה ישירה ע"י הדפדפן (ללא חילוץ אוטומטי)
+    const a = document.createElement('a');
+    a.href = node.downloadUrl;
+    a.target = '_blank';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    throw new Error('NATIVE_DOWNLOAD');
 }
 
 async function downloadAndExtract(node, btn) {
@@ -352,7 +371,7 @@ async function downloadAndExtract(node, btn) {
 
         try {
             updateProgress(2, 'מוריד...');
-            const buffer = await downloadZip(node.downloadUrl, p =>
+            const buffer = await downloadZip(node, p =>
                 updateProgress(2 + Math.round(p * 55), 'מוריד...'));
 
             updateProgress(58, 'מחלץ...');
@@ -384,19 +403,24 @@ async function downloadAndExtract(node, btn) {
             updateProgress(100, 'הושלם');
             showSuccess(`"${node.name}" הורד וחולץ בהצלחה`);
         } catch (e) {
-            showError('שגיאה: ' + e.message);
+            if (e.message === 'NATIVE_DOWNLOAD') {
+                updateProgress(100, 'מוריד...');
+                showSuccess(`"${node.name}" מוריד — לאחר הורדה חלץ לתיקיית הספרים`);
+            } else {
+                showError('שגיאה: ' + e.message);
+            }
         } finally {
             btn.disabled = false;
             btn.textContent = 'הורד';
-            setTimeout(hideProgress, 1500);
+            setTimeout(hideProgress, 2000);
         }
         return;
     }
 
-    // ─ Fallback: הורדת ZIP ישירה ללא חילוץ אוטומטי ─
+    // ─ Fallback: הורדה ישירה ללא חילוץ אוטומטי ─
     try {
         updateProgress(5, 'מוריד...');
-        const buffer = await downloadZip(node.downloadUrl, p =>
+        const buffer = await downloadZip(node, p =>
             updateProgress(5 + Math.round(p * 88), 'מוריד...'));
         updateProgress(95, 'מכין...');
         const blob = new Blob([buffer], { type: 'application/zip' });
@@ -410,7 +434,11 @@ async function downloadAndExtract(node, btn) {
         updateProgress(100, 'הושלם');
         showSuccess(`"${node.name}" הורד — חלץ את הקובץ לתיקיית הספרים של אוצריא`);
     } catch (e) {
-        showError('שגיאה: ' + e.message);
+        if (e.message === 'NATIVE_DOWNLOAD') {
+            showSuccess(`"${node.name}" מוריד — לאחר הורדה חלץ לתיקיית הספרים`);
+        } else {
+            showError('שגיאה: ' + e.message);
+        }
     } finally {
         btn.disabled = false;
         btn.textContent = 'הורד';
