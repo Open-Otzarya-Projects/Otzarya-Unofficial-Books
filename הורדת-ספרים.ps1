@@ -56,6 +56,7 @@ $btnBrowse.Location = "400,370"
 $btnBrowse.Size = "100,28"
 $btnBrowse.Add_Click({
     $dlg = New-Object Windows.Forms.FolderBrowserDialog
+    $dlg.ShowNewFolderButton = $false
     if ($dlg.ShowDialog() -eq "OK") { $txtPath.Text = $dlg.SelectedPath }
 })
 $form.Controls.Add($btnBrowse)
