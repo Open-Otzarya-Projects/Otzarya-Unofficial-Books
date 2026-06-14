@@ -1,498 +1,261 @@
-﻿<!DOCTYPE html>
-<html lang="he" dir="rtl">
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>הורדת מאגר ספרים</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הורדת ספרי אוצריא</title>
 <style>
-:root {
-    --primary: #1976d2;
-    --on-primary: #ffffff;
-    --surface: #ffffff;
-    --on-surface: #1a1a1a;
-    --surface-container: #f3f4f6;
-    --outline: #d1d5db;
-    --font-family: system-ui, sans-serif;
-    --font-size: 15px;
-    --line-height: 1.5;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-    background: var(--surface);
-    color: var(--on-surface);
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    padding: 20px 20px 60px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-h2 { color: var(--primary); font-size: 1.4rem; margin-bottom: 4px; }
-#release-name { font-size: 0.8rem; opacity: 0.5; margin-bottom: 16px; }
-#notice {
-    background: #fffbeb;
-    border: 1px solid #fcd34d;
-    border-radius: 10px;
-    padding: 10px 14px;
-    margin-bottom: 16px;
-    font-size: 0.85rem;
-}
-#error-msg {
-    display: none;
-    background: #fef2f2;
-    color: #b91c1c;
-    border: 1px solid #fca5a5;
-    border-radius: 10px;
-    padding: 12px 16px;
-    margin-bottom: 16px;
-    font-size: 0.9rem;
-}
-.full-bar {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--surface-container);
-    border: 1px solid var(--outline);
-    border-radius: 12px;
-    padding: 12px 16px;
-    margin-bottom: 16px;
-}
-.full-bar span { flex: 1; font-weight: 600; font-size: 0.95rem; }
-#full-library-btn {
-    display: none;
-    align-items: center;
-    background: var(--primary);
-    color: var(--on-primary);
-    border: none;
-    border-radius: 20px;
-    padding: 7px 18px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    cursor: pointer;
-    font-family: inherit;
-    white-space: nowrap;
-}
-#full-library-btn:hover { opacity: 0.88; }
-#tree { border: 1px solid var(--outline); border-radius: 12px; overflow: hidden; }
-.tree-node + .tree-node { border-top: 1px solid var(--outline); }
-.tree-children .tree-node { border-top: 1px solid var(--outline); }
-.tree-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 14px;
-    transition: background 0.12s;
-}
-.tree-row:hover { background: var(--surface-container); }
-.toggle { width: 16px; flex-shrink: 0; text-align: center; cursor: pointer; font-size: 0.8rem; color: var(--primary); user-select: none; }
-.node-name { flex: 1; font-size: 0.95rem; }
-.node-name.folder { font-weight: 600; cursor: pointer; }
-.node-name.folder:hover { color: var(--primary); }
-.node-size { font-size: 0.75rem; opacity: 0.45; flex-shrink: 0; white-space: nowrap; }
-.dl-btn {
-    background: var(--primary);
-    color: var(--on-primary);
-    border: none;
-    border-radius: 14px;
-    padding: 4px 14px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    cursor: pointer;
-    flex-shrink: 0;
-    font-family: inherit;
-    white-space: nowrap;
-}
-.dl-btn:hover { opacity: 0.88; }
-.dl-btn:disabled { opacity: 0.3; cursor: not-allowed; }
-#search-wrap {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--surface-container);
-    border: 1px solid var(--outline);
-    border-radius: 12px;
-    padding: 8px 14px;
-    margin-bottom: 16px;
-}
-#search-icon { flex-shrink: 0; width: 18px; height: 18px; opacity: 0.45; fill: var(--on-surface); }
-#search-input {
-    flex: 1;
-    border: none;
-    background: transparent;
-    font-family: inherit;
-    font-size: 0.95rem;
-    color: var(--on-surface);
-    outline: none;
-    direction: rtl;
-}
-#search-input::placeholder { opacity: 0.4; }
-#search-clear { display: none; background: none; border: none; cursor: pointer; font-size: 1rem; opacity: 0.4; padding: 0; line-height: 1; flex-shrink: 0; }
-#search-clear:hover { opacity: 0.8; }
-.search-path { font-size: 0.72rem; opacity: 0.4; direction: ltr; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
-.loading, .empty { text-align: center; padding: 36px; opacity: 0.45; }
-#success-msg { display:none; background:#f0fdf4; color:#15803d; border:1px solid #86efac; border-radius:10px; padding:12px 16px; margin-bottom:16px; font-size:0.9rem; font-weight:600; }
-#progress-bar { display:none; background:var(--surface-container); border:1px solid var(--outline); border-radius:12px; padding:14px 16px; margin-bottom:16px; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4ff;color:#222;min-height:100vh}
+header{background:#1a237e;color:#fff;padding:18px 24px;text-align:center}
+header h1{font-size:22px;font-weight:700}
+header p{font-size:13px;opacity:.8;margin-top:4px}
+.wrap{max-width:680px;margin:24px auto;padding:0 14px}
+.card{background:#fff;border-radius:10px;padding:20px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,.09)}
+.card-title{font-size:15px;font-weight:700;color:#1a237e;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.step-num{background:#1a237e;color:#fff;border-radius:50%;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.book-list{list-style:none;max-height:260px;overflow-y:auto;border:1px solid #ddd;border-radius:6px;margin-top:4px}
+.book-list li{display:flex;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .1s}
+.book-list li:last-child{border-bottom:none}
+.book-list li:hover{background:#f0f4ff}
+.book-list input[type=checkbox]{width:17px;height:17px;cursor:pointer;accent-color:#1a237e}
+.book-name{flex:1;font-size:14px}
+.book-size{font-size:12px;color:#999;white-space:nowrap}
+.link-all{font-size:12px;color:#1a237e;cursor:pointer;text-decoration:underline;margin-bottom:6px;display:inline-block}
+#loading{color:#888;font-size:14px}
+.folder-box{display:flex;align-items:center;gap:10px;margin-top:6px;flex-wrap:wrap}
+.folder-name{flex:1;font-size:13px;color:#555;background:#f5f5f5;padding:7px 12px;border-radius:6px;min-height:34px;line-height:20px;word-break:break-all}
+button{padding:9px 20px;border:none;border-radius:7px;cursor:pointer;font-size:14px;font-family:inherit;transition:opacity .15s}
+.btn-blue{background:#1a237e;color:#fff}
+.btn-blue:hover{opacity:.88}
+.btn-blue:disabled{background:#b0b8d8;cursor:not-allowed}
+.btn-gray{background:#e8eaf6;color:#1a237e}
+.btn-gray:hover{background:#c5cae9}
+.btn-green{background:#2e7d32;color:#fff}
+.btn-green:hover{opacity:.88}
+.prog-list{list-style:none;margin-top:12px}
+.prog-list li{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:7px;margin-bottom:6px;font-size:13px;background:#f5f5f5}
+.prog-list li.waiting{background:#fff8e1}
+.prog-list li.working{background:#e3f2fd}
+.prog-list li.done{background:#e8f5e9}
+.prog-list li.error{background:#ffebee}
+.prog-list li .ico{font-size:16px;flex-shrink:0}
+.prog-bar-wrap{height:6px;background:#ddd;border-radius:3px;margin-top:8px;overflow:hidden;display:none}
+.prog-bar{height:6px;background:#1a237e;border-radius:3px;transition:width .3s;width:0}
+.fallback-box{margin-top:12px;padding:14px;background:#fff3cd;border-radius:7px;border:1px solid #ffe082;font-size:13px;display:none}
+.fallback-box h3{margin-bottom:8px;color:#856404}
 </style>
 </head>
 <body>
+<header>
+  <h1>📚 הורדת ספרי אוצריא</h1>
+  <p>הורדה ישירה לתיקיית הספרייה שלך</p>
+</header>
+<div class="wrap">
 
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;">
-    <h2 style="margin-bottom:0;">הורדת מאגר ספרים</h2>
-</div>
-<div id="release-name"></div>
+  <div class="card">
+    <div class="card-title"><span class="step-num">1</span> בחירת ספרים</div>
+    <span class="link-all" id="linkAll" onclick="toggleAll()" style="display:none">✔ בחר הכל / בטל הכל</span>
+    <div id="loading">טוען רשימה...</div>
+    <ul class="book-list" id="bookList" style="display:none"></ul>
+  </div>
 
-<div id="notice">
-    ⚠️ דף זה פועל בכרום / אדג' בלבד. הורדה וחילוץ מתבצעים ישירות בדפדפן — ללא מגבלת זמן.
-</div>
-
-<div id="error-msg"></div>
-<div id="success-msg"></div>
-
-<div id="progress-bar">
-    <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:0.85rem;">
-        <span class="progress-name" style="font-weight:600;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></span>
-        <span class="progress-label" style="opacity:0.55;flex-shrink:0;margin-right:8px;">0%</span>
+  <div class="card">
+    <div class="card-title"><span class="step-num">2</span> תיקיית יעד</div>
+    <p style="font-size:13px;color:#666;margin-bottom:10px">בחר את תיקיית הספרייה של אוצריא — הספרים יחולצו לתוכה ישירות</p>
+    <div class="folder-box">
+      <button class="btn-gray" onclick="pickFolder()">📁 בחר תיקייה...</button>
+      <div class="folder-name" id="folderName">לא נבחרה עדיין</div>
     </div>
-    <div style="background:var(--outline);border-radius:99px;height:6px;overflow:hidden;">
-        <div class="progress-fill" style="background:var(--primary);height:100%;width:0%;transition:width 0.2s;border-radius:99px;"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="step-num">3</span> הורדה וחילוץ</div>
+    <button class="btn-blue" id="btnGo" onclick="startAll()" disabled>⬇️ הורד וחלץ</button>
+    <div class="prog-bar-wrap" id="barWrap"><div class="prog-bar" id="bar"></div></div>
+    <ul class="prog-list" id="progList"></ul>
+    <div class="fallback-box" id="fallbackBox">
+      <h3>⬇️ חלק מהספרים הורדו לתיקיית ההורדות</h3>
+      <p>לאחר שההורדה הסתיימה, לחץ כאן כדי לחלץ אותם לתיקייה שבחרת:</p>
+      <br>
+      <button class="btn-green" onclick="pickAndExtract()">📦 בחר קבצי ZIP לחילוץ...</button>
     </div>
-</div>
+  </div>
 
-<div id="search-wrap">
-    <svg id="search-icon" viewBox="0 0 24 24"><path d="M16.1017 17.1624C14.717 18.3101 12.9391 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11C19 12.9391 18.3101 14.717 17.1624 16.1018L21.7803 20.7197C22.0732 21.0126 22.0732 21.4874 21.7803 21.7803C21.4874 22.0732 21.0125 22.0732 20.7196 21.7803L16.1017 17.1624ZM17.5 11C17.5 7.41015 14.5899 4.5 11 4.5C7.41015 4.5 7.41015 4.5 11 4.5Z"/></svg>
-    <input id="search-input" type="text" placeholder="חפש ספר או תיקייה...">
-    <button id="search-clear" title="נקה חיפוש">✕</button>
-</div>
-
-<div class="full-bar">
-    <span>המאגר המלא — כל הספרים בקובץ אחד</span>
-    <button id="full-library-btn" onclick="startDownloadAll(this)">הורד הכל</button>
-</div>
-
-<div id="tree">
-    <div class="loading" id="loading">טוען רשימה...</div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="books_data.js"></script>
 <script>
-const GITHUB_REPO = 'Open-Otzarya-Projects/Otzarya-Unofficial-Books';
-const LATEST_DL   = `https://github.com/${GITHUB_REPO}/releases/latest/download/`;
+const REPO    = 'Open-Otzarya-Projects/Otzarya-Unofficial-Books';
+const MANIFEST = `https://raw.githubusercontent.com/${REPO}/main/manifest.json`;
+const DL_BASE  = `https://github.com/${REPO}/releases/latest/download`;
 
-let expandedPaths   = new Set();
-let currentManifest = [];
+let books = [], dirHandle = null, allChecked = false;
 
-// ─── טעינת נתונים ─────────────────────────────────────────────────
-
-async function fetchWithFallback(url) {
-    const attempts = [
-        () => fetch(url),
-        () => fetch('https://corsproxy.io/?' + encodeURIComponent(url)),
-        () => fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(url)),
-    ];
-    for (const attempt of attempts) {
-        try {
-            const res = await attempt();
-            if (res.ok) return res;
-        } catch {}
-    }
-    throw new Error('לא ניתן להגיע לגיטאב');
+async function init() {
+  try {
+    const r = await fetch(MANIFEST);
+    const data = await r.json();
+    books = data.filter(b => b.depth === 0).sort((a,b) => a.label.localeCompare(b.label,'he'));
+    renderBooks();
+  } catch(e) {
+    document.getElementById('loading').textContent = 'שגיאה בטעינת הרשימה: ' + e.message;
+  }
 }
 
-async function getAssetUrls() {
-    try {
-        const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/releases/latest`);
-        if (!res.ok) return {};
-        const json = await res.json();
-        const map = {};
-        // asset.url = https://api.github.com/repos/.../releases/assets/{id}
-        // fetching it with Accept:application/octet-stream redirects to CDN with CORS headers
-        for (const asset of json.assets || []) map[asset.name] = { apiUrl: asset.url, dlUrl: asset.browser_download_url };
-        return map;
-    } catch { return {}; }
+function renderBooks() {
+  const ul = document.getElementById('bookList');
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('linkAll').style.display = 'inline';
+  ul.style.display = 'block';
+  books.forEach((b, i) => {
+    const li = document.createElement('li');
+    li.onclick = () => { const cb = document.getElementById('cb'+i); cb.checked=!cb.checked; updateBtn(); };
+    li.innerHTML = `<input type="checkbox" id="cb${i}" onclick="event.stopPropagation()" onchange="updateBtn()">
+      <span class="book-name">${b.label}</span><span class="book-size">${b.size}</span>`;
+    ul.appendChild(li);
+  });
 }
 
-async function boot() {
-    let data = typeof BOOKS_DATA !== 'undefined' ? BOOKS_DATA : null;
+function toggleAll() {
+  allChecked = !allChecked;
+  document.querySelectorAll('#bookList input').forEach(c => c.checked = allChecked);
+  updateBtn();
+}
+
+function updateBtn() {
+  const any = [...document.querySelectorAll('#bookList input')].some(c => c.checked);
+  document.getElementById('btnGo').disabled = !(any && dirHandle);
+}
+
+function selected() {
+  return [...document.querySelectorAll('#bookList input')]
+    .map((c,i) => c.checked ? books[i] : null).filter(Boolean);
+}
+
+async function pickFolder() {
+  try {
+    dirHandle = await window.showDirectoryPicker({ mode:'readwrite' });
+    document.getElementById('folderName').textContent = '📁 ' + dirHandle.name;
+    updateBtn();
+  } catch(e) {
+    if (e.name !== 'AbortError')
+      document.getElementById('folderName').textContent = 'שגיאה: ' + e.message;
+  }
+}
+
+async function fetchViaProxy(zipName) {
+  const url = `${DL_BASE}/${zipName}`;
+  for (const p of [
+    `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+  ]) {
     try {
-        const res = await fetch(`https://raw.githubusercontent.com/${GITHUB_REPO}/main/books_data.js`);
-        if (res.ok) {
-            const text = await res.text();
-            const json = text.replace(/^\s*const BOOKS_DATA\s*=\s*/, '').replace(/\s*;\s*$/, '');
-            data = JSON.parse(json);
-        }
+      const r = await fetch(p);
+      if (!r.ok) continue;
+      const buf = await r.arrayBuffer();
+      if (buf.byteLength > 500) return buf;
     } catch {}
-
-    if (!data || !data.length) {
-        showError('לא ניתן לטעון את רשימת הספרים');
-        hideLoading();
-        return;
-    }
-
-    const assetUrls = await getAssetUrls();
-    currentManifest = data.map(item => ({
-        ...item,
-        assetInfo: assetUrls[item.zip] || null,
-        downloadUrl: LATEST_DL + item.zip
-    }));
-    hideLoading();
-    document.getElementById('full-library-btn').style.display = 'inline-flex';
-    renderTree(currentManifest);
-    initSearch();
+  }
+  return null;
 }
 
-// ─── עץ ────────────────────────────────────────────────────────────
-
-function buildTree(manifest, parentPath) {
-    return manifest
-        .filter(i => i.parent === parentPath)
-        .map(i => ({ ...i, children: buildTree(manifest, i.path) }));
+async function extractBuf(buf, book) {
+  const zip = await JSZip.loadAsync(buf);
+  const parts = book.path ? book.path.split('/').filter(Boolean) : [];
+  let cur = dirHandle;
+  for (const p of parts) cur = await cur.getDirectoryHandle(p, {create:true});
+  for (const [name, entry] of Object.entries(zip.files)) {
+    if (entry.dir) continue;
+    const segs = name.split('/'); const fname = segs.pop();
+    let d = cur;
+    for (const s of segs) d = await d.getDirectoryHandle(s, {create:true});
+    const fh = await d.getFileHandle(fname, {create:true});
+    const wr = await fh.createWritable();
+    await wr.write(await entry.async('blob'));
+    await wr.close();
+  }
 }
 
-function renderTree(manifest) {
-    const roots = buildTree(manifest, '');
-    const container = document.getElementById('tree');
-    container.innerHTML = '';
-    if (!roots.length) { container.innerHTML = '<div class="empty">אין נתונים</div>'; return; }
-    roots.forEach(node => container.appendChild(createNode(node, 0)));
+function nativeDl(zipName) {
+  const a = document.createElement('a');
+  a.href = `${DL_BASE}/${zipName}`; a.download = zipName;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
 }
 
-function createNode(node, depth) {
-    const hasChildren = node.children && node.children.length > 0;
-    const isExpanded  = expandedPaths.has(node.path);
-
-    const wrapper = document.createElement('div');
-    wrapper.className = 'tree-node';
-
-    const row = document.createElement('div');
-    row.className = 'tree-row';
-    row.style.paddingRight = (16 + depth * 24) + 'px';
-
-    const toggle = document.createElement('span');
-    toggle.className = 'toggle';
-    if (hasChildren) {
-        toggle.textContent = isExpanded ? '▾' : '▸';
-        toggle.addEventListener('click', () => toggleNode(node.path));
-    } else {
-        toggle.textContent = '•';
-        toggle.style.opacity = '0.25';
-        toggle.style.cursor  = 'default';
-    }
-    row.appendChild(toggle);
-
-    const name = document.createElement('span');
-    name.className = 'node-name' + (hasChildren ? ' folder' : '');
-    name.textContent = node.name;
-    if (hasChildren) name.addEventListener('click', () => toggleNode(node.path));
-    row.appendChild(name);
-
-    if (node.size) {
-        const size = document.createElement('span');
-        size.className = 'node-size';
-        size.textContent = node.size;
-        row.appendChild(size);
-    }
-
-    const btn = document.createElement('button');
-    btn.className = 'dl-btn';
-    btn.textContent = 'הורד';
-    btn.onclick = () => downloadAndExtract(node, btn);
-    row.appendChild(btn);
-
-    wrapper.appendChild(row);
-
-    if (hasChildren && isExpanded) {
-        const sub = document.createElement('div');
-        sub.className = 'tree-children';
-        node.children.forEach(child => sub.appendChild(createNode(child, depth + 1)));
-        wrapper.appendChild(sub);
-    }
-
-    return wrapper;
+function mkLi(label) {
+  const li = document.createElement('li');
+  li.className = 'waiting';
+  li.innerHTML = `<span class="ico">⏳</span><span>${label}</span>`;
+  document.getElementById('progList').appendChild(li);
+  return li;
+}
+function setLi(li, cls, ico, txt) {
+  li.className = cls;
+  li.innerHTML = `<span class="ico">${ico}</span><span>${txt}</span>`;
 }
 
-function toggleNode(path) {
-    expandedPaths.has(path) ? expandedPaths.delete(path) : expandedPaths.add(path);
-    renderTree(currentManifest);
-}
+async function startAll() {
+  const sel = selected();
+  if (!sel.length || !dirHandle) return;
+  document.getElementById('btnGo').disabled = true;
+  document.getElementById('progList').innerHTML = '';
+  document.getElementById('fallbackBox').style.display = 'none';
+  const barWrap = document.getElementById('barWrap');
+  const bar = document.getElementById('bar');
+  barWrap.style.display = 'block'; bar.style.width = '0';
 
-// ─── הורדה + חילוץ ────────────────────────────────────────────────
-// GitHub חוסם CORS על release downloads — לכן: הורדה ישירה ע"י הדפדפן
-// + חילוץ ע"י בחירת הקובץ שהורד (showOpenFilePicker)
+  let hasFallback = false;
+  const items = sel.map(b => ({ book:b, li:mkLi(b.label) }));
 
-async function extractZip(zipFile, node, rootDir) {
-    showProgress(node.name, 0);
-    const buffer = await zipFile.arrayBuffer();
-    updateProgress(20, 'מחלץ...');
-    const zip = await JSZip.loadAsync(buffer);
-    const entries = Object.values(zip.files);
-    const pathParts = node.path.split('/');
-    let destDir = rootDir;
-    for (const part of pathParts) destDir = await destDir.getDirectoryHandle(part, { create: true });
-    let done2 = 0;
-    for (const entry of entries) {
-        const parts = entry.name.split('/').filter(Boolean);
-        if (!parts.length) continue;
-        if (entry.dir) {
-            let d = destDir;
-            for (const p of parts) d = await d.getDirectoryHandle(p, { create: true });
-        } else {
-            let d = destDir;
-            for (let i = 0; i < parts.length - 1; i++) d = await d.getDirectoryHandle(parts[i], { create: true });
-            const fh = await d.getFileHandle(parts[parts.length - 1], { create: true });
-            const w = await fh.createWritable();
-            await w.write(await entry.async('arraybuffer'));
-            await w.close();
-        }
-        done2++;
-        updateProgress(20 + Math.round((done2 / entries.length) * 78), 'מחלץ...');
-    }
-    updateProgress(100, 'הושלם');
-    showSuccess(`"${node.name}" חולץ בהצלחה`);
-    setTimeout(hideProgress, 2000);
-}
-
-async function downloadAndExtract(node, btn) {
-    // שלב 1: הורדה ישירה ע"י הדפדפן (ללא CORS)
-    const dlUrl = (node.assetInfo && node.assetInfo.dlUrl) || node.downloadUrl;
-    window.open(dlUrl, '_blank');
-
-    // שלב 2: בחירת תיקיית יעד
-    let rootDir;
+  for (let i = 0; i < items.length; i++) {
+    const {book, li} = items[i];
+    setLi(li, 'working', '⚙️', `מוריד: ${book.label} (${book.size})...`);
     try {
-        rootDir = await window.showDirectoryPicker({ mode: 'readwrite' });
-    } catch (e) {
-        if (e.name !== 'AbortError') showError('לא ניתן לבחור תיקייה');
-        return;
+      const buf = await fetchViaProxy(book.zip);
+      if (buf) {
+        setLi(li, 'working', '📦', `מחלץ: ${book.label}...`);
+        await extractBuf(buf, book);
+        setLi(li, 'done', '✅', `הושלם: ${book.label}`);
+      } else {
+        nativeDl(book.zip);
+        setLi(li, 'done', '⬇️', `${book.label} — הורד לתיקיית ההורדות (חלץ למטה)`);
+        hasFallback = true;
+      }
+    } catch(e) {
+      setLi(li, 'error', '❌', `שגיאה — ${book.label}: ${e.message}`);
     }
+    bar.style.width = `${Math.round((i+1)/items.length*100)}%`;
+  }
 
-    // שלב 3: בחירת קובץ ה-ZIP שהורד
-    btn.disabled = true;
-    btn.textContent = '...';
-    showSuccess('הקובץ מוריד — לאחר ההורדה בחר את קובץ ה-ZIP לחילוץ אוטומטי');
+  if (hasFallback) document.getElementById('fallbackBox').style.display = 'block';
+  document.getElementById('btnGo').disabled = false;
+}
 
-    let zipFile;
+async function pickAndExtract() {
+  if (!dirHandle) { alert('בחר תחילה תיקיית יעד (שלב 2)'); return; }
+  let files;
+  try {
+    files = await window.showOpenFilePicker({
+      multiple: true,
+      types: [{ description: 'ZIP files', accept: {'application/zip':['.zip']} }]
+    });
+  } catch { return; }
+  for (const fh of files) {
+    const book = books.find(b => b.zip === fh.name) || {label: fh.name, path:''};
+    const li = mkLi(book.label);
+    setLi(li, 'working', '📦', `מחלץ: ${book.label}...`);
     try {
-        const [fh] = await window.showOpenFilePicker({
-            types: [{ description: 'ZIP', accept: { 'application/zip': ['.zip'] } }],
-            startIn: 'downloads'
-        });
-        zipFile = await fh.getFile();
-    } catch (e) {
-        btn.disabled = false;
-        btn.textContent = 'הורד';
-        if (e.name !== 'AbortError') showError('לא נבחר קובץ');
-        return;
+      const buf = await (await fh.getFile()).arrayBuffer();
+      await extractBuf(buf, book);
+      setLi(li, 'done', '✅', `הושלם: ${book.label}`);
+    } catch(e) {
+      setLi(li, 'error', '❌', `שגיאה: ${e.message}`);
     }
-
-    // שלב 4: חילוץ
-    btn.disabled = false;
-    btn.textContent = 'הורד';
-    try {
-        await extractZip(zipFile, node, rootDir);
-    } catch (e) {
-        showError('שגיאה בחילוץ: ' + e.message);
-        hideProgress();
-    }
+  }
 }
 
-async function startDownloadAll(btn) {
-    const rootItems = currentManifest.filter(i => i.depth === 0);
-    if (!rootItems.length) return;
-    // פתח את כל ה-ZIPs להורדה ישירה
-    for (const node of rootItems) {
-        const dlUrl = (node.assetInfo && node.assetInfo.dlUrl) || node.downloadUrl;
-        window.open(dlUrl, '_blank');
-        await new Promise(r => setTimeout(r, 600));
-    }
-    showSuccess(`${rootItems.length} קבצים מורדים — לאחר ההורדה לחץ "הורד" על כל ספר לחילוץ`);
-}
-
-// ─── חיפוש ─────────────────────────────────────────────────────────
-
-function initSearch() {
-    const input = document.getElementById('search-input');
-    const clear = document.getElementById('search-clear');
-    input.addEventListener('input', () => {
-        const q = input.value.trim();
-        clear.style.display = q ? 'block' : 'none';
-        q ? renderSearchResults(q) : renderTree(currentManifest);
-    });
-    clear.addEventListener('click', () => {
-        input.value = '';
-        clear.style.display = 'none';
-        renderTree(currentManifest);
-        input.focus();
-    });
-}
-
-function renderSearchResults(query) {
-    const q = query.toLowerCase();
-    const matches = currentManifest.filter(i => i.name.toLowerCase().includes(q) || i.path.toLowerCase().includes(q));
-    const container = document.getElementById('tree');
-    container.innerHTML = '';
-    if (!matches.length) { container.innerHTML = '<div class="empty">לא נמצאו תוצאות</div>'; return; }
-    matches.forEach(item => {
-        const row = document.createElement('div');
-        row.className = 'tree-row';
-        row.style.paddingRight = '14px';
-        const name = document.createElement('span');
-        name.className = 'node-name';
-        name.textContent = item.name;
-        row.appendChild(name);
-        if (item.parent) {
-            const path = document.createElement('span');
-            path.className = 'search-path';
-            path.textContent = item.parent;
-            row.appendChild(path);
-        }
-        if (item.size) {
-            const size = document.createElement('span');
-            size.className = 'node-size';
-            size.textContent = item.size;
-            row.appendChild(size);
-        }
-        const btn = document.createElement('button');
-        btn.className = 'dl-btn';
-        btn.textContent = 'הורד';
-        btn.onclick = () => downloadAndExtract(item, btn);
-        row.appendChild(btn);
-        const wrapper = document.createElement('div');
-        wrapper.className = 'tree-node';
-        wrapper.appendChild(row);
-        container.appendChild(wrapper);
-    });
-}
-
-// ─── UI ────────────────────────────────────────────────────────────
-
-function showProgress(name, pct) {
-    const el = document.getElementById('progress-bar');
-    el.style.display = 'block';
-    el.querySelector('.progress-name').textContent = name;
-    el.querySelector('.progress-fill').style.width = pct + '%';
-    el.querySelector('.progress-label').textContent = pct + '%';
-}
-function updateProgress(pct, label) {
-    const el = document.getElementById('progress-bar');
-    el.querySelector('.progress-fill').style.width = pct + '%';
-    el.querySelector('.progress-label').textContent = label || (pct + '%');
-}
-function hideProgress() { document.getElementById('progress-bar').style.display = 'none'; }
-function hideLoading() { const el = document.getElementById('loading'); if (el) el.style.display = 'none'; }
-function showError(msg) {
-    const el = document.getElementById('error-msg');
-    el.textContent = 'שגיאה: ' + msg;
-    el.style.display = 'block';
-}
-function showSuccess(msg) {
-    const el = document.getElementById('success-msg');
-    el.textContent = '✓ ' + msg;
-    el.style.display = 'block';
-    setTimeout(() => el.style.display = 'none', 7000);
-}
-
-boot();
+init();
 </script>
 </body>
 </html>
