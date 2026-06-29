@@ -1,0 +1,2742 @@
+﻿<img src="data:image/png;base64,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" >
+
+<h1>שירת בני מערבא - שירים ארמיים של יהודי ארץ־ישראל בתקופה הביזנטית</h1>
+<b>(יוסף יהלום ומיכאל סוקולוף, האקדמיה הלאומית הישראלית למדעים, ירושלים תשנ"ט)</b>
+<h2>פסח</h2>
+<h3>א</h3>
+אימר שבחה / דמלכה דעלמה
+אתני שירין / בכל כנישתה
+בחר ליה / חדה יבן ושמה יונתי
+וחמה יאיא / (ו)אורחם יתה
+גדיתי איכומתי / הבה אמר לה
+דהבת נטורה / מעינה כרמין
+דברה ועלה / גו בית חמרה
+תמן אשקיה / עסיס רימונים
+הבת אמרה לה / בבעו מנך חביבי
+להן דאת אזל / דבור יתי עמך
+והנא יתה / ממליה דפמה
+דהבן סיפבתה / חלין כדבשה
+זהה לבה עליו / כד רחם יתה
+וההבת מיתחט˺י˹ה עליו / איך בר על אביו
+חמה יתה / יאיא כבורדה
+וסימוקיא כשושניא / [... ...]
+טבא היא ריחמתך / הבת אמרה לה
+ובטביו דיתתה / דאת הוא ארוסה
+יאיא קומתיך / דמתה לתמר
+ושני שדיך / כישני עפרים
+כלת לבנון / עלת על ארוסה
+נמת ודמכת לה / תחות חזורה
+לכן תמן גפפה / ונשק יתה
+והיא הבת כליל / תחות רישה
+מן רוחיה דליליה / נטרית יתך
+וחמת סיפבתך / מנטפן טלין
+נפשי צביה / נקום ניפתוח לך
+רגלי מש˺ט˹פן / איך נטנפנה
+סימן אודע יתה / עד זמן דעוררה
+וכסי ענאני עלוי מינין / דקמת ופתחת לה
+עליה מן בגינה / לגנתיה דגוזה
+ביני א˺י˹ליניה / איתטמר מינה
+פראת בתריה / בשוקייא וברחבייא
+בעת יתה / ולא אשכחת יתה
+צוחת בדרה / צוחת בטלייא
+חמיתון לי / אנהו ארוסי
+קרין לה שפירתהן / אן אזל ארוסיך
+דאתי בעיה / לה גבן
+<h3>ב</h3>
+[אזל משה / ו]קום על ימה
+ואמור [לימה / זו]ע מן קדמיי
+בש[מי תיזיל / ותימור לימה]
+[אנה הוא שליחיה / דיוצר] בראשית
+ג[לי אורכך / שעה] זעורה
+עד דייע[ברון בגווך / רחימוי קיריס]
+[דשבטוי דיע]קב / שרי[י ב]עקה
+דהא סנאיה[ון / רדפין בתרהון]
+[הכה ימה / סגר מן קודמיהון]
+[וסנאה רדיף / מן בתרה]ון
+ואזל משה / וקם [על ימ]ה
+ואמר ליימה / זוע מן [קדמיי]
+[זע ימה / מן קודם] משה
+דהווה בידיה / חוטר נסייה
+חמה רב[ה / עלת בימה]
+וש[רי מתרברב / עם משה]
+[טעו היא לך] / בריה ד עמרם
+דלת אנה מ[ת]כבש / מן יליד ד אתה
+[יומין תלתה / אנה רב מינך]
+[הי]ך את יכיל / למכבוש יתי
+כמה את מתרברב / אמר ליה [משה]
+[דלא בטבותך / את מתכבש]
+למה את לקובלי / ואנה לקובלך
+הדה שעתה / [לא ...]
+[מלך מלכיה / שלחי לגבך]
+[למעבר]ה בגווך / בנוי דרחמייה
+נחת משה / ו[ק]ם על ימה
+[ולה בעה / למשלום גרמיה]
+סוף מלייה / אמר ימה למשה
+דלית אנה [מתכבש / מן יליד דאתה]
+[ענה משה] / ˺ואמר˹ [ל]ימ[ה]
+דז[עור מינ]ך / הוא [מכ]בש לך
+פתח [פמיה ימה / ואמר למשה]
+בריה ד עמרם / לא תתרברב
+צווח משה / מן [כל חיליה]
+[וימה לא בעה / למכבוש גרמיה]
+[קל רוח דקדש / קרא למשה]
+[ואשתכח דבירה / ממלל עמה]
+[רמה יהב למשה / חו]טר נסייה
+למהווי ר[די ב]יה / כל אומייה
+[שמע ימה / דבירה]
+[ממלל עם משה / מגו נורא]
+[תהא ימה / מן כל חיליה]
+[ועברון בה / שבטוי דיעקב]
+<h3>ג</h3>
+[ל ..... / ... אח]ריהון
+וחשב [ ... / רב]א עם זעורא
+[מ .. ...] / בצלו קמו ישראל
+[... פ]ירשוי / שליפין [...]
+[נ.. ... ה]וא / דרָמַן בעמקי תהומא
+[..]יה דמשה / אמר למתבזעא
+[סב חוטרא] בידך / ובזע ימא
+[שמ]א מפרשא / רשים וכת[יב]
+עינוי אמך / ונסב חוטרה
+ואתבזעו מיא / מן אימתיה דרמא
+פריקיה עברו / בתרין עשר אסטרין
+דלא יתערבון / שבטא עם חבריה
+צפא שנאה / היך [... ...]
+והוא טרד עמיה / ו[.. ...]
+קרת בת קל / וצוח[ת ...]
+ואודי רשיעא / במריה [...]
+רוממון לאלההון / כד [... ...]
+מתגאי ומטלק ביה / [ש.. ...]
+שוררת מרים / וכל נשיא
+ועל עיסק נבואתה / דאתקי[ם] לה
+תקפא לאלהא / די [עבד] נסין
+וגזי לרשיעין / ית גמוליהון
+יודו ליי' חסדו וג' (תהלים קז:ח ועוד)
+הודו לאל השמים וג' (תהלים קלו:כו)
+ו[..] שמים וג'
+שירו ליי שיר חדש וג' (תהלים צח:א ועוד)
+אשירה ליי בחיי וג' (תהלים קד:לג)
+זמרו יי כי גאות וג' (ישעיה יב:ה)
+הודו ליי כי טוב וג' (תהלים קו:א ועוד)
+<h3>ד</h3>
+אזל משה מן שמי[ה] / וחות לגבי בנייה
+ביידך אנה עתיד פרק / כל אוכל[סייה]
+גלה אנה לך / כל נסייה
+דאיקונין דסבך / חקיקה בכורסייה
+הא אין סרב פרעה / מן למשלחה בנייה
+ואין לא ידחול / מן שמיה דח[ייה]
+זרק אין הוא / בנהרה מיינוקייה
+חשבן אחשב עמיה / במה דחשב [..ייה]
+טירנוס אין הוא / על כל בנייה
+יתיב משעבד להון / בטינה ובליבנה
+כל בכורוי אתקטל / בפלגות לילייה
+לביה אנה מכבד / דירדוף בתר בנייה
+מטמע אנה ביימה / כל נזלייה
+נודע יתיה / דאנא אלה בשמייה
+סגר אנה ליה / לסוף נסייה
+עבד חשבן עמיה / במה דחשב עם בנייה
+פרק אנה לבניי / מן שעבוד לבנייה
+צלותה אדכרת / דתלתי סבייה
+קרנהון אנה עתיד / זקיף למרוממייה
+רחמיי הנון / מן שירויה
+שבועתה אשלמת / וקרבו עדנייה
+תושבחה רבה / אעביד עם [בני]יה
+<h3>ה</h3>
+אזדעזע עלמה / ורעש תהומה
+בירתת ואימא / כד מלל רמה
+גזירה מהיימנה / אמר להיימנה
+דמטה קצה / למפרוק למי מנה
+הא מטה קצה / סנאין למקצצה
+וחמה בלחצה / דאומה לחיצה
+זעקה שמע וידע / ולשליחה אודע
+חכימין תודע / דקרב ידוע תדע
+טבח חמרין / דלן הוון ממרין
+ינקין על כן מזמרין / זה אילי אמרין
+כוכב שחרה / אדיק היך נוהרה
+למפרוק שחורה / מן ארע שחירה
+תרין אחייה בממלכון / אמרו לקהלכון
+תקף פרקן אתי לכון / היך דאמרית לכון
+ואמר מימריה דיי עם משה ועם אהרן
+בארעה דמצרים למימר
+<h3>ו</h3>
+אמר אויב אסור מרכבה
+- בחרבא דלא מתרברבא
+- גברייא עבדי קרבא
+אמר אויב דחוקו בתר משועבדי
+- הוון מאתיין ועשר שנין תחות ידיי
+- ומן בתר כן ערקו ומן שעבודיי
+אמר אויב זרוזו בתריהון ואנא עימכון היך גיברא
+- חבישין אנון בארחא ולית להון [מעברא]
+- טרדנא עליהון ימא ומדברא
+אמ' או' יתקוף חילי על חילותהון
+- כרעותי עבידו במשריתהון
+- למפלגא ית בזתהון
+אמ' אויב מליאו ידיכון מנהון
+- נכיסו ית אנשיהון
+- סאיבו ית נשיהון
+אמר אויב עבידת דמין יתעבדו
+- פרצופיהון מיתחות שמיא יאבדו
+- צדיית קשתי בפריח יצעדו
+אמ' או' קטילת רבא קטילו בהון
+- רברבניי יפלגון ית שללהון
+- שיתו לחבלה כל אנפיהון
+אמ' מש' רעה יש' האזינה נוהג כצאן יוסף
+- יושב הכרובים הופיע (תהלים פ:ב)
+<h3>ז</h3>
+מן כותך / אריה נהמא - אמר משה
+בקליה נהים / ומרעיש עלמא - אמרין מלאכייא
+מ' כות' / גיבור בגיותא - אמ' מש'
+דכוליה עלמא / מנך מרתתא - אמ' מל'
+מן כותך / הדור בקדשא - אמ' מש'
+ועבד ניסן / בצפרא וברמשא - אמ' מל'
+מן כות' / זוקף כפופים - אמ' מש'
+חמי מסכינים / וזיין סכיפין - אמ' מל'
+מן כותך / טבא ומיטיבא - אמ' מש'
+יהב לבריתא / אוצרי ט˺י˹בא - אמ' מל'
+מן כות' / כובש חובין - א' מ'
+לידה מקרב / טובן דתיבין - אמ' מל'
+מן כות' / מלך מלכיא - א' מ'
+נסב א˺ר˹כייא / מן כל איפרכיא - אמ' מל'
+מן כות' / סומך נופלים - אמ' משה
+עונה עלובים / דהוו מושפלים - אמרין מלאכיא
+מאן כוותך / פודה וחובש - אמר משה
+צדקה לובש / נקמה מתלבש - אמרין מלאכיא
+מאן כוותך / קרב לעבדך - אמר משה
+רברבין עובדך / וכולא עובדי ידך - אמרין מלאכיא
+מאן כוותך / שליט באכסוסיא - אמ' משה
+יה עביד / ניסיא לעמוסיא - אמרין מלאכיא
+מאן כוותך / תקיף באראלים - אמר משה
+לשמך מהללים / מי כמכה באלים - אמרין מלאכיא
+<h3>ח</h3>
+תנון שבחיה - דשליט על כל קוזמוס - יי מלך
+שבטיא צווחין ליה - על גיף ימה - יי מלך
+רעיא בחייליה - קלסון יתיה - יי ימלוך
+- - בביתיה רבא ימלוך עלינא לעלמי עלמין
+קלסיה ראובן - דהוא חי וקיים - יי מלך
+צווח ליה שמעון - דלית אוחרן כוותיה - יי מלך
+פתח פומיה - לוי בשירה - יי ימלוך
+- - בביתיה רבא ימלוך עלינא לעלמי עלמין
+עורר יהודה - גבורתיה ואמר - יי מלך
+סכה יששכר - דעד עלם עלמין - יי מלך
+נצחוון הוא - איתעני זבולן - יי ימלוך
+- - בביתיה רבא ימלוך עלינא לעלמי
+מלך ודיין הוא - צווח ליה דן - יי מלך
+לית אוחרן כוותיה - קרא נפתלי - יי מלך
+כליליה לעלם - תני גד - יי ימלוך
+- - בביתיה רבא ימלוך עלינא
+יקרא דידיה - אשר שבחיה - יי מלך
+טיבותיה ורוממותיה - תני יוסף - יי מלך
+חדה בנימין - דהוא בתחומיה - יי ימלוך
+- - בביתיה רבא ימלוך עלינא
+זרק ליה מנשה - כליליה ואמר - יי מלך
+ואפרים קם ליה - וקלסיה בתוקפיה - יי מלך
+הוא לעלמא דין - ולעלמא דאתי - יי ימלוך
+- - בביתיה רבא ימלוך עלינא
+דילעיל ודילרע - סביל באדרע - יי מלך
+גנוניה יבוא - עד עלם עלמין - יי מלך
+בגו גינתא דעדן - עם צדיקוי יי ימלוך
+- - בביתיה רבא ימלוך עלינא
+אוניאון הוא - בחיל שמיא - יי מלך
+אורנוס הוא - על דרי ארקא - יי מלך
+אפתינתיאוס הוא - בכוליה עלמא - יי ימלוך
+- - בביתיה רבא ימלוך עלינא לעלמי עלמין
+<h3>ט</h3>
+א[וחר]ן דלית דכותי[ה] / [בע]למ[ה] [לית דכותיה]
+גיבר [עו]בד כו' / דחיל לית [דכותיה]
+הוא [הוא ו]יהוי כו' / ומן ה[וא דכותיה]
+<h2>שבועות</h2>
+<h3>י</h3>
+אלי מלך גלה ופנה / מן קודם כפנה
+ועמיה חסדא וחנה / ותרין גוזלוי בקנה
+בגין דלא יתמסכן / גלה ועבד כן
+וראשיה במואב ארכן / בריך הוא דעבד כן
+גוזלוי נשין נסבון / ותמן יתבון
+ולקץ יומין שכבון / ולא אתעכבון
+דמעת נעמי בעינה / ובזעת מאנ˺י˹ה
+על בעלה ועל בניה / דאשתנון עדניה
+הא מן מואב נפקת / ולבית לחם אסקת
+ערפה מנה רחקת / ורות בה דבקת
+ואמרת רות לנעמי / עמך הוא עמי
+לחמך הוא לחמי / עד דניזיל לבית עלמי
+זמנה דאתון לבית לחם יהודה / הוה שירוי חצָדָה
+נעמי בפ˺ו˹מה מספדה / ורות עטיפה חסדה
+חמין נשין יתה / ורהטין לקדמותה
+אתת נעמי לביתה / ועמה כלתה
+טלייתה לא תקרון לי נעמי / מרירה הוא שמי
+דאתחלל כרמי / לבר מתחומי
+יתיבה הוות בשלווה / רחימה וחביבה
+וכדון אנה יתיבה / צדייה ועליבה
+כלתה נפקת ולקטת / ושבלים לקטת
+ימין וסמאל לא נטת / דתהון חבטת
+לה חמה בועז קָימָה / כיוון תמימה
+ושאל לעולימה / מן היא דא דקימה
+מואביה היא דא / אמר ליה חצודה
+דאתת מתועדה / עם אמה יחידה
+נטה בועז למהלכה / וקם יתה מברכה
+תהווין בריכה / ומינך יקום שלמה מלכא
+סגדת קודמוי לארעא / ותנית לחמתה בדיעה
+חמותה לה מודעא / דהוא תבועה
+עטופי לבושי הדרה / ופוקי גביה לאַדּרָא
+טוסי עלוי כצִפְרָה / ודמוכי גביה עד צפרה
+פרת ונפקת / ובצדיקה דבקת
+ובמשכוביתיה חבקת / ומנה לא רחקת
+צדיקה מאנוי לבש / ויצרה בישה מניה כבש
+ויתה עד צפרה חבש / ואתעסק באוריתא דחליא מן דבש
+קרא בועז בצפרה / לגוברין עשרה
+ואיתיב יתהון חבורה / וקדש יתה כהלכה וכתורה
+רברבני חכמתא / ברכון לרביתה
+תתברכין כלה בריכתה / ומינך תקום מלכותא
+שירוי עבדת / ועם צדיקיה חדת
+וזמרין בדת / ועברת וילדת
+תקיפה יהב לה בר / וקרת שמיה עובד
+ועובד הוליד את ישי / וישי הוליד את דויד
+ככ' ואלה תול' פרץ פרץ (רות ד:יח)
+הודו ליי כי טוב כי ל' ח' (תהלים קו:א ועוד)
+<h3>י*</h3>
+<h4>על רות</h4>
+איתחלפין שנייה ולשנייה / ל[..] דיינייה
+אשתפך דימו[ס ..נייה] / [... ..נייה]
+[ב.. ..מי] / [... נעמי]
+קניינה ארמי / [..ב]דה ולית [דמי]
+[ג..] בנוי בבנין יאין / דלא במיניין
+ונסבון [לון זו]גין / נשין מואביין
+דוות חדה כעורפה / [...] עורפה
+ורות חסד עטיפה / דאדבקת [..פה]
+[הא]שתיירת נעמי גרמה / אלייתה בפמה
+[... ..]מה / דיבדון מן עמה
+וצווחת ואמרת / [...] יביי
+ואובדית תרין רביביי / וליבי [דוויי]
+[ז.. דע]בד חסד / ונטר לאלפין חסד
+[... ..ס]ד / במה דגמלתון יתי חסד
+[ח.. ..]תי / [...] יתי
+המין תונחתי / וקל בכיתי
+[ט.. אתג]בר / וקירסה כבר עבר
+ולא [..בר] / [... ..בר]
+<h3>יא</h3>
+ארכין יוי / שמיא לסיני ואמר למשה / מהימני תא סוק
+בני פלטין / לא יבהלונך
+דנצח יתהון / סבך מן רישא
+גומרין דאתון / הוה נוריה דנמרד
+ולא יכיל למכוי / רגלוי דסבך
+דביק לית בך / נורא דמלאכי
+דעמך אשא / אכלא אשא
+הא אנא מלביש לך / פורפירין דידי
+דלית גבר אחרן / דתקרב לותך
+וקבעית קרני הודא / והדרא ברישך
+דאי קריב מלאכא / תנגשיניה בהון
+זעירא לא תהוי / באנפך משה
+דלית את ידע / מה חיבתך עלי
+חי אנא וקיים / דיברית איקונך
+עד דלית שכלילית / רומא ומכא
+טירוני מרומא / קמו להון תמהין
+די אכסנאה / הכא מנן הוא
+יה יהיב רישו / לבשרא למקרב הכא
+ומן כדין / אנן אפרופסין
+כד חמון מלאכיא / דעני כדין להון
+די אכסנאה / אנא מהודע לכון
+לענותנותא / איתקרי משה
+רעוהון דבניי / מהימנא דביתי
+מכון שמיא / ורמת ארעא
+ואשכח קאים / בין חיותא
+נעו מלאכין / לקביל אופנין
+כד חמון למשה / קריב לערפליא
+שערתא דגופיה / קמו להון כחדא
+דאיקונין דיעקב / הוא מזדקף לקיבליה
+עול וקרב לך / רעוהון דבנוי
+צוח מן כרסייה / מלאכא
+פסול לך לוחין / [מן] ˺סמפרינון˹
+מן כרסייה / דמלכא חייא
+צהיל הוה / ליביה דמשה וחדי
+דהוה רחמנא / אפילוגוס דידיה
+קריבו מלאכיא / קדם כרסייה דקיריס
+ואמרין בבעו / לא ישלט בן
+רישא דכיפא / בחוטריה תבר
+ואנן קשיין / ליה למנגשא
+שדי אמר ליה / לא תדחל משה
+דמימרי יהא / לך בסעדך
+תיסב אוריתא / ותיתוב לך בשלם
+דלא אשכחית / בנביאי כוותך
+<h3>יב</h3>
+אחר אנגלי מרומא / פתחין לי דנעול - אמר משה למלאכיא
+אנן לא פתחין / דלא שלטין למיפתח - אמרין מלאכיא למשה נבייא
+בכון ביה אנא צוח / אורנוס פתחין לי - אמ' מש' למלא'
+בן את למה צוח / קדם קיריס למצווח - אמ' מלא' למש' נבי'
+גבר אנן מן גינוס / לאברהם צדיקייא - אמ' מש' למלא'
+גבר מן בר איתא את / לאתר דנור היך תיסק - אמ' מלא' למש' נבי'
+דאין אתון לא פתחין / סופיכון למיפתח - אמ' מש' למלא'
+דאין את סליק / סופך למחות - אמ' מלא' למש' נבי'
+וסליק משה לרקיעא / ואמר למלאכיא
+לית אנא נחית / עד אורייתי אסב / עד אצבע גבורתי נכתב
+עד אסב כלתי ואזיל - עד אסב אורייתי ואחות
+לית אנא נחית / עד בַרְיוֹנִי נחמא / עד בלוחות נִדַּמֶה
+עד אסב כלתי וא' - עד אסב אורייתי ואחות
+לית אנא נחית / עד גבור אֶשׁגַּח / עד גוייתכון אֶנְגַּח
+עד אסב כלת' וא' - עד אס' אור' ואחו'
+לית אנ' נחי' / עד דתי איפה / עד דממליל פה אל פה
+עד אס' כלתי ואזי' - עד אס' אוריית' ואחו'
+[לית אנא נחית / עד ה.. ... עד ה.. ... ]
+- - - - - - - - - - - - - - - - - - -
+[עד אסב כלתי ואיזיל] - עד אסב אוריתי ואיחות
+לית אנא נחית / עד זהא נזהא בעננא / ועד נקרב לשכינה
+[עד אסב כלתי ואיזיל - עד אסב אוריתי ואיחות]
+לית אנא נחית / עד חכמה נחמי בעין / עד נקבל לוחין תרין
+עד אסב כלתי ואיזיל - עד אסב אוריתי ואיחות
+לית אנא נחית / עד טבעת נחזה / ועד אסב חקוק מזה ומזה
+עד אסב כלתי ואיזיל - עד אסב אוריתי ואיחות
+<h3>יג</h3>
+איתו כרועו לצלמי / לולבי דתמר - אמר להון ננסא אתבוננו מה עבדית לכון / עד דאתון בציון - אמ' להו' ננס'
+ארמיית שממה / בגו ביה גנוניה דקיריס דדכון - אמ' להו' ננס'
+אית לן פטרין / שמיה לא ינום ולא ישן - צווחו תלתהון
+באבונן דלעיל / הוא רוחצנן - אמ' חנניה
+ביה אנן רחצין / מן טליותן - אמ' מישאל
+בנורא אנן יקדין / וביה לא כפרין - אמ' עזריה
+אנן לא כפרין / בלא יהוי לכון - צווחו תלתהון
+גרמין אתון / גרמיכון למיקוד - אמ' להו' ננס'
+גופיכון יתעבדון קטם / בגו אתון נורא - אמ' להו' ננס'
+גבורה ודינמוס אי אית לאלהכון / הוא ישזבינכון - אמ' להו' ננס'
+אית לן פטרין / שמיה לא ינום ולא ישן - צווחו תלתהון
+דחילותא דצלמך / לית הוא בליבן - אמ' חנניה
+דמות דצלם / לית אנן פלחין - אמ' מישאל
+דע דפטרונן / תיאורון יתך - אמ' עזריה
+אנן לא כפרין
+היך כפרתון בי / דלא למיסגד לצלמי - אמ' להון ננסא
+האידַּנַא אתון כרעין קדם אַנְטַרֵטִי / ואי לא יקדין - אמ' להו' ננס'
+הא אית לכון למידע / דאתון כרעין דלא בטיבתכון - [אמ' להו' ננס'
+אית לן פטרין
+ומה אנן אמרין / לדר בשמיא - אמ' חנניה
+והוא גלי / עמיקתא ומסתרתא - אמ' מישאל
+ועימיה שרא נהורא / וחשוכא ליה גליא - אמ' עזריה
+אנן לא כפרין
+זריק אנא יתכון / לגו אתון נורא מכפתין - אמ' להו' ננס'
+זעיף אנא עליכון / דאתון מרדין בי ובצלמי - אמ' להו' ננס'
+זמן די תשמעון קל קרנא ממללא / כרועו קדם צלמי - [אמ' להו' ננס'
+אית לן פטרין
+חי וקיים הוא / פטרון דידן - אמ' חנניה
+חבל על בנין / דכפרין באבוהון - אמ' מישאל
+חס לן דנכפור / בנעשה ונשמע - אמ' עזריה
+אנן לא כפרין
+טבחית ונכסית / גוזליא בציון - אמ' להון ננסא
+טייס ונהים הוינא / כאריא בגו בית גנוניה דקיריס דידכון
+טלקית רישי מיינקיכון / ולא פריק יתכון
+אית לן פטרון / שמיה ל' י'
+יוויי עלך ננסא / מה את מחרף - אמר חנניה
+יליף מן פרעה / דקדמוי מינך - אמר מישאל
+יחיד הוא אלהן / תיאורו יתן - אמר עזריה
+אנן לא כפרין / בלא יהיה לך
+כל יתבי ארעא / מיני נכבשו ונאלמו - אמ' להון ננסא
+כל סנקליטין דידי / קיימין קדם צלמי ואינש לא מרד
+כמה דאתון קשיין עורפא / דלא למיכרע לצלמי
+אית לן פטרון / שמיה ל' י'
+לא חשחין אנחנא / על דנא פיתגם להתבותך - אמ' חנניה
+לית לן חישוק באלהא / דבר אינש צייריה - אמ' מישאל
+לאלהנא אנן פלחין / וסגדין דאעבר יתנא בגו ימא ביבישתא - [אמר עזריה
+אנן לא כפרין / בלא יהיה לך - צווחו תלתיהון
+<h3>יד</h3>
+אמר יצחק / לאברהם אבוהי מה נאה מדבחא / די בניית לי אבא
+בפריע פשוט / וסב סכינך
+עד זמן דאנא מצלי / קדם ריבוני
+גלי אדרעך / ואסור חרסך
+היך גבר דעביד / שרוי לריבוניה
+דין הוא יומא / די יהון אמרין
+אב לא חס / בריה לא עכיב
+היך תזיל ותימר / לשרה אמי
+היך תפרוש מיני / ותיזיל לביתא
+ונשיק יצחק / לאברהם אבוהי
+ופקיד יתיה / וכן אמ' ליה
+זריק דמי / על גבי מדבחא
+וכנוש קטמי / ואוביליה לאימי
+חיי ומותא / כולה בידיה
+ומודה אנא ליה / דהכדין בחר בי
+טובך אבא / די יהוון אמרין
+אנא אימר עלתא / דאלהא חייא
+יתקוף רוגזך / על רחמך אבא
+ותיהוי כגבר / דלא חייס על בריה
+כגבר אכזרי / סב סכינך
+ותכוס יתי / דלא תסאיבני
+לא תהוי בכי / דלא נעכבך
+ולית אנא מן ידך / נסב גרמי
+מה תבכי / אמר יצחק לאברהם אבוה
+טובי די בחר / קיריס מן כל קוזמוס
+ניחא רוחא / דאימי שרה
+היך נפקינן תרינן / בליבא שלימא
+סכינך אבא / הב לי אגושיניה
+בבעו מינך / לא תסאיבני
+עיני חמון / קיסין מסדרין
+נור דלוק / ביום קרבני
+פתח פומך / ובריך אבא
+אשמע אנא / ואימר אמן
+צוארי פשוט / אבא [...]
+ומה דהני לך / קום ועביד
+קמו מלאכיא / מפייסין למריהון
+בבעו מינך / חוס על טליא
+רחמוי דאבוי / אנן מדכרינן
+גבר דאכלינן / מלח בביתיה
+שדי אמ' ליה / לא תדחל טליא
+אנא הוא פרוקא / דאפרוק יתך
+תקיף הוא אלהא / תקיפין עובדוהי
+לית אחרן כוותיה / ולית דדמיה ליה
+<h3>טו</h3>
+לא תרצח איתגבר בחייליה / אדוניה בר חגית
+כד אזל בעצתיה / דיואב בן צרויה
+ביני טורייא / צוח יואב
+וכל ברייתא / שמעון קליה
+גיברא הוינא / ולית [דכוותי]
+וכל גבורתי / לא הניית לי
+[די] מלכא שלמה / לא שמיע לי
+חייב יתי לקטלא / ולא צבית למלתי
+הלא [מי]דכר לי / מלכא שלמה
+כל טיבו די [עבד]ית / עם דוי[ד] אבוך
+וכרכין ומחו[זין] / כ[בישית] קודמוהי
+ונחתי ימא / [וכל יבישתא]
+זעו מני / כל מלכייא
+וכ[ל גיבריא] / אתעקרו מן קודמי
+[חבל] דדיינין / דינין אכזרין
+כגבר דכוותי / מתקטל בחרבא
+טעם יואב / טעמא דמותא
+ענה ואמר / ליואל בריה
+יואל [ב]רי / בכי על אבוך
+ואמר ווי ווי / עלך [אב]א
+כד חמא יואב / דקטלין יתיה בחרבא
+ענה ואמר / לבניה בן יהוידע
+לבנייה בנייה / צוורי רומא וסייפך חלש
+ואיך אטעום / מיתה משונה
+מה [נ]עבד / למלכא שלמה
+דדינין אכזרין / [..ל ..ך] לך
+נהם יואב / בשעתא [ההיא]
+[ואש]תמע קליה / לכל ברייתא
+[סבול גרמך] / ולא תקטלינני
+דעתיד [למימטי יומא] / דתידכר לי
+ענה מלכא שלמה / ואמר ליואב
+אידכר לדמיה / דאבנר בן נר
+פתח פומיה / יואב בן צרויה
+אזל ובכה / עם חברוהי
+צוח יואב / בשעתא ההיא
+ונפלו זייניהון / דכל [גיבר]יא
+קליה שמע / מלכא שלמה
+ענה וא[מר] / לרחבעם בריה
+רחבעם ברי / קום [שלוף] זיינך
+וגבי ית דמא / דאבשלום אחיי
+שמעון קליה / כל ישראל
+שריין עיניהון / זלגן דמעה
+תמה מלכה שלמה / וא[מר] אוי
+מה נעבד / לשבועתא דאבא
+טו*
+[פ.. ... / ... ...]
+[... ... / ... ...]
+[צווחתיה ד]אבנר בן נר / היא קמת לי
+וענ[.. דעמשא] בן יתר / היא גרמת לי
+קציה בניה / [ראשיה] דיואב
+ויואל בריה / קביל יתיה בצל[..]
+ראשיה דיואב / אעלי לות מלכה ש[למה]
+[ורעדו] מיניה / כל רברבנהי
+שמעו סדרי / [...] עמון דאתון
+גיברה יואב / והוו[ה.. ...]
+תוהת מלכותיה / והוות באת[בהלה]
+[על] דאתקטל / יואב גיברה
+<h3>טז</h3>
+אית לי חד טליא / זעיר ומיינוק הוא זיויה דעבראי / זבינתיה מן ערבאי
+בעיא אנא ליה / למירדי בגינתי ולא צבי
+ואמר לי לית רדי / תורא עם חמרא
+גטמוס דידיה כסב(ר)˺א˹ / בר שבעין שנין
+ובר שביסר שנין הוה / כד זבינתיה
+דמותיה דמלכא / ומילוליה דחכם
+דולוס לית ביה / אלא כבר מלכין הוא
+היך כמה זמנין / שזגית כסא
+צהי למישתי / ולא צבי למישתי
+ואמ' לי / גנב בר גנבתא
+למה לא את שתי / מן ˺מי˹מוי דגנבין
+זעיר ומינוק / הוא עבדי יוסף
+דנסיב הוני / בגלל שופריה
+חינא וחסדא / מלוין יתיה
+חד מן ימיניה / וחד מן שמאליה
+טרדנא אנא לך / מגו פלטין דידי
+דאיסטטיתי / היך לאזינותא
+[יומא ולילא / נורא בליבי]
+[היך אילן דיקוד / בשלהבת דנור]
+כל ערסין דרבונך / פריסין לך
+ובמה דהני לך / קום ודמוך
+לא בגין חד ליליא / דאדמוך יאות
+אנא טריד ערסין / מגינתא דעדן
+מפייסא אנא לכון / כל חבורתיי
+דתסוק עמי / בגו פלטין
+ניכול כחדא / ונשתי כחדא
+אימר לכון מילי / ותימרון קושטא
+סקת עמהון / בגו פלטין
+ואותיבת יתהון / על סמנוטין
+עבדי קראת יתיה / ריבונתיה דיוסף
+קום קטר זיינך / ושמיש כעבדא
+פיילין בידיה / וקם ומיזוג להון
+הוון טענן כסא דמותא / ולא טעמן ליה
+צפיין הויין ליה / ובידיהון סכינין ואתרוגין
+אתרוגא לא חתכן / וידיהון דמא מליא
+[ק.. ... / ... ...]
+[... ... / ... ...]
+[ר.. ... / ... ...]
+[... ... / ... ...]
+שויין עלוהי עלילה / ומעכבן יתיה
+וממללן ליה / לאיסתכולי בשופריה
+תיעול עמה / אמרין ליה
+למיעבד ריעותה / והוא לא צבי
+ואינון קמן / ואשכחן דפלטן
+שכבת זרעוהי / מתותוהי א[..]
+<h2>תשעה באב</h2>
+<h3>יז</h3>
+קינה אריה סלק מן ימה / וגנוני סתיר
+אחרב היכלה / וכלום דלא אותר
+ובתר כן / חז[ר] על מה דאתותר
+כנש אכלסוי / למחרבא בית תר
+- - סחי
+גברין הון בה / בשמי מתקריין
+וחוביא הון ב[ה] / בכפלי כפלים
+דהוה בה / חמש מאה ספרין מקריין
+וקדם כל חד וחד מנהון / חמש מאה תלמידין קריין ותניין
+- - למה תר[יבו]
+[ה]ווה עילאה ממני / בריש מיתובא
+ג[ברא] דאתקרי שמיה / בר כוזבא
+וחמשין ות[רין] שנין / הוות בשליוה
+בתר דא[תח]רב / ביתא חביבא
+זהון [...] / וחשבון בלביהון
+דאינון מהינין בשליותהון / [... ..הון]
+ו[ח]זרון לחדא / ואתגאון בעותרהון
+עד דאתחתם / גזר דינהון
+טרוגינוס דרומי / אכלסוי כנש
+ו[אד]רינוס / לבית תר אתכנש
+יהב אבנא באצרא / ויתה כבש
+וקטלו תלת [מאה] / [ד]בנינש
+כפת ונכס / כל אכלסיהון
+ולא שייר נשמה / בחד מנהון
+עד די לנהריא / נגד ˺אדמהון˹
+עד דאתמזג ימה / מן אדם קטיליהון
+מגלגל הוה אדמהון / כיפין נטילין
+וטען יתהון / סגין מילין
+נפלון בחרבא / אכלסין קטילין
+עד אתעבדון סייג / תמנת עשר מילין על תמנת עשר מילי[ן]
+סופסטין בבית תר / אנשון [רזי]ן
+ואתמסרון ביד / עם עליזין
+ועליהון / נפלון בזוזין
+וקטלו תלת מאון / תלשין בידיהון ארזין
+פולמיה דרומי / הון רשיעין
+וכל בטנתהון / הון מבזעין
+צלבון תלת מאה ינקין / ביום משקעין
+וקטלו תלתין אל[פין] / דכהנין תקועין
+קומתהון לחרבא / הון כפפין
+וזיו אפיהון / מתחלפין
+רציצו מן מינוקיה / תלת מאון דאלפין
+˺וקטלו תלת מאון דאלפין˹ / באצבעתהון מנטפין
+שדי אדכר / לאכלסוי ˺דרומי˹
+מה דעבדון לבית תר / בהדן יומא
+תתגלי כטבח / ותגבי דינא
+ותקרב לציון / קץ תשועת נחמה
+חסלת
+<h3>יח</h3>
+רהט לילי ט' באב אתכנשו עשרה מלכין / כולהון איפרכין
+היכלי הפכין / ויתי כקש מדרכין
+בשעתה דאזלון יליליא א˺ר˹עה למיללה / חטפון לבהון דקהלה
+בה בליליא שמעון קול יללה / ואיתחיבו מיד בכו תבכה בלילה
+גברת חובתהון / ותקפת מחתהון
+ואיתגזר על אבהתהון / דלא למיעול לארע תותבותהון
+דווה לבי על יאשיה / דלא קם כוותה בכל מלכיה
+איך דגרמון חוביה / איתמסר ביד מלכא מיצריא
+הוות מחתמה גזירתיה / ונפק לקדמותיה
+פרעה נכו שלח לוותיה / במה לי ולך אזהר יתיה
+ולא שמע ליה כד אסהד ביה / ובביקעת מגידו תקף לביה
+זרקי גירין איזדרקון ביה / תלת מאה גירין איזדרקון ביה
+זריז ואמר לרב חיילוותיה / מקרבא אפיקו יתיה
+ובמרכבתה תינינתא ארכבו יתיה / וכד על לירושלים פרחת נשמתיה
+חייליה דסנאה עליי רעם / על צדיקייא כד מטא זעם
+אייתיב ירמיה עטא וטעם / וקוננון עליי איכה יועם
+[ט.. ... אומ]תה / וסלק למלכותה לסוף ירחין תלתה
+פרעה נכו [..תה] / [... ... ...] שביתה
+יתי ענש בדמוי דיוסף / חלף דזבנתיה ביכסיף
+כיפלי [כפ]לים עלי איתוסף / מאתין קינטונרין דהב וכסף
+כעס עתקה וסגון עקין / וגלינן לרחיקין
+וצווחנן מין צוקין / ווי ביומוי דיהויקים
+לסוף חד עשר למלכותיה / סלק ננסא ואגלי יתיה
+ובקולריא כתפון יתיה / ועשרה אלפין נפקון עמיה בגלותיה
+מליך יכוניה על כל קהלה / ולבש כלילה
+ועל דכעס לנורא עלילה / תִיניָנו סלק נַנסא בידחילה
+מכס (ל)ילדי יכוניה ואמיה / ושני באפוי טעמיה
+ולבבל אחתיה עמיה / ושבעה אלפין וחבורתיה עמיה
+סגון עקיא / ותקפון צוקיא
+חד עשר שנייה / דמלך צידקיה
+על דלא שמע למילוי דירמיה / וכפר בשבועתיה דחיה
+איתמסר ביד (מלכא מיצריא) / ˺רב טבחיא˹
+פק˺י˹ד ננסא ונַכֵּס בנוי / וסמי עיינוי
+ושני עידנוי / ולחדה תקפון דינוי
+צרה ויללה איתרעמית / על פיליה דבבל יתיה כד חמית
+ואמרת ברוך דיין האמת / מדבר ומקיים וכל דבריו אמת
+קם דמיה דזכריה לסוף שנין / ואיתרע לשונין
+ואיתנכסון עלוי כיונין / תמנין אלפין דכהנין
+רהיטו וסאיבו בתולתה / ואפקון יתהין צניעתא
+[... ... ...] / [...] כתיפן בגלותא
+שעתה דגלון רבה וזעירה / יתבון בכין על נהרה
+תלון עינהון לנורא / דלא ישבוק יתהון בצרה
+תקיפא דאמר להון / לית אנא שביק יתהון
+לית אנא נשי יתהון / ברם אנא עתיד למשיזבה יתהון
+<h3>יט</h3>
+שלשלתא היך - אתחתם גזר דינא מן שמיא
+- בכן שלח עלי נורא מן שמיא
+- גְעוֹן עְלַי כאריא כל שנאיה
+- עד יַדִיק ויחמי יי מן שמיא
+היך - דַחְקוּן לי כל אומיא
+- היך מא דאתנבי עלי ירמיה
+- וּשבוֹן מַנִי בניא חבִיבַיָא
+ה' - זַרקוּן לנורא כל מַינוֹקַיָא
+- חבְלוּנִי וְאשְתַבֵית אִימַא עם בניָא
+- טַלטַלון יָתה בכל ארעַיָא
+ה' - יָתְבֵית ארמלָא מן כל צַדיָא
+- כַפְתוּן בתולְתַי לסוסֵי סָנאיָ[א]
+- לְכֵן על אלֵין אנא בכיא
+ה' - מָלוֹן מַבוֹעִין מן קטִילַיא
+- נַהְמוּן עלֵיהוֹן כיוֹנַיָיא
+- סורוּ סְאִבִין צָוְחִין לִי אומָיא
+ה' - עַרטִילוּ כָהניָא מן לבושיָא
+- פחדָתְהון נַפְלַת עלי ואנָא בָכיָא
+- צדיקיָא אתְכַפִיתו בקולָרַיָא
+ה' - קטעין מני גוזָלַיָּא מן קנִי
+- רחקון ואטלטלון ואִסְתַתַר גנוֹנִי
+- שִלְהַבוּן נורא בְבֵית קָרבני
+- תדֿיק ברחמין סגיאין ותִבְנֵי בית מעוני
+<h3>כ</h3>
+<b>שלשלתא</b>
+אַרְעִים בְמַר קָלִי
+דְאִתּרַע שׁוּר מִגְדַּלִי
+ושָנְאָה אַגְלִי יָת כָל קְהָלִי
+וּשְתַק אוּלְפַן מַמְלְלִי
+וְאִתְקַטִיל מַלְכִי מִסַגִֿיאוּת מַעְלִי
+לְכֵן צַוְחֵת אַלְלַי לִי
+אוי מָה דַהוַת מַחְתִּי קָשְיָא
+בִתְכִֿיף כֵד אִיתְקַטִיל מַלכָא יאשִיָה
+- אללי לי
+גִירִּין תְלַת מָאְוַון זַרְקוּן בְגוּפֵיה
+דַיָּין וְצַדִּיק הַוָה בִשְעוֹתֵיה
+- אללי לי
+הַוָה צִדְקֵיה עַלַי תְּלִי
+וּמַפִּיק דִינִי לְזָכוּ כֵּד הָוָה מְצֵַלִי
+- אללי לי
+זַכַּי ותַֿקִין הְוָה כְמשֶׁה עִנְוָנָה
+חַבֿוֹרַן מִשְׁתַבְּחִין בֵיה מַלְאַכֵי מְעוֹנָה
+- א'
+טַעְנוּן גוּפָיה דיַשִירָא
+יֶאְוַי דאַתְעַבַד כִּכֿבָֿרָה
+- א'
+כַד אִיסְתַלַק מִן דָרָא
+לַוְלֵית דְאִשְתְחַיר כְקִדְרָה
+- אל'
+מָה אִינוּן סַגִין מִיַלַיי
+נְתַנֵי כַלמָה דַעבַר עַלֵייִ
+- אל'
+סַכְיֶית דֶהְוָה מִסְתַיְּעָא
+עִידַן דְחובָתִי מֵאַרְעָא
+- אל'
+פְתַח יִרְמיָה עְלוֹי וְאִתְבַהַ(י)ל
+צַוַח וַי מִן יוֹמָא דֵּין וּלְהַל
+- אל'
+קוֹנֵן עַלוֹי בְעַשְרִין וּתְרֵי אָתִֿין
+רְבָה צֶעְרְהוֹן וְקָמוּן לְהוֹן רְתִֿיתִֿין
+- אל'
+שָׁרִין וְשָרוֹת עַלוֹי אַיְלְלוּן
+תָקפָּא עָקָתְהוֹן ואִתְבַהְלוּן
+- אַללַי לִי
+<h3>כא</h3>
+אנא אזיל ואבכה על - אוּמָא רְחִימָא
+- בְחִירָה מִכָל אוּמָא
+- עיני עיני יורדה מים
+על - גוֹזָלִין דְאִתְחַנְקוּן
+- דְּחִיקִין כַד נַפְקוּן
+- ע' ע' יור' מים
+על - הֵיכְלִי דְאִתְחַרַב
+- וכָהַנַי דְאִתְקַטִילו בַחְרַב
+- ע' ע' י' מ'
+על - זָרִיתָא בְחִירְתָא
+- חַרֵיבָא כִקִי(ל)קְלַתָא
+- ע' ע' י' מ'
+על - טֶכִיסִין כְעָן דָבחָא
+- יְהִיבִין לַמַפָחָה
+- ע' ע' י' מ'
+עַל - כְפִיתִין בקוּלְרַיָא
+- לָא אַשְכְּחוּן מִחְיָה
+- ע' ע' י' מ'
+על - מַיְנוֹקִין בְסִפְרֵיהוֹן
+- נוּרָא אוֹקְדַת יָתְהוֹן
+- ע' ע' י' מ'
+על - סָבַיָא נְטִילַיָא
+- עַיְנִי עַלֵיהוֹן בָכְיָא
+- ע' ע' י' מ'
+על - פרי גפנא דדהבא
+- צוקתי עליהון רבא
+- ע' ע' י' מ'
+על - קְהָלִי דִגְלוֹן
+- רַחַקוּן ואִיטַלְטַלוּן
+- ע' [עיני יורדה מים]
+על - שַלֵוְיתִי דְנַפלת
+- תִמִימָתָא מִנַה גְלַת
+- ע' [עיני יורדה מים]
+<h3>כב</h3>
+פז' שירו לנו אֵיך אִינוּן יָת סָגְדֵי לַבֵל
+בְנַהַרָא דְבָבַל
+- שירו לנו
+גְלַייִן וּמְטַלְטְלִין יָתְבִינַן
+דִכְעַס עַלַן פִטְרוֹנַן
+- איך נשיר א' ש' יי
+הָא אַתוּן מְעַרְבְבִין
+וּבַחַשוֹכָא יָתְבִין
+- שי' ל' מש' ציון
+זִמְרִין אִיתְהַפְכֿוּן לְאַבְלִין
+חַיָה אִיתְבִינַן בַקִבְלִין
+- איך נש' א' ש' יי
+טַעְמָה חַלְיָה דַּהְוֵיתוֹן נָסָגִין
+יתהְגוּן ואַתוֹן מִתְפוֹגְגִין
+- ש' ל' מ' צ'
+כְבַר חַשְכַת חַדוּתַן
+לֵית אַנַן בַאֶרַע אַחְסָנוּתן
+- א' נ' א' ש' יי
+מַה לְכוֹן בָכְייִן
+נָהַמִין וּמְבַכְּייִן
+- ש' ל' מ' צ'
+סַפְדִינַן בְכִילָיוֹן
+על אַדְכָרוּת צִיון
+- א' נ' א' ש' יי
+פַתְחוּן וסַפְדוּן כוּלְכוֹן
+צַוְחוּן וְשַמְעוּן קָלְכוֹן
+- ש' ל' מש'
+קָלַן אִסְתַכַר מִן צוֹקְתָּה
+רָמָה אוֹתבַן בבַהתן
+- א' נ' א' ש' יי
+שָׁוֵי לְכוֹן אֵיך אַתוֹן מְצִיקִין
+הָא אַתוֹן שְבִיקִין
+- ש' ל' מ' צ'
+תָקְפָא צוֹקְתָא לַחַדָא
+דַחְטֵינַן לְחָדָא וּמְיוּחָדָא
+- א' נ' א' ש' יי
+<h3>כג</h3>
+אַדִיק בְבָעוּ על ציון בְרַחַמִין תִבְנֵי ירושלים
+גְנוֹנִין תַתְכֵן בְצִיוֹן
+דִרְתָֿא דְדָויד ירוש'
+הוֹדָא והַדרָא תַלְבֵש לציון
+ותנחם ירושלים
+זִיו יְקָרָך תַנְהַר בְצִיון
+חדוּתָא תִשְתַמַע בִירוש'
+[ט.. ... ...]
+[י.. ... ...]
+כְלִילִין עַשְרָה תַלְבֵש לציון
+ליוֹמא דְתֵיתֵי לירושלים
+מזו שְכִינָתך תשַכלֵל לציון
+נהוֹרָא תַנְהַר ירוש'
+ששון ושִמחה תַשְמִיַע לציון
+עִידָן דְתִתְגֵלֵי בירוש'
+פָרְקָנָא רַבָא יַיתֵי לְצִיון
+צַמַח יִצְמַח בירוּשלים
+קל גבורָתַך תַשְמִיַּע בְצִיון
+רַגְלֵי מבַשֵר בירושָלים
+שִירִין וּזְמָרין יִשְתַמְעון לציון
+תַתוּב בְרַחַמִין לִירוּשָלָים
+ככ' ˺לכן˹ כה אמר יי שבתי לירושלים ברחמים וג' (זכריה א:טז)
+כי נחם יי ציון נחם כל וגמ' (ישעיה נא:ג)
+<h3>כד</h3>
+ארים עיני / לשמי מרומא אצווח ואבכה / קדם מלכ[א רמא]
+בקדמיתא כתב לי / לוחי קיימא
+וקרא יתי / יונה תמה
+גבר חובא / ותקוף עון ואשמה
+ואתמסר עמא / ביד פלחי צלמא
+דקרו בחרבא / סנהדרי חכמה
+דהוון יא[ן] / כניהור חמה
+הפכו פתורה ומנורתא / ברגז וחימה
+ואדליקו באישתא / היכלא ואולמא
+ואמרו אין / דאפיק יתהון ממצרימה
+ופרק יתהון / באדרעא מרוממא
+זאעת ארעא / ורגשו מלאכי מרומא
+כד שמעו דאישתביו / בני גברא רחימא
+חרבא דשנאה / קטלת בעמא
+ולא חסו / על סבא ועל עולימא
+טריפו רוחיהון / בין גללי ימא
+וטבע[ת] נפשתהון / בעמקי תהומא
+ינקי חלבא שחטו / בכנף אמא
+ונגדו נחלין / יאוי כמיא דמא
+כלין וחתנין / שחטו כחולא דימא
+ומלו בית גנוניהון / יאווי כמבועא דמא
+לא חסת עיניהון / עליהון לרחמא
+דכן אתגזר עליהון / משמי מרומא
+מלאכי שלמא / קשרו מספדא בשמי מרומא
+ואשגרו דימעי / קדם מלכא רמא
+נהוריה דחמה / חשך בההוא יומא
+ואף סיהרא / לא אנהר לעלמא
+<h3>כה</h3>
+בשם רחום אבהת עלמא / תלון עיניהון למרומא
+כד חמון אומא רחימא / באננקי קימא
+בכון בכל לביהון / ותבעין רחמין מאבוהון
+דיתרחם על בניהון / ויפל שנאיהון
+געא אברהם כתורא / קדם עליון ונורא
+מריא אידכר פתורא / דסדרית קדמיך בתדירא
+דמעת סרה בבכיא / ועורדת כל דמכיא
+רבוני אידכר מיכלייא / דאַיְכלֵית למלאכיא
+הוה יצחק [...] / [... ... ...]
+<h2>פורים</h2>
+<h3>כו</h3>
+<b>קילוס לפורים ללמגלה</b>
+אתנה בכנישתי / שבח לאילה אבהתי
+אהודע לאומתי / מא דמטא יתי
+ביומֹהי דסבא בחירא / אתגרי ליה נמרוד גוברא
+וטלקיה לאורא / ושיזב יתיה נורא
+גדיין כד איתי יעקב לאימיה / ואוכיל לאבוהי רחמיה
+אתא עשו מן יומיה / ונטריה ושטמיה
+דבבותיה כד חמת אימיה / שלחת יתיה לגב לבן לגרמיה
+ואתגלי עלוהי רחימיה / ומליל עימיה
+הא עשרין שנין / הוה רעי עם לבן עאנין
+וקנה בנן ובנין / ועיזין ואמרין
+וכד אתא למחזור לאתריה / רדף לבן בתריה
+ובעא למובדא עיקריה / ונטורא נטריה
+זרז עשו מן שנתיה / ונפק לקדמותיה
+ובעא למובדא יתיה / לולי אילה אבהתיה
+חילוון דמלאכין / שלח ליה מלך מלכין
+דיהוון עימיה דרכין / וקדמוהי מהלכין
+טענו יתיה בנוי כיוון / ונחתו למצרים בשבעין חילון
+ואיתותבו תמן / שנין עשר ותרתין מאוון
+ילדיהון לנהרא / זרק פרעה ממזירא
+וטבע יתיה אלהא גיברא / בימא כאיברא
+כד נפקו מן ימא / במימריה דרמא
+אתא עמלק מחרמא / מנהון למתגרמא
+לאילה עיליא / תלא ידוהי משה מעליא
+ואתיהב עמלק לכליא / ביד יהושע טליא
+מנהון סכי למתפרעא / סיסרא רשיעא
+ולשיציא יתהון בעא / מן גו ארעא
+נורא מן שמיא / זרק עלוהי [מ]כוכביא
+וסדרו עימיה קרביא / בגין עמא [ר]חימיא
+סנחריב גרש חילותיה / ואתגאי במלכו[תיה]
+[ו]חרף בנבלותיה / למן די ברא נשמתיה
+עביד קרבין / של[ח מלא]כיה בגין חביבין
+וקטל מן אוכלסוי טליין וסבין / מאה ותמנן וחמשה אלפי כת[יבין]
+פרא מלכהון דבבלאיי / ואיתי עמהון כשדאיי
+חרב ביתהון דעבראיי / ואגלי עמא יהודאיי
+צדיקין ארבעה כד קמון / וצלון וצמון
+מלכותא מיניה אשלמון / ובמפלתיה חמון
+קם שמשאי ספרא / ואסגי בעותרא
+ותקל אלפין עשרה / לאובדא אומא מעשרא
+רָמָא פסל כספיה / וטמע אלפיה
+ובלבל סופיה / ועל שריתיה אצטלב גופיה
+<b><b>עד כאן מוגה</b></b>
+שדי מרי שמיה / יעורר ניסייא
+ויצמח באלין יומיא / ישועה לבניא רחימיא
+תקרב שעתא / ותתפרק אומתא
+ותיסגי לן ולכון חדותא / היך דהוה בשושן בירתא
+שליטא ידיק ברחמין / משמי מרומין
+למפרוק עם רחימין / משבעין אומין
+מן דאתפרע מן קדמָיֵא / הוא ישיצי אחריֵא
+ויתנקם מן רומיא וסרקיא / ביד עמא יהודאיי
+ככ' ונתתי נקמתי באדום ביד עמי ישראל
+ונ' ליהודים היתה וג'
+<h3>כז</h3>
+אסתר בבעו / אמרת מילהא ובתחנונים / סדרת צלותא
+בבעו מינך / שמע צליין
+שמע צלותי / בעידנא הדין
+גלינא וטרידנא / מן ארענא
+ובדיל חובנא / מסרתא יתנא
+דיתקיים בנא / פתגם דכתיב
+ותזדבנון תמן / לבעלי דבביכון
+והא אבהתנא / מזדבנין ולית דקני
+[ ... ... / ... ... ]
+ודתא נפקא / לקטלא [ ... ]
+וכולנא מתמסרין / לחרבא כחדא
+זרעיה דאברהם / לבושין סקא
+וקטמא רמי להון / על רישיהון
+אם חטו אבהתא / מה חטו בנייא
+אם נשתצי / מאן מודי קדמך
+טפליא אם / חטו קדמך
+ינקי תדייא / מה חטו
+יתבי ירושלם / נעו מקבריהון
+דמסרתא בניהון / למתנסבא
+כענני שמיא / את מעבר יתנא
+מה קלילן אינון / יומי חדוותן
+להמן רשיעא / מסרתנא
+ולבעלי דבבנא / לאתנסבא
+מדכרנא אנא קדמך / עובדי רחמין
+מן אברהם / אישרי למימר
+נסיתא יתיה / בכל נסיונין
+בדקתא יתיה / ואשתכח מהימן
+סעיד וסמיך / לבני רחימוי
+דתעיל יתהון / כחותם קיימא
+עולבננא תבע / מן המן רשיעא
+ופורענותא / מן בר המדתא
+פרע מיניה / על ידי עמך
+דבעא לשיצאה / יתנא כחדא
+צר ותשנוק / לעמך הוה
+לאעקא להון / בכל אתריהון
+קיים עלמא / קיימתא עמנא
+עקידת יצחק / זקוף יתנא
+רמא המן / כספא למלכא
+למזבן יתנא / בעשר אלפין ככרין
+שמע בקלנא / ועני יתנא
+ואפיקנא / מן עקא לרווחא
+תבר תקיפין / תבר ית המן
+ולא תיהוי / תקומה למפלתיה
+<h3>כח</h3>
+אסתר צווחת / צווחא רבא
+וילילת / יללה מרורה
+בבכייה ובדמעין / אמרת מילהא
+ובתחנונים / סדרת צלותהא
+גרונה איתחר / מן קדם פומה
+ועיינהא איסתמיין / מן קדם דמעתהא
+דמיית אסתר / ואמרת בלבה
+דילמא איעול קדם מלכא / ולא יקבל מני
+הא אנא / עלא קדם מלכא
+למבעי רחמין / על אחסנתי
+ומלאך דרחמין / יקבל יתי
+וייעול עמי / חינא וחסדא
+זכותא דאברהם / תיעול קדמוי
+עקידת יצחק / תזקוף יתי
+חיניה דיעקב / יתייהיב פומי
+חיסדיה דיוסף / על לישני
+טוביה לאניש / דאתרחיץ עלוהי
+ולא בהית / כל דרחיץ ביה
+ימיניה ושמאליה / יפשוט לי
+דבהון ברא / עלמא כוליה
+כל ישראל / בעון עלי רחמין
+דעליכון אנא עלא / למבעי רחמין
+[ל ..... / ...... ]
+[ ... ... / ... ... ]
+מתחנן איניש / קדם קדשא בריך הוא
+משתמעה צלותיה / בעידן עקתיה
+נחזי בעובדי אבהתנא / ונעבד כוותהון
+והוא יעביד לנא / ית בעותנא
+שמאליה אחידא / בצואריה דיצחק
+וימיניה / על סכינא
+עבד ברעוא / רעות מימרך
+ולא עיכב / שליחותך
+פתחתא רקיעא / כוין כוין
+למיתן אתר / למלאכי מרומא
+צווחין במריר / וכן אמרין
+חבל לעלמא / אם כך עבד
+קריא אנא קדמך / עני יתי
+דאנת עני / לכל מאן דדחיק ליה
+רחמנא וחננא / איתקריתא מרחיק רגז
+ומסגי למעבד / טיבו וקשוט
+שמע בקלנא / ועני יתנא
+ואפיק יתנא / מן עקא לרווחא
+תלתא יומין / צמית קדמך
+מיכן ואילך / מה איכול למעבד
+<h3>כט</h3>
+אציתו לי אילניא / וכל שתיליא
+דשתילו / מן יומא דבראשית
+דבר המדתא / בעי למסק
+לאלכסנריא / דבר פנדירא
+גופנה אמרא / קוצרא אנא יצטליב ברישי
+דמיני נסבין / אמרא בניסוכין
+אדרא אמרא / יצטלב ברישי ולא יכילנא
+[ ...... / ...... ]
+חילא אנא / אמרת תאינתא
+יצטלב ברישי / ולא יכילנא
+דמיני נסבין / לביכוריא
+ומני לביש / אדם וחוה
+זיתא אמרה / יצטלב ברישי ולא יכילנא
+דמני נסבין / מישחא למנרתא
+חכים רזיא / ברא יתי
+למפרע שטריה / דעובדיה נביאה
+טב חרינא / דיצטלב ברישיה
+אמר דיקלא / קדם נטוריה
+ידעין כל / בני בישרא
+דהוא המן רשיעא / בר בריה דאגג עמלקאה
+כל מלכיא / יודון קדמך
+דאת הוא אלהא / ולית בר מינך
+לך יאי / למפרוק בנייא
+כמא דפרקתא / ית אבהתהון
+מתיב קודשא / ואמר ליה
+יישר חילך / כל מה דאמרת
+נסיביתך בעצה / דיצטלב ברישך
+דאת זוגא / לכניש דציון
+סבירית אמרת אתרוגא / דיצטלב ברישי ולא יכילנא
+[ ... ... / ... ... ]
+דעליי אתא / כל עלמא כולהון
+למיסב מן איביי / לשבחא קדמך
+פתח אסא פומיה ואמר / יצטלב ברישי ולא יכילנא
+הא אנא שותף / עם אתרוגא
+צווח בלוטא ואמר / יצטלב ברישי ולא יכילנא
+דדבורה מניקה דרבקה / קבורה תחותוי
+קרא בוטמא ואמר / יצטלב ברישי ולא יכילנא
+דאבשלום בריה דדויד / איתלי ברישי
+רומנא אמר / יצטלב ברישי ולא יכילנא
+דצדיקיא / מתילין לקבלי
+שמעו מני / אמר ארזא
+[ ...... / ...... ]
+תלון יתיה / ולעשרתי בנוהי
+על צליבא / דאתקין לנפשיה
+<h3>ל</h3>
+<b>אלפבית</b>
+אית הווה חד יהודיי / בשושן יחידיי
+מורדכיי ודיי / מור דכי וכדיי
+בשושן בירתה / הוון סגין יהודאיין
+ועל דאתערבון במגוסה / כאילו דלא הוון יהודאיין
+גובריה ונשייה / עמה רחימיה
+היך אתערבון / ביני אומיה
+דמורדכי לא אכל / ובחר בה יחידי
+ואמר לדין יאי יתקרי / איש יהודי
+הווה חכם / שובעין לישן
+בגין כן אתקרי שמה / מורדכיי בילשן
+וחמישיי בחבורתה / די גלת לבבל
+מה דאתיחס / אשר באו עם זרובבל
+זרע קדיש הוא / מן רחל רחימתה
+מן שמעי בן גרה / קם פרוק לאומתה
+חס עלוי דויד / עד דאקים בנין
+ומנה קם פרוק / באילין עידנין
+טליתה הדה יתמה / רבת על גדה
+היא אסתר / ברתה דדאדה
+יאיה כשמשה / מה דלא סמת עיין
+חס לה לנפשה / לא הוות מתחמיה לכל עין
+כד נפקת / קלווסיס דמלכותה
+למכנשה / ית בתולתה
+לקיטונה עלת לה / דלא למתחמיה
+דלא למסתאבה / בנימוסי אומייה
+מלאכה יתב לה / בכווי עיליתה
+מתחמיה לעבוריה / היך דדמותה
+נטוריה רהטו / ולמלכה אמרו
+ולשעה זעירה / לוות מורדכיי אשתגרו
+סבה סבה למה לא אמרתה / דאית לך ברה
+מוניין אתון לי / דלית לי בר ולא ברה
+עברו בתר מלאכה / עד די עלו לטליתה
+ואסתלק מלכתה / ותפסון טליתה
+פעת ובכת אוי לי / איך פוגרי אתבזי
+איך איעול לתרע / דלית בה מזוזי
+צור יהב לה / דמו דשובעין אומין
+דישוון בחד קל / ולא יתנון בה מומין
+קרב מרדכי ופקדה / דלא תודע לאומתה
+דכל אומייה / סניין אומתה
+רהטו ביגתן ותרש / ויהב[ו ח]ק[יק] בי[דה] דמלכה
+ואתודע למורדכיי / וא[כ]מן יתה דלא יודע למלכה
+שדיי [שלח] לחוויה / דאשלי לארס
+ואתא לקיתונה / ואריק בה סם וארס
+תבע מלכה ואשתכח / וצלב יתהון בטהרה
+ולא גזה טפשה טב בטב / אלא כתב בדפתרה
+<h3>לא</h3>
+<b>חורן</b>
+אודי לתקיפה / משבחה ומתקפה
+דמן ראש צפה / מה דהווי בסופה
+בגין דגרמת שעתי / וסגת חובתי
+וחרב בייתי / ואתחלפת מלכותי
+גלית ואטלטלית / ולעית ולא בטלית
+אשתעבדית ואתקטלת / וגימטס אתערטלית
+דחקתי בבל / דחפתי מדיי
+סאבתי יוון / אדקת יתי אדום
+הלא כל מלך ומלך / דהווה מלך
+עליי ביש הווה מתמלך / וגייז והלך
+ויי מה עבר עליי / מן כל חגוליי
+בשושן והכה / ביומי אחשוורוש מלכה
+זהייה הוינה / כד תקף ורבה
+ויתב בכורסי דהבה / וכורסיה דשלמו ה[ווה]
+[ח]מון מה עבדית לנפשי / [לא] שמעית לקדישי
+וגלון מאני שימושי / וכורסי מלכות קודשי
+טעיה כד יתב / ובכורסיה אתיתב
+(שרי) ספרין שרי כתיב / ולא ידע דהוא תותב
+יהב בדעתה / למודעה גיוותנותה
+ופרס שליוותה / כד יתב במלכותה
+כנש יתיר [מ]ן דיי / מה דלא כדיי
+מאה ועשרין ושבע מדינן / מן פרס ומדיי
+להון צבט מגוסין / ובוץ וארגוון פריסין
+מייכלין ומסלסין / ומשקיי ולא אנסין
+מותר מן צורכה / אגס באורכה
+מאה ותמניי יומין / שירו אריכה
+נגד שמשין / לקהלה משמשין
+תחות רגליהון פרסין / כנפין דאטוסין
+סגה קהלה / וסגה קלקולה
+וחמרה זלזלה / דלא שווה מזלה
+ערטליה דלא לבוש / מלכתה תיעול
+ואילולי דסלק בה דופי / כבר בעת למיעול
+פקד וגזר / ובה דלא חזר
+למתבע דין / לידעי דת ודין
+צוקה בהלת[ה] / וסגת תונחתה
+דמטת גזירתה / עלוי ועל בייתה
+קדיש אדכר / עובד כשדאי
+דסאבון מנהון / נשי יהודאי
+רמה שלם להון / כעובדיהון
+ומנהון ובהון אקים / מסאב בנתהון
+שובע שנין דיומין / במל[ה] בלידה
+צער בתול[ן] / כל רמש בתולה חדה
+תרין עשר ירחין / בבסמני[ה] ממש
+מפרנקה ומבסמה / בגין חד רמש
+<h3>לב</h3>
+<b>חורן</b>
+אמת די אצטלבו / עשרתי בנוי דהמן
+אייללת זרש / וצווחת תמן
+בייא מן המן / דפח לן טמן
+בכל שנה ובכל זמן / אמרין [ארור] המן
+גברה רשיעה / גברה דבהתתה
+לא אציתת ולא שמעתה / עובדיה דהדה אומתה
+[דמי]ין אינון / לאריה ולאריותה
+[ייילה] ומה מטתה / על ברה פרשנדת[א]
+הלא בעובדיהון / מלכין קודמיהון כפון
+ציימין ומצליין / אבוהון אלפון
+ואייללת על בניה / דכולהון אתחטפון
+ויילה ומה מטתה / על ברה דלפון
+זניתה / אמתה דויזתא
+אמרה ליטה שעתה / דאתעתדת שריתה
+חדותה סכיית בבייתה / ואתת לה תונחתה
+ויילה ומה מטתה / על ברה אספתא
+טעייה הוות מן יומיה / אסתר יתמתה
+ומן עיליה אתקריית / אסתר מלכתה
+יי על זרש / היך אתת עליה בהתתה
+ויילה ומה מטתה / על ברה פורתא
+כד חמת בניה / כפיתין בקולריא
+קמת מספרה בסערה / בכייא ואליא
+ליט הוא המן / דגר[ם] לן דא מן שליא
+ויילה ומה מטתה / על ברה אדליא
+מה טב הוא / ומה חלי מותא
+אלווי מיתת זרש / ולא חמת דא קנתא
+נוהרה [הוה] בבייתה / ואתת עליה בכי[תה]
+ויילה ומה מטתה / על ברה ארידתא
+סריסיה לווי לא קרון / להמן לשירותא
+כל דא דמטה יתן / מן חמרה דשתה
+עליה ומה אתא עליה / ה[י]ך אתת עליה בישתה
+ווילה ומה מטתה / על ברה פרמשתא
+פרחון מן פלטין דידי / עשרתי גוזליי
+וליבי וכול[יי]תי / לגו מני מסיי
+צדייה אנה יתיבה / מן כל אוכלסיי
+ויילה ומה מטתה / על ברה אריסיי
+קרא המן בכתבוי / דלא יהוי יהודיי
+צלבון יתה וית בנוי / ואשתיירת אנא לבלחודיי
+ריימה הוינה / באמהתי ובעבדיי
+ויילה ומה מטתה / על ברה ארידיי
+שמימה אנה יתיבה / מן כל זוייתה
+אנה ובייתה / מסירין לבזתה
+תלת חבלה בקדלה / וחנקת גרמה זניתה
+ויילה ומה מטתה / על ברה ויזתא
+לב*
+[ט ..... / ... ] בעותיך
+תתעבד רעותיך / וכל מרעיתיך
+ייתי את ועבדה / דעביד סגידה
+בצפרה כחדה / לשירו מעתדה
+כד שמע למלתה / מן אסתר מלכתה
+המן בן המדתא / ייתי לשירותה
+לבה רבה עלוי / וקרא לרחמוי
+לאנתה ולבנוי / סדר להון מלוי
+מן בתר / דאתרברב המן מותר
+קנה לה כותר / ובייתה קם סתר
+נפק מלאכה / מן שמה דמלכה
+מן רומה למוכה / עוריר לדמיכה
+ספר דוכרנה / קרון לי אנה
+דמטרף אנה / ולא טעמית שנה
+על המן וקרא / וכתבוי לא קרא
+ואשתכח יקרה / למורדכי מייקרה
+פרי וסב לבושה / המן בישה
+וכליל בקדושה / לצניעה וקדישה
+צור ית סופיה / וגרוש ית סוסיה
+קודמוי לדימוסיה / למרדכי בפרהיסיה
+קם ועבד כן / אפיתיטה דלא הווה כן
+וקומתה ארכן / חד גבר מיסכן
+רמה רוקנה / ושיצי קינה
+וגדע קרנה / ונפלת איקונה
+שבח לרמה / דשרי במרומה
+ומפל מן מרומה / כל מן דרוחה רמה
+תדיר לרחמוי / עבד קרבי בנוי
+ומקף להון עננוי / ומתקלס בעובדוי
+<h3>לג</h3>
+אַתְרמֵי חבטא / ואתיהב קסטא / בטעני שרביטא אתעני נ[ימרוד] / אנא הוינא מרוד / ולא ה[וינא .. רוד]
+אתחמדֶת למחמי / פרכ[סיס ד]רומי / ולאבנין ארמי
+אמרית במימר / איתעבד חֵימַר / וכולַא א[יתגמר]
+אישתכלל מוֹגְדְלי / וסגֵ[א .. ]לי / ולא הווה צַדֵׁי לי
+אגוסטוס אתגְלִי / ומן ריאש גַלְגְלִי / אמר נימרוד
+בדין דקשיט / קיריס לך [א]ושט / ועוקמַתַך פשט
+בולֵיה במרומא / ואת ביתהומא / היך' איתגרית לרמא
+בוּצִין דַמְנַירַא / בעלמא נַהִרַא / זְרַקְת לגוֹ נורא
+בראש [שבעין] אֹמִין / תלתי קודם עממין / 7ו .. רקי' דבנימין
+בַיְתַא ירתַּת / ולמרדכי ארתת / ואַתֵית היך דאַתַת
+בַתַר מֵיכלַא / מְטַא יֵתֵי כוּלֵא / אמר המן
+גוּרְיַיא בישַא / הווה לַך לִמְפַשְפְשַה / מן לַקַה מן ראשה
+גֵר אַפֵך דַכְלֵב / דהוַיית מַכְלֵב / סב סב[ך] צלב
+גרמַך מה חמֵית / נפשך למַן דְמַיִתְּ / דעל סַב הוַית חמִית
+גַבְלוּן בְטַיְנִי / משה רַטְנִי / ואקִימֵית בסַטְנִי
+גרי רגיז בִבְולֹרָיי / וּקְטַל בְכוֹרָיִי / ופַנַה מן כורָיי
+גְרַשִי ליַימָא / וַעֲבֵרֵי דלַא מַה / אמר פרעה
+דאַת בַר מסאָבִין / וכולַך מלא חוֹבִין / מן בִיאה דַּעֲלִיבִין
+דוֹן נַפְשַך קַדמוֹי / דְכוּלַּן חַמַיִי / דְמלך דָּרַמַיִי
+דאַתְּ בר נְשֵי / דהוַות מִתְקַשֵׁה / טב לך לְמחשֵה
+דהוַית ניאוֹטירוֹן / וַאמַרֵית לֵית פַטרון / לְמִישרֵי קיטְרון
+דִּיֵבְתַה עלָי מַמְנַת / וְשֵירוּ עַלָי זַמְנַת / ועל רֵאשִי אַומְנַת
+דחפתי לְבַיְתִי / וגַלְיַת בְהתתי / א' המן
+הוֵית מַסֵק כַבֵד / היך קֹבלַן יעֶבד / וְנַפְשַךְ מובֵד
+הַוְיַת מִיתְרַבְרַב / דְמַר לַך הווה רב / אזל לשמה ולשַרָב
+הווה לך למרתוק / [ ..... תוק / ... .. תוק]
+הא שַטְיַיה דְבַיְישַן / היך נחית לשושן / לְמֵרְמֵי בֵלֵישַן
+הוינַא רב ושליט / הא איך לית לי פליט / טעי [ומן סב] (פ)1מ'ליט
+הא אפלי ברפידים / ודני דין דלא דין / א' עמלק
+ולא אנא מוקֵר / דאַת סַב דִיקַר / ונפשָך מינִי איקָר
+ומליך קצָר / דלֵית את נַצַר / כְמַר אַתְּ מקַצַר
+וגעוֹר גַרמָך / דפרס חרמָך / נהַרָה מחָיק שמָך
+ואנא בָר בְרךְ / ומסְתַא דאנא חַבְרַך / מה לֵּךְ על דְּבָרַך
+ולית אנא ניפוֹן / דעשרתי בנָיי טְפוֹן / וביש לי על דלפון
+ושוֹבְקִי בְּעָקְתִ֗י / צִיר בַרקתִֹי / א' המן
+זניתַה דסֵבֶתַךְ / היא דערבבתך / ביומוי סיבותך
+זרש מלכתך / היא סַמְכַתָךְ / על רֵאש שירותָך
+זְמָר הוֵוִיתְּ בכפר / ומָקְזַן וּסְפַר / ובעית סַופַר
+זַהֵיתְּ למהוי דוכס / ותיפוק היך אֵיפָרְכוֹס / ולמרדכי תיכוס
+זריז נַחְיתֵת לקִישוֹן / אלה עבר ברעשון / ומסרי לליקשון
+זְרְבָתֵי איתָא / ונסבת בִרְכְתָא / א' סיסרא
+חציף את למֵיקוֹל / היך חֵמר תֵקוֹל / דְּרַהֵט בקולקול
+חשב את מן פריטא / וְסַגָייא וְסַטֵא / ועל [רב]ו חטֵא
+חַס לך מן כָרִיס / דכולֵךְ אֵיבְרִיס / ושמַך דְּסָרִיס
+חבְרַך אַת מְבַזִי / חגָל וּמִתְבָזּי / חַזֵ[ַר .. ]זֵי
+חַבְרַך אנא סיסרא / דאַת בִישֹׂרא / וְרַמֵית יתי בְּמוֹסֵרָה
+חנקון יתי ולעשרה / אוֹמָא בִיש הוַוה בַושְרַא / א' המן
+טפשָא דכפר קרַנוס / הוֵייתְ צריר פוֹרנוֹס / והוית טוּרָנוֹס
+טְעֵי כניאוטֵירוס / ושגִיא יִטְרוֹס / וּמְהַלֵּך בְאֵור(נ)וֹס
+טוּרַנוֹס הוית בפלטין / בְעֵין שַרביטין / מבַשר לשַׁלִּיטִין
+טְעֵית דהוֵית גִיבָּר / ואַמרית בְרוֹן גְבָר / עימִי מי יתגבָר
+(טעי) טְעֵין קלַעַה / בִּי אַתַא מקַלעָה / דְאַרְפְשִׁי על ארעָא
+טרַפָי על אפָיי / ותַבַר גַפָיי / א' גולית
+יַאֵי אַת קָאֵם / ונָאֵף וְרֵעִם / וְאַפֵך דְנַאִם
+יִלְלַן מְיַלֵּל / ומילין מְמַלֵּל / ולקִירִיס מֵילֵּל
+יאוי לך אמר דְּלִי / דאתָא מן אנטוֹלִי / מפַרנַק ומַטְלִי
+יהב אבנים בידיה / ואתָא על גַדֵיה / מזַמֵר לְדַידֵיה
+יתֵי רְפוֹש בְדִיקְלָיה / ולֹא ידעֵית מה קָלָּה / עד דִימְטָא יֵתֵי סיקְלָא
+וַאֵי דִשְמַעַית לזרש / וככלב אנא מיתגְרֵש / א' המן
+כלב את וחציף / וחשיבן ועצן רציף / ולמיתקול כסף יציף
+[כי]לו הוית מסק / כל לילייה עסק / למי[נ .. ו]ף עטיף שק
+כבדך לא נחת / עד דנפשך שחת / ורוחך פחת
+[כ ..... / ...... / ...... ]
+כנשת אלף אלפין / ודיברת חניפין / סייפין שליפין
+כעבור כעסי / רוקן כוסי / א' כושיה
+למה כדן כושייה / אתית מיתקשיה / שובקי למנשייה
+למקרוץ למישיחור / אתית למינחור / גבר מכיר בשיחור
+ליתביה הוא דמי / ונפשיה לבר טבין מדמי / והוא יבין [בטימי
+לית ליה טבו / דלא שווה לרבו / גבר ביש בכל צבו
+לי אתת מעקה / ונפשי עליי עייקה / ונחתית לעומקה
+לעלם לית אנש / מרגש עד יינש / א' המן
+מלא את עצן / ורמיי וליצן / ולית בר רוחצן
+מן זרעיה דאגג / דהוה מתפוגג / ופירין דשמיטה מגג
+מן חלציה דהמתה / אומא את חומדתא / ובפילקי ארמייתא
+מליף הווה לך מיני / דאת רב מיני / [ ... .. ]ת הוני
+מלאך עלי נפק / וחוטרין יתי דפ[ק / ו]אוכלסיי ליה ספק
+מן כל עמי / לא אשתיירת לי לגרמי / א' סנחריב
+ניפון את עליי / אין פתחית מגליי / לית סוף למיליי
+נפשך זעירה / ונחור כחזירה / דאוכלסך אזלון בזהרה
+נפשך דמית באלה / ובעית למהוי פלח / על מן [דאת בה פלח
+נפשך לא נחית / עד דכבדך שרית / ורוחך פחית
+נפשי עליי כמיתה / דשמעית לזרש זניתה / למעתדה שריתה
+נטור דלית ליה שינה / היך הפך עליי מנגנה / א' המן
+סבר את בגרמך / דאת צלב לגרמך / ואנא שותף עימך
+סמיר על קיס / ודמותי במרקוליס / מצייר על קיס
+סמרי על קיס / ובשרי לטופח נקיס / ובר נגיד בקיס
+סכיף באיסקוטוס / מן אתא זיניטוס / וקרון יתי כריסטוס
+סמר במסמרין / בגפיי מסמרין / טב מיני אכל שע[רין]
+סופיה די נקיב[תה] / עבידין בהתה / בכל [א .. ] ומדינתה / א' פ[ל]ני
+עלת לגב מלכא / דלא בר זעה מלוכה / לית סוף על בריכה
+ענה [יתי ... / ... ... / ... ... ]
+[ענת] יתי איתתי / ואסגיית בהתתי / ובידי סתרית בייתי
+ענא יתי קיסר / מה איתעבד לחד שר / דסנאוי לי מסר
+ענה יתי בורייה / סב כלילא ולב[י] סוסייא / וארכב מרדכי
+עבידית היך עבד / דשמע ועבד / [א' המן] [יהודייה
+פרית דלא בדיעה / סבר דיירת ארעא / ולא אישתיירת לי ביעא
+פרית למגנוב / וסב למצלוב / ועמיה למחרוב
+פקדית ועבדית צלם / ואשתין אמין שלם / ואיתבהלת בחלם
+פקדית זני זמרין / קודמוי מזמרין / בי מיתגברין
+פרית רבו למיסב / והוני אתנסב / והיך בעיר אכילית עשב
+פרית ושבחית למלכא / דברא רומא ומוכא / א' ננסא
+צריף הוית ילף / ולעמך מזלף / ולא מיתגלף
+צריך הוית מיתבוננה / מן שמטי הונה / ושנה עלייך עידנה
+צניעתא צמת / ובצלו קמת / ובמפלתך חמת
+צניעתא תלתא יומין / [ ..... מין / ..... מין]
+<h2>ראש־חדש ניסן</h2>
+<h3>לד</h3>
+יקול לילה ראש חדש ניסן
+אליסון מה משבח / הדין ירחא
+דביה איתפרקו / אבהן ובנין
+בפלגות ליליא / איתגלי קיריס
+וימיניה פשוטה / על ישראל
+[גב]ריהון דמצראי / לחוד רכיהון
+נפקו מיללין / [בצווחן ו]אלין
+דנין לפרעה / טרוד ע[מ]א הדין
+דלא יתאחרון / וה[א] כולם מיתין
+הא בכ[ורינ]ן / כולהון קטילין
+ואין [לא מ]יב[ .. ]ון / אנן מתקטלין
+ופרעה הוא / דק[רא] למשה ולאהרן
+קומו פוקו לכון / [מן גו עמי]
+זי[ו]הון דישראל / [לא אשתני]
+[ו]ח[ינ]א וחסדא / הוא [ש .. ... ]
+חייהון דמצראי / [אתעבדון] ל[ש]מא
+חולף די שע[בדון] / עמא בחירא
+ט[ענין] כל דאית להון / על עננני]ן
+ושאלי[ן כ]ל דאיתרעון / חולף [א] גריהון
+יומא הוה / מתח שעו[י] בכפלא
+עד די ישאלון / [כל] צרכיהון
+כל אצוות[ה]ון / טענון בשושפיהון
+[על] גיף ימא / עברו פ[ריקי]ן
+לאר[בע ... / הו]א [ד]חמא
+<h3>לה</h3>
+על שמך בריין קידושין
+אֶתְֹגַּלִי אֶלָה קַנָּה מִן גּוֹ מְעוֹנָה
+לְמִפְרוֹק יַווְנָה מִ[ן] שִעְבוד ל[ .. נה]
+אָתֵה רְכִיב עַל עַנָנָה וַאַמַר ילַטָעונָה"
+אַזֶל כַּבֶּשׁ לִי עָנָה
+דְאֶשְלַם קִי[צָה ומְ]טָה אָשוּנָה
+דְתִתְפַרֵק שׁוֹשַנָּה
+<h2>החודש הזה לכם</h2>
+<h3>לו</h3>
+אֶתְבחֵר זַהְרָה / לקִידוּשׁ יַרְחִין
+לעידָנִין וּלְזַמְנִין / ולריח נ[י]חוחין
+בֵּיהּ סִמָנִין / ועוֹד סִימ..ונִין
+[כֵד] הוא סָלֵק / חַכִּימִין מִיתְבוֹנַנִין
+גַּלִּי עַיְנֵיךְ / וֵאֶמוֹר לְסָקוֹרָה
+דְיֵתְלֵי עַיְינוֹיֶ / וְיַסקוֹר בְזֶהְרָה
+דֶּכֶיד הוּא סָלֵק / קַרְנוֹי מַתְאַמַן
+עָלְמָה הָוֵה / עַל סכָּנָה
+הָאֶנְחַמִית זַהְרָה / זְקִיף לְדָרוֹמָה
+וְקַרְנֵה חָורִיתָה / רְכִינָה לְצַפוּנָה
+וסִימָן יֶהֶיבֵי לַךְ / אֵזְדַהַר בְבִישתָה
+דְּ[ַמן] צַפּוּנָה / עָקתָה נָפְקָה
+זַהְרָה אֵין הַוָוה / זְיקִ'יף לצַפּוּנָה
+וְקַרְנֵה חָורִיתָה / רְכִינָה לדְרוֹמָה
+חַדוּ רֶוּבָּה / לכל קֹמִיטַטוֹן
+זוֹלָּה ושׂוֹבְעָה / הָוַויִן בְעָלְמָה
+טָב סִימָנֵה / רְ[ַכ]ין לדָרוֹמָה
+דַשַׁתָּה פְּטִיִמָה / ושׂוֹבְעָה בְעָלמָה
+יַרַק פַרְצוֹפֵיה / מן צַפוּנָה
+יַוקְרָה וכַפְנָה / הָוַויִן בְעָלְמָה
+כד הוּא לָקֵי / בְפַלְגֵיה דְנִיסן
+אֶנָש רַב נפל / [מִ]ן סֶינְהַידְרֶן
+לְעָלַם יֶהֶוֵי לַךְ / סִימָן מְהַייְמָן
+דְבֵיהּ מֵיתַּכַּל / בְעִירָה דַּכְיָה
+מְסַמַּק אֵין הַוָּוּה / כַאֲדָם בְאִיָּיר
+מַלֶךְ מִן צפּוּנָה / נָצַח לְחַבְרֵיה
+נוּר קְשֵי[ .. ] נָפְלָה / עַל בִירְיָּיתָה
+וכָל בְנֵי אַנָשָה / לָקָיִין בחטאה
+סַמּוֹק ולְקֵי / אֵין הַוָוה בְסִיוָן
+עַרבּוֹבַ[ה] הָוֵה / ביַלַ[ .. מ]וֹיְ דִּיַמָה
+עַל חַמָרַיָיה / וְעַל חֵיוַות בָרָה
+נָפְקָה קְלַוְוסִיס / לְמִתְקַטָלָה
+פרְצוֹפֵיהּ ד[ַתמ]וז / אֶין הַוָוה יַרּיק
+עַלעוֹל יהֶוֵה / בפולגוס דימה
+צַווְחָה רַבָה / בֵכָל בִיטְנָתָה
+דְלָה מִן מְחַכַלַן / יֶהֶוַין לְמוֹתָה
+קאֵים אֶין הַוָוה [זק]יף ולְקֵי / לגוֹ יַרְחָה אָב
+קַטְלָה הָוֵוה בְגִיבְטוֹס / וּכְפַן בְדָרוֹמָה
+רְפִיש יֶהֶוֶוה נִילוֹס / ולָא יֶהֶוי סָלֵק
+וכל בני עוֹרַבְיָיה / יִוצְ]רַכוּן לַלַחְמָה
+שַפַעְ אֵין הַוָוה כַתַלְגָה / לַגוֹ יַרְחָה אֵלוּל
+תהא ידע / דּהוּ לָקֵי בְ[ .. ]ַלְגּה
+תהא פְלַגּוּ / רַבָּה בְעָלְמָה
+בֵן ישְׂרָאֵל / ובֵן מַלכוּתָה
+תִשְרִי לעָלַם / זְהַר לָלָקֵי
+ואֶין לָקֵה / סִימָן קְשֵׁה לְסָנְאֵיהוֹן דִיְהודָיֵי
+שַׁמדָה נָפק / מִן מַלְכוּתֵה
+וקְטַע דַּאַנִינְקַה / יֶהְוֵה יְהוּדָיֵי
+ר[וח] במרחשוָון / אֶין מחה לְזַהְרָה
+ואלקי יָתֵיה / ולָא תֶהֶוַה מְ[צִ]יק
+קָל מִן שַׁמַיָיה / נָפֵק מִן שַׁלְיָיה
+הָא דְּסָנְאָה / [ .. ]ליי מִן מַלְכוּתֵהּ
+צַפי בֵּהּ בְכִיסְלֵיו / סַמּוֹק כְנוּרא
+מוֹתָה הָוֵוה / במַיְנוֹקַיָּיה
+פַרְכּוס הָוֵי / עַל עוֹללייה
+וכָול בִטְנָתה / יִדְחַלֶן מִן מוֹתָה
+עַכיר אֶן הַוָוה / כְתנַן בטֵבֵת
+מַלֵך יגלי / מן זאויתה
+סַקה יֵחוֹת / על עַבוּרַיָיה
+יַוקְרָא וכַופְנָה / הָוֵוה בעלְמָה
+נוֹהְרֵיה אֶן הַוָוה כַּאַדָם שְפִיך / לגוֹ יַרְחָה שַבָט
+מותה הווה / ועכברה יסגי
+מלך מן מדנחה / מתקטל בצפונה
+וגובה יפוק / וכלום דלא יהי
+לגו ירחה אדר / אן הווה לקי
+[מ]ותנה הווה / ועכברה יסגי
+כְדֵן סִימָנֵי / חשבוני זַהְרָה
+לכָל סִימָנֵי / יַרְחֵי שַׁתָה
+<h3>לז</h3>
+<b>חורן</b>
+אֶתְכַנַשׁון כחדה / כָל יַרְחַיָּיה
+מן בגין נִיסָן / דְאָתְקַרִי פָרוֹק
+בְיָיה אַנַן צָוְוחִין / מן קודם ניסן
+[אנן חד] עַשַׂר / והוּא נָצֵח לן
+גְעָה נִיסָן בכל לביה / וְהָכַדֵין אַמַר לְהוֹן
+קַבֵּילוּ מִינִי / כָל דְנֶיאֶמַר לַכוֹן
+דַּלָה תמלל מותר מילה / אַמַר נִיסָן לאִייָר
+אַתְּ מַתִיל בְתוֹרה / ולית אַתְּ פָרוֹק
+הֶוִּי יָדַע / בְעֶגְלָה דאתעביד
+בר תוֹרִין הַוָא / ראַתְּ דָּמֵה לֵיה
+ומָלַך סִיוָן / גָּעֵה וְאָתֵי
+דְּסִינַי רַחַמָךְ / ולית אַתְּ פָרוֹק
+זוֹם פימָּךְ לא תמלל / אַמַר נִיסָן לתמוּז
+סַרטָן אַתְּ [דְ]מַיָּיה / ולית אַתְּ פָרוֹק
+חַמִי לא תַמַלֵלְ / מוֹתַר [מילה]
+[לַבְ]חַיָיה דֶּתַּבַרֵת / מיתבעין מינך
+טַפַש אַב ולָא יָדַע / אַמַר ניסן לאב
+כוּלָך יללן / וכוּלִי זמרין
+יַכֶל אַתּ לַמִפרוֹק / בַנוֹי דְּאַרְיָיה
+אנה עתיד מסיק / ארייה לאריאל
+כמון פימך / אמר ניסן לאלול
+לתצוכה לִבְתוּלָה / למַצַנָּעָה גַּרְמַהּ
+לָא תְמַלֵלְ מותר מלא / אמר ניסן לתשרי
+דגוצטוט / ציד מוזניה
+מתחננין בך / מן צומין [וצל]וון
+אנה צמיד מייכל / צליי ופטירין
+נְטוֹר גַּרְמַךְ לָא תְמַלֵל / אמר ניסן למחשוון
+את מתיל בעקרבה / ולית אתְ פָרוֹק
+סְנָה לָא תִנְטוֹר / אמר ניסן לכסליו
+לית צ[ורכ]ה לקשתך / [למעבד] קרבה
+עַנָה ניסן / ואמר לטבת
+הוו הוֹנַךְ לִגְּדֵיך / וַאַנָה לְאִמַּרַיְי
+פ[ .. ] קל[ה] תסגי / אמר ניסן לשבט
+[ד] צַנְתָּה ותַלְגָּה / משעבדין יתך
+צָבוּתָךְ [ַבד]לִי / [ַהיוך דָלַיִן
+[וד]לה דָלָה / [ ... ... ]
+קַמץ פַּימַּךְ לא תמלל / אמר ניסן [לאדר]
+מְלַך נוּנִין / [ולית] אַתְּ פָרוֹק
+רחמין [אי]ת להוֹן / [ ... ... ]
+[ ...... / ...... ] רוק
+שלֵ[ט] אַנָה / ורֵאשׁ על כו[לכון]
+מְתִיל בְאמַרָה / ובי ( ... ) מ[ת] פלג אמר לכל [כַיי]
+תַקיפָה עַבַדִי / פָרוֹק לעַמֵּיה
+ובִי הוא עַתִיד / ל[מַ]פרוֹק יָתְהוֹן
+<h3>לח</h3>
+<b>חורן</b>
+אַנ ;: ]י לַ[כְׁנִיי] / בְרָאשֵי יַרְחַיי
+הָאקְרֵת יתהון / רֵיעַיי וְאַחַיי
+בניסן תּתְמנוֹן / עים אימַּרֵי פִסְחיי
+כִרְאוּבֵן הַּאַתָה / טְעִין [יברו] חַיי
+גְּבורְתֵּיהּ דְּאִיָּיר / דְּנֵיק [שמעון]
+[ ... ] דַחַרַב שׁכֶם / על בַתולָה
+[דמו]ון חקיקן / קָודַם אָורְנוֹס
+וכָורְסֵיהּ [ ... ] / תְרַע כַהַנָה
+הוֹדֵיה [ד]סִיוָון / דָּמֵי [לת] אוֹמים
+דְּכלהוֹ[ן ... ] / כְּתָב חַקִיק וְיָאֵי
+ולֵיוִי דַּאַקִים / תְּרֵין בנין רְחִימִין
+ח[ד] רעה עַן / וחַד מְכַפַּר חוֹבִין
+זִיוֵיה דְּתַמוז / דָּמֵי לְסַרְטָן
+דַּסנה לעָלַם / לָא יַסְטֵה
+חָוכְמָה ובִינָה / יַהְבֵית לְיִשָׂכָר
+דְּלָא יַהְבֵית לַבִרְיָיה / אגַר דַכּבָתֵהּ
+טִבְעוֹנֵהּ דְּאָב / דָּמֵי לאַרְי[ה]
+וַאַנָה עַתִיד הָפֵיך / אֶבְלֵיה לַחַ[ַד]ַו
+יְהוּדָה קְהלֵיה / בֵינֵי פָרָשָׁתָה
+ופְנָה לתָמָר / מִן אֶישָׁתָֹה
+כְלִילָה אַלְבַּשֵׁית / לִיַרְחָה אֶלוּל
+הֵיך דִבְתולָה / דמְצַנְּעָה גַּרְמָהּ
+לִזְבוּלוּן יַהְבֵית / [תוגרת] יַמַיָיה
+ומְטָה בְמַעַלֵיהּ / [ ...... ]
+מָה רַב מַזָּלֵהּ / דִּיַרְחָה תִּשְרִי
+[ה]יך [ ..... יָה] / הֵיך מָה דְּגִיבָּרָה
+נָּגֵיד [ .. ]יה / כבַת [ ... ]
+מכרע זכוון / [ומָפיק] חובין
+[סדרי] דְּבַרְכַן / יֶהְבֵית בְמַרְחַשְׁוָון
+דְּבֵיה רְבִ֗יבִ֗ין / ודוּחִין נָשְׁבִין
+עַבְדֵית אָשֵׁר / בְרִיך מִן בְנַיָּיּה
+וְעַקְרַבָה / לְסָנְאֵיהוֹן דִּיְהוּדָאֵי
+פִנְסֵיהּ דּכִיסְלֵיו / דָמֵי לְבוּצִי[נ]ין ב[ .. ]
+דְּבֵיה חַנֶוכַתָה / וכָל מַן דְּזָרַע מַצְלַח
+צוּרְתֵּיה דְּדָן / דָּמְיָה לְקַשְׁתָּה
+וְעִמֵיהּ יֶהֶוֵי / דַיָּינָה דְּקוּשְׁטָה
+קָם טֶבֶת / דָּמֵי ל[גדֵי] בַּכִּיר
+דברכן אַבוּנַן / בְמַשְכִין [דגד]יין
+[ר .. ]ה נַפְתָּלִי / פָּתַח פַּימֶּיהּ
+[ ..... ]חיי / מן טַבְיָיה ומִן אַיַּילָה
+[ש]בט בְדָו[ַגְמֵ]ה / דְּיוסף חַסִידָה
+דְּדַבַּר [ .. וֹכְבַ .. ] / [ול]בַש כְּלִילָה
+תִּת[פרק לב]ני ישראל / בזכו[ת]יה [ ... ]
+כְּמָה דֶּאֶתפַרַקְתוֹן בֵאַדָר / עַל יַדוֹי דְּשִׁיבְטֵהּ דַּבִינְיָמִין
+<h2>אחרון חסלין</h2>
+<h3>לט</h3>
+[ה .. סיון] / [ ... ... ] [דבי אינון מתפרקין / ואנה הוא אבוהון]
+ובי סלק / משה למרומא
+ואחית עימיה / לוחי קימא
+זעף תמוז / בקל עציב ואמר
+דבי אינון מתפרקין / וא' וג'
+חדיי בריאתא / בשירויי
+דיכלון וישבעון / מן פירי עללתה
+טס אב / למצוח ומימר לחב'
+דבי אינון מתפרקין / וא' וג'
+ידיי פרשת / ובטלת גזירה
+דעתידא למיתי / על אומה קדישה
+כחש אלול / למצוח ומימר לח'
+דבי אינון מתפרקין / ואנא ה'
+ליביהון ועיניהון / עתיד למחדשא
+ובי עתיד למתבניא / בית מקדשא קדישא
+מלל תשרי / ממלל פומיה
+דבי אינון מתפרקין / וא' ה' וג'
+נוהריה דישראל / אנא שרויה
+דבי אינון / חָרַן
+סגין דבר / ירחא מרחשון
+דבי אינון מתפרקין / וא' וג'
+עבדון קרב / ואצלחון בנוי דחש[מונאי]
+[ ... ... / ...... ]
+<h2>סיומי קריאה</h2>
+<h3>מ</h3>
+אמר קיריס למשה / מן גו שכינתה
+בגין מה את דחיל / מן מותה
+גזרית / על כל ביריתה
+דע דתמן אינון / יכל' אבהתה
+הלא משה / כד שמע מלתה
+ובהיא שעתה / אזל לחברון רבתה
+זעק וקרא לאדם / מן גו קבורתה
+חמי לי למה / חטיתה בגו גנתה
+טעמת ואכלת / מן אילן דעתה
+יהבת לבניך / בכיתה ואליתה
+כל גנתה הוות קודמיך / ולא שבעתה
+למה בפקודוי / דקיריס מרדתה
+מן את אמר ליה / אדם בחוכמתה
+נדע אן אית בך / דעת בינתה
+סימן קשה הוא דן / דעוררת יתי מן שנתה
+ענה ואמר אנה הוא משה / דקבלית אוריתה
+פתח פמה ואמר ליה / אתבונן מה קריתה
+צפי דתרין אלפין דשנין / קדמת יתי אוריתה
+קביל עליך משה / כס מותה
+רשים הוא שמי למותה / ולי למה אוכחתה
+שמע משה / וגזלת ביה דמעתה
+תתניח נפשך / עם כל אבהתה
+<h3>מא</h3>
+אזלת בכיתא / בכל מדינתא
+בשעתא דאתפטר / משה נבייא
+בכא יתיה / נילוס נהרא
+גברא דרביתי / מן טליותא
+גען ובכן / כל שבטיא דישראל
+כענא במדברא / דלית להון רעיא
+דמעא שפכין / בית ישראל ואמרין
+מאן יהב לנא / גברא כוותיה דמשה
+הר טורא דתבור וכרמל / שפכין בבכייא
+וסיני מספד / בין תרויהון
+ווי עלי / אמרת אורייתא
+רעיא טבא / דאתפריק מיני
+זע ואתבהל / יהושע בן נון
+כיונק דמתגמיל / מדדי אימיה
+חבל עלי / אמרת אורייתא
+ומשה יהב לי / חיים לעלם
+<h3>מב</h3>
+<b>פביט אחר</b>
+אזלת יוכבד / מפייסא למצרים
+מצרים מצרים / דילמא חמית לי למשה
+בחייך יוכבד / לא חמיתי יתיה
+מן יומא דקטל בי / כל בוכרא
+אזלת יוכבד / מפייסת לנילוס
+נילוס נילוס / דילמא חמית לי למשה
+בחייך יוכבד / לא חמיתי יתיה
+מן יומא דעבד / בי מימי לדמא
+אזלת יוכבד / מפייסת לימא
+ימא ימא / דילמא חמית לי למשה
+בחייך יוכבד / לא חמיתי יתיה
+מן יומא דאעבר בי / תרין עשר שבטין
+אזלת יוכבד / מפייסא למדברא
+מדברא מדברא / דילמא חמית לי למשה
+בחייך יוכבד / לא חמיתי יתיה
+מן יומא דאנחת עלי / לישראל מנא
+אזלת יוכבד / מפייסת לסיני
+סיני סיני / דילמא חמית לי למשה
+בחייך יוכבד / לא חמיתי יתיה
+מן יומא דאנחת עלי / תרין לוחי קיימא
+אזלת יוכבד / מפייסת לכיפא
+כיפא כיפא / דילמא חמית לי למשה
+בחייך יוכבד / לא חמיתי יתיה
+מן יומא דמחא עלי / תרין שרביטין
+מב*
+מן מעב[ר] / ליך [מן מ .. ליך]
+מן משקי ליך מיין / [מן מ .. ליך]
+מן מייכיל ליך לחם / [ ... ]
+מהימנה לית אנ[ה ... ]
+מילה אית ליה [ ...... ] ליה:
+נורא אלהים נסב [ ... ]
+נזף בכל אגיגנטס [ ... ]
+נסא צינצלין דנור / ו[ .. ]
+נפקת יוונה ופרחת ל[קובלה / ... ]
+[ ... את]יה בע[י]ה [ל]משה
+[ .. ]מה וכד דלא אתא
+[ ... וכ]ד דלא אתא צווחית בייה:
+[ ... ] משרוי מן כדון:
+[ ... בע]יי בטיוורייה:
+[ .. י] בראש הר טורה:
+[ .. ע] ליך ולמשה:
+[ .. מ]יך דהא דמך בשלם:
+[ ... ] דמעין כד בעת למשה:
+<h3>מג</h3>
+אפתח פמי / ואסב רשותיה
+דמן דברא / עלמה במלתא
+בתושבחתיה דויד / ארומם יתה
+צדיק דמן בתריה / לא קם כו[ותיה]. [ .. ל .. ]
+געה ואמר / טובוי לגוברא
+דעבד רעותיה / דקדישה ועירה
+דלא הלך / בעיצה דרשיעין למתחברה
+ולא אתחבר / במייתוב[ית] ליצני חבורה
+הוא מיזמורין / מאה וחמשין אמר
+בכולהון משבח / לדן דברא כול[ה] במימר
+ומתכנשין בבתי כנישן / יתהון למימר
+מסכיי להדן דעתיד / עבר רכיב [על] חמר
+זמרי נבואתה / חליין כדבשה
+טעמא מפרשין / בלשן בית קודשה
+חבבי[ה ו]קדשיה / מלכא קדישה
+ויהב ליה מלכותיה / ושמה מפרשא
+טכס גרמה ז[מרין] / למרח[ .. ] מן שמה
+ולמתני כל יומוי / בתורה תמימה
+יהב ליה קיריס / מלכו מן שמי מרומה
+ולא פסקת מן בנוי / עד סוף כל עלמא
+כללון עימיה מיזמורין / חכימיי וקדישיי
+ואתקרון כולהון על שמיה / כאולפן פירושיי
+לכן אתייחס בפם / חכימיי וראשיי
+אילין תושבחתיה / דדויד בן יישיי
+מלכותיה לא פסקה / לעלמין
+היך מה דאחסיניה / עתיק יומין
+נצחנה למתן ליה / בעם סוכלתנין
+וחכימין בחירי[ן] לשמיה / מן שבעין אומין
+סודה טמירה / רמה ליה גלי
+ועל כל קהליה / י[ .... ]לי
+עתיד אתי מניה / מתקרי חכלילי
+ועל ידוי יתפרק קהלי / וישתכלל (חכלילי) היכלי
+פתח פמה / בראשה וסופה
+ורומם ושבח / לתקיפה
+צדקתה נטירה / ומתק[נא] ליה לסופה
+דהוה מן חבורה / יקירה ועדיפה
+קרנא דעתידה / למצמח מנ[יה]
+כדון יצמח / וירעי עניה
+רמה יעבד בגין שמיה / ויקנא לימיניה
+ויצמח כדון / פורקניה
+שבועתה ידכר קיריס / כדון ברחמין
+ויפרוק יתן / מן שבעין אומין
+לתקיפה ליה יהוון / משבחין ומרממין
+תפרוק לעמא [די] / לתלים סיפרא משלמין
+ככ' כל הנש[מה]
+<h3>מד</h3>
+<b>קילוס</b>
+אמלל בחכמה / סדר עובד עולמה
+ייחוס שמהן / שרי תמימה
+בשמהן מפרשין / גוברין וקדישין
+אדם שת אנוש / בעילוי ריש ראשין
+גוברין וחכימין / בתרין ספרין רשימין
+קינן ומהללאל וירד / בראש ובסוף חתימין
+דכל תנויי ידועיי / עד כדון אנה באות רביעיי
+ומן יכל מתני שבחה / דחנוך דהוא שביעיי
+הא דפתחת למסדור / עובד כל דור ודור
+ולא אספיקו מליי / בפירוש כל דור
+וייחוס עלמא / הוא דחיל סגין
+ארבע מאה טעינין / הוון ליה נהיגין
+זרעה דאברהם / בה אתפרש
+זעירין ורברבין / חקיקין במדרש
+חכימין וליוויין / כחדה מפרש
+כהנין וסוכלתנין / בסוגי מדרש
+טעמי שיר ביה חקיקין / גב נביאין וחכימין מעתקין
+בסדרהון מתקריין / ולא מפסקין
+ית עסק דויד ושבחיה / בנעמה וזמרה שבחיה
+והודו ליי שורר / בדביריה ורוחיה
+ית עבד [שאו]ל מלכה / אתפרש להוד הכה
+וגם לדרוש באוב / אתחקק עלוי בכתב וב[ה] לכה
+כל עסקה דארונה / אסק מן בית עובד אדום
+למתקנה ליה / מקדש להדום
+ליואיי משוררין / מן קדום
+במנענעים ובצלצלים / וניצוח לא יידום
+משרוקיין ושיפורין / חצוצרוון וכינרין
+עם כל כלי שיר / לאלה חיי מהדרין
+נויי קודשה ובניינה / ידידיה בן דויד כונניה
+קטעוי וגלפוי / וכל עינייניה
+סכום אומנוי / שובעין אלפין
+קטועין ונגרין ולהוד גלפין / פורין במטרין ומתחלפין
+עובד בית אלהא אשלם / וחנוכה עבד ליה וסוגי שלם
+ובחדות בית אלהא / אתוועדון כולה שלם
+פירוש שאר מלכייא / נסב מן ראשי מילייא
+שרי מן רחבעם / וכל עסק אבייה
+צבית זרח כושייה / אלף אלפין ביבשתא ובמייה
+למסדרא קרב / עם אסא בן אביה
+קרובה אלהא נצח / וסנאיהון בידיהון רצח
+ופד[ו] ופרקן שרי / ואודי ונצח
+רמה כחדה ואפליה / בגין דאתגאי יקטיל' לקובליה
+ומן שמי מרומה / אשקע [מ]זליה
+שאר סנאייה / קטל יהושפט וחזקיה
+ומלכין ושליטין / מסר בידיהון אל[ה שמיה]
+שרים ושרות / פתחו בקינה
+ואליין וקינין / והספד מקו[ננה]
+[ .. ]ב[ו] עוללין ויונקין / תלתלון בנביאי וחכימיי
+ומקדשה חרבת מן [ ... ] / ולא חסת על סביי ולא על עולמיי
+תלה כורש כדון בעלמה / מן סלק [ ... ] בייתה רחימה
+הא שלם קצה / למתרוממה
+ככ' כה אמר יי כורש
+<h2>קילוסים לכלולות</h2>
+<h4>מד*</h4>
+<b>פביט חתן</b>
+ארומים לחננה / דהדרך חתנה
+ויהב לך חנה / במקטר גנונה
+בחר לך במתקל / זוג כד נפק בך תקל
+בריך זכא כדין תקל / ארום טוורייה תקל
+גהוץ חתנה לזוגך / ואתבונן מן זווגך
+טור גפנך לבר זוגך / דלה מזגך
+דולך לא יחסר / וטב תתבשר
+וכל דאסיר יתך יתא[סר] / ורבו תיסר
+הא חלקך גבך / מא דתקל לך רבך
+לדמ[ .. ] עובך / אשקי גובך
+ולא תתיהר / וחובה לא תהרהר
+מבועך אזדהר / ובוצינך ינהר
+זרעך חתנה / יפרי כגופנה
+ויתרבק כגנה / וירצף כרימונה
+חייה דכולה חסד / הוא יתן לך חסד
+ותתלווֹי בחסד / ותהווי בגמלי חסד
+טב לך חתנה שמע לי / ומ[צי]ת למ[מללי]
+מן לממלל[ה א]דניך מלי / דנסגי[ך ... ] רשות קהלי
+יאי את לחדה / ולית מינך היא הדה
+מריה דסעודה / יהב לך חנה וחסדה
+כנונייה תסגי / ככוכבייה תסתגי
+כעפרה דמסגי / וכחלה דהוא סגי
+לא ימוט כיסך / ולא יתמוטט כסך
+ולא יתמעט פרנוסך / ולא יחסר מגוסך
+מן [א]וצריה דגיברה / תהוי מברך גוברה
+בבייתה ובאפי ברה / ובכל תוגרה
+נטיר תהוי ומעייני / מצלי ומתעני
+מן כל מות משנה / ומן כל סיו'ני
+סופך יהוי טב / מן קדמך דהווה טב
+דן דכולה טב / לך בכולה ייטב
+עתיר תהוי בממונך / ובדעת הונך
+תתברך בקינך / ובכל קיניינך
+פרוטרון תהוי ופרונימוס / בחכימי קוזמוס
+בטעני קולמוס / וכילפי נומוס
+צמחין מן הדה כלתה / תקים כיוכבד כללתה
+לאורייתה [ו]להלכתה / לתלמודה ולמכלתה
+קרבו כל בני קרתך / יחדון בחדותך
+אתכנשון כל בני מדינתך / וחדון יתך
+רחימך אינון כולהון / והא כדין תגזי להון
+ביומיך [ו]ביומיהון / בשכלול בית גנונהון
+שלמה ושודכה / יתרמי עלוי בברכה
+בבייתה ובהלוכה / במקמה ובמדמכה
+תחדי בזוגתך / תתברך בכלת[ך]
+תהוי שלמה חדותך / וקיריס יחדי יתך
+תוב [כ]לתה שומעין / ולממלל תשמעין
+[מן ממ]ללי [אד]נ[יך] שמעין / קודם כל [שומ] עין
+ש[ ..... ] חגול[יך / ...... ] ליך
+פרין וטרבין אית ליך / לבשתין כליל [ ... ] טב רגליך
+רג בכלוליך / תהוי טבה ע[ .. ליך]
+[ ... ] תקיליך / קודם כל קהליך
+קם ובעל ח[ו .. תיך] / [ ... ] עבידתיך
+תתקיימין לבייתיך / ותיט[ב .. תיך]
+<h3>מה</h3>
+<b>פביט חתן</b>
+חתנא אצלח כאדם קדמייה
+בחיריה דאלהא חייה
+גביל מן תחות אבן שתייה
+דאצלח בעשרתי [ .. ]ונייה
+חתנה הדיר תהוי כנוח ראש צדיקייה
+ואצלח [ב]מצוב ארזייה
+זכייה דאשתיזב מן מייה
+חסידה דזן בתיבותה תורה וארייה
+חת' טב תהוי כאברהם עברייה
+יקירה דנהר כוכביה מן כוכבייה
+כד אטלק לאתון גומרייה
+למשיזבה יתיה אתגלי עילייה
+חת' מצלח תהוי כיצחק ראש עקידייה
+נפשיה אשלים בטור מורייה
+סהיד טב וריש לענוונייה
+עורלתיה אתגזרת ליומין תמנייה
+חת' פיריך יהוון כיעקב ריש תמימייה
+צורתיה חקיקה בגו כורסייה
+קרא בנומוס ושרי במשכנייה
+ראש לשבטייה ולחסידייה
+חת' שלם תהוי כראובן טעין יברוחייה
+תיוֹבֹה דשיזיב לאחוי מן קטוֹלייה
+חתנ[ה ת]צלח כשמעון עבד קרבייה
+שמעון צלותה [ ... ] מן מרוממייה
+@@
+חת' רבותך תהוי כלוי [ .. ייה]
+[קמון] מיניה ליויה וכהנייה
+ח' צדיק תהוי [כיהודה .. יי]ה
+פרחה דאטרד מן כל שבטייה
+ח' [ע .. ת]הוי כיששכר דמליף אורייה
+סורקה דממצע בין תרין תחומייה
+חת' נהיר תהוי כזבולון [דמגלי] סימת חלייה
+מצלח ואכיל תוגרת ימייה
+חת' לדן תדמי[ך ... ] דינייה
+כחווייה עקץ וממרע סוסייה
+ח' יקיר תהוי כנפתלי דנעמתיה חלייה
+טווייה דקליל בשליחותיה כאייליה
+ח' חכים תהוי כגד דאחסין תחומייה
+זייניה מפרק רא[ש] עם אדרעייה
+ח' וכאשר תתברך בבנייה
+הדירה דאתבר[ך] בתפנוקי מלכייה
+ח' דמותך תהוי כיוסף נזיר אחייה
+גוברה דפתר בחכמתיה חלמייה
+ח' בריך תהוי כבני[מין] רחימיה דעילאה
+ארום באחסנותיה ירושל[ים בנייה]
+מה*
+חורן
+אשבח בחדווה / לצר אד[ם וחווה]
+[ב .. ] כולה הווה / בר מינה כלום לא הווה
+גולם צו[רה / ... ] יצירה
+דמתילה באכיל חצי[רה / ... .. צרה]
+[ה ....... נה / ורמה] על אדם שנה
+ותלש אל[עה .. נה] / [ ... ..... נה]
+[זוויג] דן לדן / ברך דן ודן
+חד[ .. ..... דן/ ..... דן]
+[ט ..... ] גדין / דכולה ליה סגין
+יתיב [ ..... דין / ... ..... דין]
+כליל זוגין / ברחמה מזדוג[ין]
+[ל ....... גין / ... ] נהיגין
+מאוזניי ומתקל / [ ... ..... קל]
+[נ .. ... ] מקלקל / היך תמרה דדקל
+[ס ....... ז / ... ] ולא תתרגי[ז]
+עותרך [ ..... ז / י]מינך לא יתבזיז
+פרדס ריחתן / יהוון כלה וחתן
+צלותן [י]שאילתן / תצלחון במתן
+קרנכון יתלי / ושמכון יתעלי
+רז בכון יגלי / דכולה ליה גלי
+שלמה וֹנייחה / חיים והצלחה
+תשכחון רווחה / בששון ובשמחה
+<h3>מו</h3>
+<b>חורן רשות</b>
+אתן דוכסא / לאל רם ונישא
+ביני אוכלסה / דלֵה יאי שבחה וקלוסה
+גיברא ומשבחה / דדידיה היא שבחה
+דיהב רווחה / לכל נפש דליה צווחה
+הוא עתיק יומין / ומשרויה במרומין
+ומן קודמוי בריחמין / יהב חכמתה לחכימין
+זה הוא רָכיב על עננה / וטעין ית טעונה
+חננה ומבוננה / יהב דיעה לידעי בינה
+טלי זעיר אנה ביניכון / נפתח פמי קודמיכון
+יתי גמלון חסד כולכון / זעיריכון עם רברביכון
+כאחד גמלון יתי כריס / עד דלא נטעון באבריס
+לכן שלמיה כקיריס / פריס על כל דקיק וגריס
+מנכון נאלף חכמתא / כל בני אוריתא
+רבכון היא חכמתא / ובסופיכון מתנתא
+מזקינים אתבונן / [ ... ... ... ]
+<h3>מז</h3>
+<b>חורן</b>
+אתחמי במרומה / עתיק יומה
+מפלג ייומה / לארבעה חולקין בחכמה
+בתלת שעין לעי באורייתא / דקדמת מכל בריתה
+דהיא חכמתה / דאיתיהבת מתנה לאומתה
+גזר תלת שעין למתב בדינה / דהוא הוא דיינה
+תקיפה והיימנה / דשרי במעונה
+דגזר עוד בחכמה / תקיף עלמה
+תלת שעין למפרנסה בחכמה / לכל דאירי עלמה
+הא תקין בכלילין / זוגין משכללין
+תלת שעין בכל יום מזויג מכללין / לחתנין וכלין
+וממעי אמכון / אתקלתון תריכון
+שם בשם אקיף שמהתכון / בריך דדביק יתכון
+זויג מאזניה תקלה / חתן עם כלה
+יתכון למכללה / קודם כל קהלה
+חיין טבין יהוי לכון / ושלמה יתרמי ביניכון
+ברכתה תשרי בעמל ידיכון / ויתרומם גדכון
+טבה הוא שמיה טבה / מן משחה טבה
+יתכון למיטבה / [ ... ] ותשתיזבון מכל חובה
+יקומון מנכון [מינוקין] / ישרין וצדיקין
+בספר חייה חקיקין / ולאור[י]תה מדבקין
+כדון ישתמע קלי / קדם צורי [וגו]אלי
+ויתקבל עליכון ממללי / דנסבת רשו מן כל קהלי
+[ל ..... / ... ... ]
+[ ... ... / ... ... ]
+מנכון יקומון בנין תרי עשר / כיעקב בשבטין תרי עשר
+מזגכון לא יחסר / וטב לכון יתבשר
+נבוון כאהרן משמשין / בגו בית קודש קודשין
+חולק ליה מפרשין / בנין קדישין
+סגוליכון יצמחון / נציכון יצרחון
+זרעיכון יצלחון / חתן וכלה יתרווחון
+ענון כל עמה / אמן מנעמה
+תניין יומה / בחדו שלימה
+פורקנין קריבין / ייתון לעם חביבין
+למנקייה מן חובין / זעירין ורברבין
+צלותי תשתמע / על כל מן דשמע
+[ ..... מע / ..... מע]
+<h3>מח</h3>
+<b>אל פבטייה לחתנה</b>
+אסב רשותכון / בגין דנודכון
+ונשתעי כטלייכון / ונברך יתכון
+לכן אתית מהליך / בירבי מתמלך
+ונאמר למלך / ארוממך אלי המלך
+יאי למברכה / מלכה [ .. כה]
+בממליה דחכה / בכל יום אברכה
+יקר ניתכלל / דלא נתבלל
+ובושרן טבן נתמלל / מן גדול ייי ומהולל
+הוא אלה משבח / ולכון יקרב רווח
+ומן כל עובדוי ישתבח / דור לדור ישבח
+<h3>מט</h3>
+אתניה שבחיה דגיברה / דשרי בנהורה
+בממריה כולה ברא / לך יי הגדולה והגבורה
+גבורתיה אתני / דהוא עונה
+דעתי דלא תשתני / אפתח שפתי ואענה
+הך ממללי / דהני לקהלי
+ואתם תהיו לי / לב טהור אלהים ברה לי
+זע כל גופי / כד קמית קודם אלופי
+חס לי דנתענש בסופי / יהיו לרצון אמרי פי
+טעם פמי אפתח / בדברי אלהים יפתח
+יפתח לאלפין פתוחה דפתח / יי שפתי דפתח
+כרעית בכל לב / לבוחן כליות ולב
+ליבי עוד ילבלב / לאדם מערכי לב
+ממללי לא יתקשה / ומלה מיני לא תיי תנשה
+נעמתי אמלל ולא אחשה / כויקרא אל משה
+ספריי ורבי / הוון מציתין בי
+עד דהבון לי ליבי / רוח אלהים דיבר בי
+פמי ולשני / ישבחון לרבוני
+צלותי תיעניני / ומל[תו] על לשוני
+קל קשיטה / יהווי באורחה ד[קושטה]
+רוחי אמכית לאוותינטה / גל עיני ואביטה
+שמע קל צלותי / תנהר לי דעתי
+קודם כל קהל עדתי / מכל מלמדי השכלתי
+<h3>נ</h3>
+אלהא רמה / יתגלי על אומה
+ביניכון / יתרמי שלמה
+גוברין גיברין / יקומון מנכון
+דמיין תהוון / לשאול מלככון
+הימינה דרמה / מגנה עליכון
+וגו בתיכון / מברכה יתכון
+זייניה דמותה / יתעבר מנכון
+חיין וקימין / תהוון כולכון
+טוב יי לכול / הוא מיטיב לכון
+יומה וליליה / הוא נטורכון
+כשתלין דזיתין / יקומון מנכון
+לאלהכון אתון סגדין / כל יומיכון
+מלכה משיחה / יצמח ביומיכון
+נהירן כשמשה / ינהרכון עיניכון
+סגולין יתרווין / בחדוות בניכון
+עד לעלם לא ירפה יי / (מ)ידיה מנכון
+פרוקה רבה / יצמח ביומיכון
+צווחתון ליה / וענה יתכון
+קדישין תהוון / כאבהתכון
+רמין תהוון / על שנאיכון
+שודכה ושלמה / יהווי ביומיכון
+תחדון ותתחדון / אתון וכל ישראל עמכון
+וליה יאי תושבחתה
+<h2>הספדים</h2>
+<h3>נא</h3>
+<b>אפטארה</b>
+אַמַלֵל תִשְׁבַחתיהֵ / דֵאָלהאָ חַיָיא
+דְיִבְיִדיֵה מַסִירָא / [נשמ] תיֵה דַכָֹל בִרְיָה
+בַמְיֵמרֵה בֵרָא / אַרעָא וְשמַיָא
+וְגֹזַר מוֹתָא / עַל כֹל חַיָא
+גַבְיִל אָדָם / וְמן עַפרָה יָתיֵה [בַ]רָא
+וְבגְנתָא דַעדֵן / אַתקיִן לַה מָדוֹרָא
+דִיניֵה כַד לָא [בַחַ]ַר / לָא [גַ .. ] בִיְקָרָא
+וְאתגזַר עַלוֹי / דִיָעוֹל לַקברָא
+האָ כַוָת נוֹח / לָא קָם בַדָתיֵה
+שְׁלֵימָא דרעי / מריה בַדחַלתיֵה
+וְאַמיִן תַלָת מָאָה / אָרכָה תְיֵבוּתיה
+וְחַיַּא סַגִיאָ[ַה] / וְמטָה יָוֹם מוֹתָה
+זַכָא אַברָהָם / בָהדֵן עָלמָא
+בִיְצחָק יִחִידָה / בְחִירָה שַׁ[לְ]יִמָא
+חַדָא כַד לַעָברֵי(ה) אוֹרחָא / אוכֵל לַחמָא
+וַלְאָ אְשׁתֵיזֵב / מִן הָדֵן יְוֹמָא
+טב הוה / יצחק לַחַדָה
+כַד מסַר / נפשיה לעקידה
+יָתֵיה שִיזַיב / ימ' למיה'ובדה מלהובדה
+ולא אשתיזַב / מן אָורחָא הָרָא
+כוָת יעקב / לאָ קַם בדָרֵיה
+תרי עשר מהֵימְנִין / קמו מן הדָרֵיה
+לֵיה רְחַם מָריֵה / ועל כוּלָה גַבַרֵיה
+ובִמָעַרת כָפֵילתָה / אֶתְעַבֵיד קִבְריֵה
+מַלַך יוסף / על מצראי בחכמתא
+בחַכמתיֵה אתקטַר לֵיה / תָגָא דמלכותא
+ניִהֵל בלַחְמָא / בִישְנֵי בִיצוּרתָּא
+ולא אשתיזַב / מן יום מותא
+סַגָּא משה / מכל נבִיַיָא
+בעמוּדָה ומַנָּה / ובֵיא'ירָא דמיייא
+על ידוֹי נחַתוּ / עשרתֵי דַבֵירַיָיה
+וכַד קרב (ליה) יומיה / אמר ליה סַק לטור עַברַיָיה
+פימֵיה דאַהרן / אתמלי שבָחָא
+ומסִיְק עָלְתָה / על מַדְבַחָה
+צדִיקָא הוָה / [ ... ] ישראל עבד נְיָאחָא
+ולא עַרַק / מן הָדָה אוֹרחָה
+[קטל] יהושע / מלכין תלָתִין וחַד
+יתהון שחק / באימה ופחֵד
+רַב רִיביֵה / אלָהָא חַד
+ומן אֵימתֵיה דמוֹתָה / הוָה יָתִיב [ו] מִתיַיחַד
+שאַרו דויד ושלמה / למבני בית מוקדשה
+באבנין טבין / וב[ .. .. ]לֵי שימושא
+תִינַחתָה אַסגִין / וְתבַעוּ בגַויֵה לְאִיתְאָשַשָא
+ומֵית עד דִי יהֵא / לעידָן רַמַשָא
+<h3>נב</h3>
+<b>[אפט]רה למיתה</b>
+[אדם אבוהו]ן / דכל דַּ[ַרי]ה
+בתשע מוון ותלת[ין / שנין חייה]
+בְשַעְתָה דְאֵתפקַד / אַשלֵים נפשֵהּ למלכָה דּ[ַחייה]
+אדם מית מן דלא מית
+נח גַּברֶן בְיוֹמוֹי / 'מוי' [דמבולה]
+[וש]לט בה / [ו]לא מ[ות]ה ולא מחבלה
+דקַרי יַ[ַתיה מלאך] מותה / וחבש יתיה בקבלָה
+נח מ' מ' ד' מ'
+[אברהם] הוא ד[הו]ה / צדיקה [רחמ]נָה
+ועל שמיה [דחננה / אשלם] נפשֶה לאתונא
+ולא יְ[כַ]ל מעכֵּב / כד קרב [אשונה]
+[אברהם מ' מ']
+יצחק זכותֵה / טַפַ(י)ת אֶשָּתָא
+דמ[קדמוי] ומבַתְריה / הוָות זכותָה
+חַוְורֶון אפֵ[יה ... ] / מלאך מותה
+יצחק מ' מ'
+יעקב טבִיַע [ ... ] / יבכֶורסֵיה5 דִּמלכָה
+דעל יַבֹּקָׁה / אֵתנַּגשׂ למלאכה
+יתי[ה ... ] מלאך מותה / וכתב יתיה בַחכָן,)ה
+יע' מ' מ'
+[יוסף כליל] / מלכותָה לְבַש
+דַּבֹעַנוָותֵיהּ / יִצרֵיה כְבַש
+לֵי[ה ... ] מלאך מותה / ויָתֵיה חְבַש
+יוסף מ' מ'
+יהודה [מתיל] / כְּאריָה בחַילֵה
+דּנהַם בטַנֹאוס / ורַּעשת מִּמַּ[מללה]
+נְהַם עליה מלאך מותה / וֶלֹתַף יָתֵי[ַה ב .. ]
+[יהודה] מ' מ'
+משה סלק לּשמַיָיה / וקבל לַווחַיָיה
+דבן .. .. ]ה / אֵתנַּגשׁ למַּלאכיָיה
+עַיינֵיה זגלֶון דַּמעִין / [ ... ] אמר לה קום סלֵק לטֶור עָ(ו)בַרַיָיה
+משה מ' מ'
+[אהרן פר]ש ידֵיה / וַשמַע ברכתֵיה
+וַעְרַק מותָה / [מן מחת]יתֵה
+צָדֵיה מַלאַך מוֹתָה / כְנוֹנָה בְחַכַתֵה
+[אהרן מ' מ']
+דוד קָם / וֶבנָה בֵית מקדַּשָׁה (דבייתה'
+וכל יומָה [ ... / .. ת] מגֵפֹתָה
+רַגלוי לְקֵץ שובעין שְנִין / [ .. ]פַשוֹ [ .. ת]ה
+דוד מ' מ'
+שלמה שעבד / רוחין בחוזקה
+[ .. ]ה לא חְמָה / לא צֵוקה ולא עָקָה
+תּּפַס יָתֵיה / [מלא]ך מוֹתָה בחוֹזקָה
+שלמה מית מן דלא מית
+נג
+אפטרה
+אשבח שמיה / דאלה עלמיא
+דבסוכלתנו אתקין / מדורי שמיא
+ברא אדם בדמו / כחד מן קאמיא
+ומית במעבריה / על מימר עתיק יומיא
+גבר זכאי הוה נח / בדָרָתיה דאתיהרון
+ובזכותיה דעופא ובעירא / לח[יי]ן [אש] תארון
+<h3>נד</h3>
+<b>אפטרה לכהנייא</b>
+אהרן בחר ביה / דין דשכלל רקיעא
+ואלבשיה לבושי / כהונתא רובתה בדיעא
+בלע קרח / ועם כנישתה בארעא
+בזימנה דקמון / ליה למְאָרעה
+גיברה בחוטרה / אודע שבחיה
+ואפרח לוזין בר ליל[י]ה / בטעמיה ובריחיה
+דחה למלאך מחבלה / בריח מַחְתִּיתֵיה
+ומן ידוי דמלאך מותה / לא יכיל משזיב נשמתיה
+הווה נדב ואביהוא / מייחדין ומשבחין
+עתידין לִמְקרָבָה / קודם מלכה ניחוחין
+ועד דלא עלון / ברשות מֶמְחין
+אוקדת יתהון [נו]רא / ומיתון לקץ יומין וירחין
+זכה אלעזר / כ[ה]ונתה רובתה
+ולבש לבושה / ונסב רַבוּתָה
+חזק [ .. ]ה יהושוע בן נון / ופלג ארע[ה] לאומתה
+[כד] קריב יומֵה / לא יכל משתזב מן מותה
+ט[ב ו]קדיש הוה פינחס / דאקים עימה קיימא
+כד [ ......... / ........... מא]
+<h3>נה</h3>
+[ז ..... / ... .. נה]
+[ ... ] נפשה / [ ... .. ]לה רשעָנֵה
+כד הוות [א .. ... / .. ה]ורה אוריה מזמנה
+[ ... טור] נבו / כד קרב זמנה
+[חב]ש אפודה / אהרן קדישה
+ויהב קשורָתָה / וטַפֵי אשא
+בין גבר לאנתתָה רדף שלם / סטן לְמַנְשָה
+ובהור טורה / אתכנש בקדושה
+טָעַיְיִן נדב ואביהוא / מַחְפִיָיתָה
+ותלתה יומין / נסון שכינָתָה
+וביום חדותהון / בערת בהון יקִידְתָּה
+ושמשון אלעזר ואיתמר / בכהונתה רובתה
+יציפין הוון / אלעזר ואיתמר
+ואחסנות כהונתה / בהון אתגמר
+ואזהרון בקודשה / דלא ישתון חמר
+וכַסֵה דמותה / חִכֵהון אַמַר
+כד עלון ישראל / להדה ארעה
+בשבע אומין / למתרוע תרעה
+יהושע פלג / להון בשבועה
+[ ... ] מלון לון [דכר] / טובה למודעה
+[ל .. ] שמואל / אתקרי נבִיָא הַיִימָן
+[חמשי]ן שנין / שמש כאוּמן
+וחסך [ .. ו] מן גזיל / ולטב אזדמן
+ואתכנשון כל ישראל / למגמול חסדה כהימן
+מלכה קדמיא / מן דבית בנימין
+הוא שאול בן קיש / דשיצי עממין
+ותרין זימנין / מנה רחימין
+ותרין שנין מלך / ומית לקץ יומין
+נצח דויד / ואמר שִירָן
+ופרש נצוחין / ועבד גבורן
+וקבע ביומוי / בית הדָרָן
+ועצר מגיפתה / כד קרב באדָּרן
+סגין סגה / שלמה בחכמה
+ואקדמון לה דורון / כל מלכי עלמה
+ואמר הבל הבלים / בנהמה
+ואשלם מלכותא / לחיי עלמא
+עבר אלישע / על שונמיתה
+ובנת לה עלי זעירה / בה למבתה
+ואַחיֵי בֶרָה / מן מותה
+ואתכנש ודמך / עם אבהתה
+<h3>נו</h3>
+<b>[אפ]טרה לנשיה</b>
+[איתון ... / ב]ני אנשא וחמון
+מן הווה זוגה דאדם / מן שירויה
+[כ .. חוה הוו]ת / [י]צירתה דשדיי
+ואדם קרא יתה / אנתה פריטון
+[גבר] לה אולדה / אנש לה רבייה
+ואיתקריית אמהון / דכל חייה
+[די]נה די קושטא / למטעום מותא
+היא וכל תולדוותה / עד יתא קיצא
+הלא אנתא דתוחמתה / הוות שרה
+דילדת / כוכב נוגה
+וחית מאה ועשרין / ושבע שנים
+ובתר כן אתקברת / במערת המכפילה
+זוג דעמודין / קמון מן רבקה
+חד לעלמה הדין / וחד לעלמה דאתי
+חייה כמן שנין / לה אתפרשו
+ברם ידיעין אנן / דטעמת מותא
+טפלין קמון סגין / מן לאה ומן רחל
+אשתין רברבן / דקמון בסיניי
+יעקוב חדה / בזימנה די אולד יתהון
+ובתר כן צווח ווי / בבית לחם יד'יהודה
+כלילין תלתה / קמון מן יוכבד
+כהנין ולוין / ואמרין שירן
+לווליית ברקם / וגעת בהור טורא
+ואגדת דמעין / בטורה דנבו
+מלכין תריין / קמון מן תמר
+עולימותא אקימת / בתלתי סימנה
+נהירה וסוכלתנו / היא הוות אסנת
+וכד חמת מלאך מותא / מין קודמוי טפת
+סגין שנין חיית / סרח בת אשר
+וסופה להוד היא / למטעום מותא
+עולמין ארבעה / קמון מן אלישבע
+מלכין משמשין / קודם מלך מלכין
+פילגש דאהרון / אחתה דנחשון
+יומה די חדת / תרין בנה קברת
+צניעה וצדיקה / הוות ציפרה
+צדה מלאך מותא / וודיי כציפורה
+קרב עבדת / דבורה ונצחת
+ובידיה דמלאך מותא / לה אתנצחת
+רחב דשיזבת / תרין יליליה ט[מנ]ת
+ומן ידו[י] דמל[אכה / ... ... ]
+שאר כל אמהתא צדיקתא / דלשמן יומהון ושניהון
+ופרנק .. ... / ... ... ]
+תתגמלון בגמל חסדא / בהדין יומה
+מה דאנש גמל חסד / בה הוא מתג[מל]
+<h3>נז</h3>
+<b>חורי לגברייה</b>
+אלילו ובכון / כל אנש על גרמה
+ברם לית אנש ידע / אמת הוא יומה
+בעפרה וקטמה / יתן פמה
+מה דישכח חסד / בבית עלמה
+גרמה וגופה / ידכי וינקי
+ברם לית אנש ידע / אמת הוא לקי
+דכד הוא מית / ומתחבש בפילקה
+לא ממון ולא בנין / משיזבין יתיה מן אנינקה
+[ה .... ]ה / נפק להדין עלמה
+הוא זהה וחדה / ורחם טולמה
+[ו .. ... ... / ..... ]ין עלמה
+וטובוי אן הווה לה עובדין טבין / יקדמון יתיה מלאכי של[מה]
+[זכו] לאנש / מהלכה קודמוי
+מנייחה נפשה / ומשדכה גרמוי
+[חכים] אן הווה / ומהלך ליצלותא כל יומוי
+יקדמון יתה / צלותה וצומוי
+טעי אן הווה / ומהלך ברושעה
+הוא מיתקרי כל יומוי / גוברה רשיעה
+ימה כד ימטי / למרבועיתה בארעה
+נפשה משתמטה / ומיתיהבה יבכף' קילעה
+כד הווה מיית / ומשלם יוונה
+הוא סביר בנפשה / הה דטפה כתננה
+לה קשי הוא יום דינה / כיום חושבנה
+כד יקום בדינה / קודם דיינה
+מלכה מרוממה / ומשבחה ומיחדה
+הוא עתיד דיין / גופה ונפשה לחדה
+נפשה וגופה / מיקטרגין לחדה
+למתן דין וחושבן / על כל עובדה
+סבאת יתי / אמרת נפשה לרוחה
+את עבדת / כל מילה סריחה
+עברת על קיימה / וכפרת במלחה
+וכד דהוינה רעיתך / הוות ניחה
+פטוטין סגין / אמרת נפשה לגופה
+את הוא סאבת יתי / בכל סואבה וטונפה
+צניעה הוינה / וטיסה כעופה
+את הוא דעבדת יתי / מטרפה כאלפה
+קרא גופה / ואיליל איי לי
+את היא דרערתי יתי / ואנשת חיילי
+רוחי כד אשלמת / ערק ממללי
+לה שעו ולה שפר / ולה דיי הווה לי
+שרית נ[פש]ה / אמרה לגופה
+את הוא דעבדת / כל מילה בישה
+תחות עפרה / נבלתך כבישה
+סגור ויהב / בבית חבישה
+תקיפה הוא דחמה / כל עובדיה דבני אנשא
+ואמר / לגופה ולנפשה
+תריכון / עתידין למתדנה
+על כל מלה ומלה / ביום חשבונה
+<h3>נח</h3>
+<b>חורי למינוקיא</b>
+ארעה זעת / ודחלה לחדה
+בשעה די חמת / ית מלאך מותא
+גדר משתיין / מן סכהן
+דבר יתהון / לרוח עילעולה
+הפך קירין / ומחרב מדינן
+ומצדי יתהון / מן עמורין
+זרב אוכלסין / בפילקה דידה
+חבש יתהון / אוניון לעלם
+טירונין רפש / גוברין מנש
+ינקין מנע / מן תדדי אמהתהון
+כלין מנע / מן תקשיטיהון
+לחתנין מפק / מן גנוניהון
+מלכין מעבר / מן עותרהון
+נורה יהב / בפיסטיה דידהון
+סופסטין מטעי / מין סופיא דידהון
+עתירין מערטל / מן שלֵיוותהון
+פרא סופין משני / וצורן מנבל
+צניעין מנע / מן צנועתהון
+קבלה יהב / בבית חבושהון
+רמה יהב / בילבושהון
+שבח לדין / דעביד כדין
+דההוא יהב / וההוא דנסב
+תתגמלון בגמל חסדה / בהדין יומה
+מה דאנש גמל חסד / בה הוא מתגמל אלה
+<h3>נט</h3>
+<b>אפטרה לנערה</b>
+אבלייה אתנחמון / בכל דריה
+בכן תהוון / שווין לצדיקייה
+געורו בכייתה / ופסוקו דמעות מעינייה
+דינכון הצדיקו / כהימניה
+המניה דאשתני / עליהון עידנה
+ומיתו בניהון בחייהון / וקבילו דינה
+זכה אדם / וקבר הבל ענוונה
+חזר ואתנחם / בגזרת טירונה
+טיר' הוא / די ברא כל נשמה
+ינחם לבך על אבל / על ברך עולימה
+כתרח דמית בנה קדמוי / בשלהבת קטימה
+לכן באברהם ונחור / חזר למתנחמה
+מתנחמה יתנחמון / כל אביליה
+נחמת ציון יחמון / כל חביריה
+סבין דמיתין מנחמין / דשבעין שניה
+על טלייה מן מתנחם / דלא עבד פריה
+פריה דמתקצצין / [ו] פגיגין מתקטפין
+צמחין דלא שַלַחו / שרשין וענפין
+קל [ .. יי]ה / בָכְיִין ועטיפין
+רמין קלין / על בנין שטיפין
+שטיפין [ ... ] / מן הדן עלמה
+שושנתהון תינהר / בההוא עלמה
+תחות אילן [חייה] / תזכון למתנחמה
+תלת אבהת עלמה / יקבלון יתך ברחמה
+<h3>ס</h3>
+<b>אפטרה לעולל</b>
+איילון ובכון / על הדא עולימא
+בהדריה והודיה / מ[שת]טף ומתרמא
+געון עלוי כחדא / כל עמא
+דבר א[בוי] ספד עלוי / ואמיה נהמא
+הימנו[ת]יה דהוה / בה מתחמא
+ומשריתיה / כגלי ימא
+זעף יתיה / מותא בחמא
+חבש [ ... / ... ... ]
+<h3>סא</h3>
+<b>אפטרה ליטוניה</b>
+תתובה עביד / עד דאת ברשותך
+שפר עובדך / ביו[מי] טליותך
+רחמין תשבח / בבית מרבועיתך
+קר[וץ] לתתוב[ה] / וארמש לצלותך
+צלותך אסגי / בקהל כנשך
+פומך [ ... ] באורייתא / ויתאסי מָחושָך
+עבוד טב בחייך / עד לא תרכין רֵאשך
+סגיל מצוון / ותתניח נפשך
+נפשך נ[ייחא] בצדקותך / בגו קב[רך]
+מן ממונך אייכל / ליתמך ולגיור[ך]
+למרי אורייתא / ארווח ולמגירך
+כווין ארחך / ולא תשמע ליצרך
+יצרך כבוש / וקבל ניחומין
+טוב[וי] דאלהא / דכיר לעלמין
+[ח ..... / ..... מין]
+זרע צדקותא / עם מצליין וציימין
+וצימין דהוון / שפירין ויאיין
+הדרין בקומה / ובזכוותא מעלין
+דבר יתהון מותא / והא אינון כאיין
+גניזין בקברא / ובעפרא בליין
+בליין ברימתא / בתר ריחא טבא ובוסמנייא
+אבנין זרקין / וסתמין קבריא
+אמרין אפטרתא / לנחם אביליא
+וגמלי חסדא / נטלין אגרהון מן שמיא
+<h3>סב</h3>
+<b>אחרת</b>
+אמור לי אנשא / דכולך אנשא
+מה לך ולאשה / גידה בישא
+בחייך הב הונך / ופתח עינך
+ותשמע אדנך / אתגזר דינך
+גבילתך מן הן היא / וקיצבת יומך כמן היא
+אחריותך להן היא / הב דעתך ותהי
+דלא תיתי עילה / מותר לממלה
+קצ[ר] ממליל'ה / דשעתך שאילה
+הבל בריית עלמך / מן מעיה דאימך
+הוות טמיע בימך / תלי במעי רחמך
+ואין אית בך דעתה / אמור לי הן הויתה
+אן אכ[לתה אן ... / אן ... ] אן נשפתא
+זהי אנא דתימר / חלי הוא או ממר
+או זכיך או [ח]מר / [שור]ך כד איתגמר
+חמי הן הויתה תלי / תשעה ירחין דתתמלי
+אמור לי מן הווא גלי / אימם או לילי
+טבועה דטבעך / הוא פתח תרעך
+ויהב בך מדעך / ובין טב לביש אודעך
+יאיא היא צורה / דברה ציירה
+ולה תשמוע ליצרה / ותשבוק לצערה
+[כד] אפקך לעלמה / לנהור יומה
+אודע יתך בעורמה / דסופך לרימה
+[לא] מצפה הוא בחינך / או שרגגך בסמנך
+בחייך הב הונך / מה דנפק מינך
+מה הניינא לך / מריד על גבולך
+תלת אומין בארעה אית לך / כל מה דלך
+[נפ]שך לא תמרמר / וביש לא תהרהר
+הוי קרץ ושהר / וליום מותא מנ[הר]
+[סק]ור מן רוחקה / דנפקת מן עומקא
+וחמי מן אישתבק מן עותקא / [ ... ..... ]בקא
+[עול] מין מיתבזזין / צדיקין מיתגנזין
+רשיעין ורגזין / ל[מו]תה רמ[ .. ]
+פרי עבוד צדקה / ותשיזב מן צוקה
+דחדי הוא צדיקה / [ ... ] צדקה
+[צ]פי דדין עלמה שיקרין / צוקן ומררין
+משוי עובדוי [ .. רין / ..... רין]
+[ק]רוץ לצלותך / וארמש לתתובתך
+עד את יהיב ברשותך / [ ... .. תך]
+[רמ]ה דגבלך / כמן ניסים בכל יום הוא עביד לך
+וגזי לך גמלך / [ ... ... .. לך]
+[ש]מוע לי ולא תכסי / ואיקרך לא תנסי
+ללבך מן .. .. סי / ..... סי]
+[ת .. ו] היא בהתתא / כד סלקה נשמ[תה]
+[כרכתה .. ת]ה / [ ..... תה]
+סב*
+- - - - - - - - - - - - - - - - - - - -
+[קר]ע לבביהון / כד פרש מנהון
+ומגנב [הוניהון] / [ומחזר] לגב רבונהון
+ריחהון הווה חלי / תשעה י[רחין דתתמלי]
+ומן הווה לה גלי / אימאם או לילי
+שביק[ ... ] מררין / ואבהתה עלוי מקוננים
+כד יתבין [ ... רין] / [כא]ילן דלא עבד פירין
+תיתי שעתה / ותקרב ש[ .. תה]
+[ות .. ך] אומתא / בזכות [אבה]תן תלתה
+<h3>סג</h3>
+[ ...... / ... ] תבעין
+[תבעין ... / ... ... ]
+[ ...... ] / ועיר ש[ .. ... ]
+[ש .... ר]ן / [ ..... ון]
+וטינ[רהון פ]לגון / ומן קושט [רח]קון
+[רחקון ... .. רה / וכ]בשין [ .. רה]
+[ו]כל[ה] עבדו בטומרא / [ .. לון קבר]ה
+[קברה] חשוך להון / ונהור לדיינהון
+דרגלהון ערבתהון / [ .. ת .. צני] עתהון
+[צני] עתהון גליין / ובחיבוט קברה [ב]לניין]
+[ ..... ]ליין / ולקטרוג פ[ליין]
+פ' למשחרה אפין / כל דהלך בחנפין
+[ .. ג] מסתפספין / ורגש עטיפין
+עטיפין אבלה / דחטון בקבלה
+מ[סירין ל]מחבלה / ובריך הוא סבולה
+סבו' דכולה / ושנין סגין להון תלה
+דלא ייתון עי[לה] / כד רוחהון נפלה
+נפ' [א]זלה להון / ומלאכה מחזר לה
+עם גופה דייזלה / דהוות חנן [לה] בממלה
+ממללה סלק לרקיעה / והוא בתנן טמעה
+דהוות ליצרה שמעה / וח[מ]יה ותאבה לארעה
+לא' דהוויה / למחזור צבייה
+למתוב מן חובייה / והיא בשאול כלייה
+כל' בפילקי / וקיימא באנינקי
+עימה בישרה לקי / להון מן ינקי
+ינ' יתהון / ה[ .. ] להון מלכהון
+דכן פתי להון / ולה שבקתון טפשותכון
+טפ' הוות בע[רה / ... .. ] רה
+אלין לאילין נטרין סנה ועיירה / חובה חמירה
+חמ' לה מתנין / [ ... .. ני]ן
+למלכה טרונין / (ולמלך) ולקיריס זדנין
+[זדנין .. לי / ..... ]לי
+מין שלייה משתלי / וטייף ובלי
+[ובלי .. ווי / ... .. ווי]
+עשר [ד]מן מיי תגווי / אן רשיע ואין צדיק הווי
+[הווי .. קה / ... .. ק]ה
+עמה בתו רמה נקקה / ולמכלת דיינה [דב]קה
+[דבקה ... .. נה / .. ]מיה כידנה
+דרת מן חרב שיינינה / ות[מ]ן [ג]נה
+[גנה .. קין / ... .. קין]
+קיימ[ין] מתבדקין / קודם בדוקין
+[בדוקין .. מן / ..... מן]
+[ ... א] כמ[ן] / ושהדה אזמן
+[אזמן יתה / ..... תה]
+[ ..... תה / ו]קושטא אתא
+<h3>סד</h3>
+מנחם יצמח ויתי מן קריב
+לציון ולירושלם בזמן קריב
+ביה יתנחמון כל דרחיק וקריב
+בבניין ביתא דחריב
+במשמר יהויריב
+ואתון אחינן אביליא
+לא בכון שארי עלמא
+ולא מינכון הוא מחסל
+הצדיקו דינכון לדינכון
+וקרובו קבילו מלי תנ' מן אח' יש' וא'
+מלא רחמייא דכוליה רחמין
+הוא יתמלא רחמין טבין וקריבין
+על עמיה בית ישראל
+ויעביד עימן מצוון וצדקן
+כמכלת רחמוהי
+ואתון עמה בנוי דאב' עמודיה דעלמא
+בנוי דיצחק אימר עלתא
+בנוי דיעקב ברא בוכרא
+מן דאמר למתן אגר טב לצדיקיא
+הוא יתן לכון אגר טב
+בהדן עלמא ובעלמא דאתי
+ויחוס ויגן וירחם
+על רבנין ועל חברין ועל שאר עמא רברבייה ודקיקיה
+גמלי חסדא בני גמלי חסדא
+דאתכנשתון בהדין יומא
+ועבדתון גמל חסדא
+כמסת גמל חסדא די עבדתון
+למגעור מינן ומנכון
+מותא ומחבלא ושטנא
+והוא ברחמוהי סגייא
+יסוג תורעתיה דבית מקדש קדישא
+ודהדין אתרה ודכל אבילי עמו ישראל
+<h3>סה</h3>
+ואתון אחינן אביליה דאבילין באבלה הדן
+רב הוא אבלכון ותקיף לחדה
+וקשיה אבדתה די איבדתון
+ברם מה אנן יכלין מעבד
+או מה אית בן דינומיס למללה
+מה עבד יכל לאמר למרוי
+או מה טינה חשיב קודם פחריה
+בעבדי רעותיה דינה מתעבד
+ואפין לברנש לית הוא נסב
+כסיה דמותה אתמזג מן ראש
+ואמר חיכי כל ביריתה
+שליטה יהב ושליטה נסב
+וכד יסב מן דידיה יסב
+תושבחתה דידיה בכל מתן ומסב
+וכולה ישבח ויאמר
+הוא יהב והוא נסב
+תתנחמו אבילי תברה
+על אבי[דתה] די אובדתון
+שתיתון במרר כוס תרעילה
+תשתון בציון כוס תנחומין
+תחות ידוי דיצרן כולן יהיבין
+וטובוי דלא צעיר במשכוביתיה
+וטובוי לכל מן דאית ליה עובדין טבין
+ליום דינה לעלמה דאתי
+מן דאתה גמל בחסדה הדן
+יהוי גמיל חסיד בחיוי ובמותוי
+וכל דעבד טב מתגזי ליה טב
+וכל אנש עובדוי אזלין קודמוי
+טבה היא צדקתה בעל אורייתה
+ויקיר חסדה דהוא חציב מינה
+תרייה עבדתון צדקתה וחסדה
+תקבלון אגר טב בתרין עלמיכון
+ואתון אחינן אבילייה
+עולו וקבילו מילי תנחומין מן אחינן
+ופנון לאחיכון דיזלון בשלם
+ואתנחמו אחינו
+עשיתם חסד המקום ישלם לכם שכרכם
+וכל העם הפנו לשלום
+<h3>סו</h3>
+ויקפו פי אלשורה ויקול אלאפטרה ובעדהא יקול
+כסיה דמותא כבר אתמזג לאדם מן רֵייש
+ואַמַר חכיהון דכל חַלָ(ת)וָותֵיה
+חלף די שתיתא כס תרעילה
+תזכה ותש[תי כס ... ]
+<h2>שונות</h2>
+<h3>סז</h3>
+שלמה מלכא רבה
+דאמליך יתיה / קדשא בריך הוא
+מסוף עלמא / ועד סופיה
+בחר ביה יי / עד דלא אתיליד
+ממעי דאימיה / רחים יתיה
+גלא ליה / רזין טמירין
+ואחוי ליה / סתרין עמיקין
+דעתא וחכמתא / יהב ליה
+ובינות ליבא / מן בראשית
+הוא הוה מסתכל / בבעלי דינא
+כד הוו אתיין / למידן קדמוהי
+ועד אינון / לא יכלין למללא
+ידע בין זכאה / ובין חייבא
+זיוא והדרא / אשתפיך עלוהי
+וכתרא דמלכותא / איתיהיב ברישיה
+חינא וחסדא / אלבישתיה
+כמא דאלביש / לדוד אבוי כל יומין
+[טב] עבד / תלת סרי שנין
+יומא קדמאה / דקביל מלכותא
+ידידיה / הוון קרין ליה
+משום דהוה רחים / למלך מלכיא
+כל מלכיא / דחילו מיניה
+כחדא אומיא ולישניא / ליה ישתמעון
+[ל ..... ] / שידין ופוגעין
+חיין בישין ורוחין / אתמסרו בידיה
+מיסין הוו / מסקין ליה
+כל [דיירי ארעא / ... ... ]
+נוני ימא / ועופי שמיא
+כחדא בעירא / וחיות ברא
+סלקין ואתיין / לבי טבחיא
+למיתנסבא מנהון / לשירות שלמה
+עתר ותקף / וקנא נכסין
+כספא ודהבא / סגין לחדא
+פשר מתלין / ומחוי טמירן
+ומהודע רזין / דלית להון סוף
+סנאוי ובעלי דבבוי / הוון רחמוי
+וכל מלכוותא / ישתמעון ליה
+קמו כולהון / למחמי אפוי
+ומתחמדין למשמע / ממלל דעתיה
+רמא ומנטלא / רומם יתיה
+בדיל עובדוי / דוד אבוי
+שמיה מהלך / בגו מלכוותא
+וגבורתיה / בגו חכימין
+תמים וקשוט / וסטי מן ביש
+ידע ברזי שמיא / וחכים אלהא
+תקפת מלכותיה / מן כל מלכוותא
+וסכלתנותיה / מן כל בני מחול
+שמעו שמעיה / וממלל דעתיה
+כחדא כולהון אתין / למשאל בשלמיה
+רחימו יתיה / כל מלכיא
+אתרעדן מיניה / כל שלטניא
+קריבו ליה / בניהון ובנתהון
+למהוי [עבדין] / רהטין קדמוהי
+צביין [ ... ] / למיתב קדמוהי
+ומתחמדין למשמע / מילי חכמתיה
+פומיה פתיח / למללא [ ... ]
+כרעין וסגדין / קדמוהי [כולהון]
+עתידין אינון / דיעלון קדמוי
+ופקדן יבסרון / כל בירנייתהון
+סנאין אינון / אתריהון ומדינתהון
+ואתיין למשמע / מילי חכמתא
+ונעימת פומיה / איך מודי
+דיהיב תשבחתא / למרי מלכין
+מפתח פומיה / בחצוצרתא
+מרומם ומשבח / למלכא רבא
+ליה איתיהיב / מפתיחא רבא
+דפתיחין ביה / כל תרעי חכמתא
+ובינות ליבא / [ ... ... ]
+[ ...... / ...... ]
+ידע ושמע / מילי עופא
+כחדא בעירא / וחיות ברא
+טביין ואיילן / רהטין קדמוהי
+אריון ונמרין / אחדו זינא
+חכים בלישנין / מן כל אומיא
+כחדא סבר / כל מתיבתא
+זעון מיניה / כל מלכותא
+רתיתא אחדו / כל שולטניא
+וליה איתיהיב / כליל ריש דנצחנין
+דרמא שעבוד / על כל אינשא
+הוא הוה / ריש כל מלכיא
+ומלכותא לקבל חבירתא / לא נשא דינא
+כל מלכיא / איתרעדו מיניה
+וכל מדינן / [ ... ... ]
+גלי רזין / גלא ליה רזין
+וידיע כל רזי / בני אנשא
+בגין דעבד / ויהב צדקתא
+ועבד גמילות חסדא / מן בראשית
+הוא זכא / בעלמא הדין
+ואף הוא / לעלמא דאתי
+<h3>סח</h3>
+תקנית עלמי / מן שרויה
+ושכללית יתיה / ליומין תלתה
+שבחיה דקיריס / מן פם מלאכוי
+צווחין קדוש / בכל יום תלתה
+רמה אתגלי / על משה בסיני
+למתן דורון / ליומין תלתה
+קריב יי / למיתיב בדינה
+על אדם וחווה / וחיווייה תלתה
+צדיי הווה עלמה / מן בתר מבולה
+ומלון יתיה / בנוי דנוח תלתה
+פינת עלמה / הינון אבהתה
+אברהם ויצחק / ויעקב תלתה
+עבד אברהם / שירו רבה
+כד נפקון לוותיה / מלאכין תלתה
+סביר הווה / בגרמיה למכוס ית בריה
+וסדר מדבחיה / ליומין תל[תה]
+נקם יוסף / נקמתהון דאחוי
+וחבש יתהון במטרה / יומין תלת[ה]
+מה מהימן הווה / שבטיה דלוי
+דהווה תליתיי / וכן אקים תל[תה]
+לן יהב קיריס / פטרונין תלתה
+משה ואהרן / ומרים תלתה
+כן אתיהב לאהרן / חולקין תלתה
+אדרעה וקיבתה / ולחיה תל[תה]
+<h3>סט</h3>
+ובמאתים וארבעים ושמונה אברים
+[ש]בכל גוף אנשא סדירין
+לעתיק יומייה משבחין ומהדרין
+חשיבין כבנין בכורין
+ומן כל אומייה יקירין
+ויום עשירי מיקרין
+דהוא יום כיפורים
+ובה משתרי לימה שטרין
+וכל דעללי עלמה בה עברין
+וישראל לאבוהון דבשמיא סקרין
+ולבביהון באימה תברין
+דמיין לקדישין ועירין
+בנהר דינור מעברין
+ודינה יתיב ופתיחין ספרין
+ויופיע מעיר גיבורים
+שלטנה לדרי דרין
+ועימה ריבו ריבוון דמלאכין
+עם ענני שמיא [מה] לכין
+לא ניימין ולא דמכין
+ובנהרי נורה עריכין
+וכאופני גלגל[והי] דריכין
+ועיינין עיינין מתהפכין
+וליחידה ממליכין
+וקדושת תלתה מארכין
+וברוך כבודו מברכין
+וידיק מן חרכין
+לעם די לה צריכין
+וצוחין ולא שדכין
+ורוחיהון מככין
+וחוביהון משלכין
+[ובעת ידו] דון ידודון מלאכי מלאכין
+למול צבאותינו הולכים
+<h3>ע</h3>
+ובכן
+יוון ומקדונייה / סלקן כעננייה
+ובטלן קרבנייה / ובעון מקטלה בנייה
+ואשמון כלייה וחתניה / וערבבון גנונית גנונייה
+ויבשון צמחי שושנייה / [ ... ... ... ]
+וגזר רבונהון דרבונייה / מלכותהון מהשנייא
+ונצחון טלייה עד אנטוכייה / וקרבון חמשתי כהנייה
+<h4>נספח</h4>
+[ ...... ] / ואַילַלֵת בְלִישָנִי
+גלתה יהודה מעני
+דָרָכוּ בִי סָנְאַי / בַחַבָלוֹת
+דְקָרוּ עולֵימִין / ואַסְגִיאוּ קְטֵילוֹת
+דִינָא כַד אִתְעַבִיד / אִשְתְאַרוּ שְבִילוֹת
+דרכי ציון וג'
+הַלָא מַחְתִי / תַקִּיפָא לְמִפְרוֹש
+הָא הִיא רַבָה / לְחַדָא מִלְדרוֹש
+הֵיכְֹדֵן קַרְתָא / דַהַוַות לכוֹלָא ראֹשׁ
+היו צריה
+וגְלַת שְכִינְתָא / וַחַרַב מְדוֹרָה
+וְנַפְקַת כַת סנהדרין / מן אַתְרַה
+ואִשְתְיָירָא רֵיקָנָא / מכל אִיי קַרָה
+ויצא בת ציון
+זְהַת בְמַלְכוּתָא / ואַסְגִיאַת חוֹבַיָא
+זְנַח יָתַה רִיבּוֹנַה / והָא הִיא צָדְיָא
+זֶמְנָא דְאַתְמְסְיִרַת / בִידֵיהוֹן דְשָנְאַיָה
+זכרה ירוש' [ימי עניה ומרודיה] ישם א: ז>
+חְרָב לְמָה / דַהַווֹן עַמָא יביה' מצַלַיִין
+חַשׁוֹך וּקְבֵיל / לְמָה בֵיה גְלַיִין
+חָריבִין לְמָה / לְגַוֵיה הַוֹון עַלַיִין
+חֶטא חטאה וג' ישם א: ח>
+טָעַת / מִן בְתַר רַבוֹנַה לאָחָרָא
+טָבוּתַיהּ נָשְיַת / ולָתֹיוּבְתָא לָא הַדְרָא
+טְרַף יָתַה / הֵיך כְּאַרְיָא לִמְתַבָּרָא
+טומאתה בש' לא זכרה
+יְקָרָא אִסְתַלַק / וכַרְמָא אִתְֹבַּצַר
+יְהִירָא גֶבַר / מַלְכָא נְבוּכַדְנַאצֶר
+יִשְרָאֵל כַד חַטוֹ / עַרְסָא אִתְקַצַּר
+ידו פרש צר
+כָהַנַיָא אִשְתְחִיטוּ / כְמוֹ דִבְחִין
+כְוָתְהוֹן לֵיוָואֵי / אִתְכַפִיתוּ שְחִיחִין
+כַד עַבַד כן / נְבוּזַרְאַדְן רב טבָחִין
+כל עמה נאנחין
+לִבְהוֹן רְגַז / וְעָל בֵיה מוֹרַך
+לעֵדָן רַחְזוֹן בַיְתָא / בְנֶורָא מִתְחַרִך
+לִמְחָתְהוֹן אן דָמֵי / אַשְוִיאוּ בְאַרך
+לא עליכם [כל עברי דרך] ישם א: יב>
+מָה סַגִין אִינוּן / לַחְדָא עָקְתַֹי
+מִן מָה דִסְגִיאוּיך / רַבוּ תוּנְחַתַי
+מַלְכָא רָמָא / אַפְלִי מַחְתַי
+ממרום שלח אש [בעצמתי] ישם א: יג>
+נָפַל מִן שְמַיָא / ייְקַר' כוֹבָעִי
+נַגְדִין כְנַחְלִין / דָּמְיַין לְכֵן דִמְעַי
+נוּרָא לְמָה שְלַח / רְבוֹנִי בְתִרְעַי
+נשקד עול פשעי
+סָפוּ מַנִי כַחַדָא / כָּל עַדָרַי
+שִׁנְאָה גְבַר / ואִיסַף גִיבוֹרַי
+סַפְקֵית כַף / וי דְאַתְכְּפִילוּ תְבָרַי
+סלה כל אבירי
+עַל דְלָא / הַוֵי זַכָּיָיה
+עַרְּטַלָיָא אַנָא / יָתְבָא ובָכְיָא
+עַל עובַדֵי / דְגַרְמוּן לִי בִכְיָא
+על אלה אני בוכיה
+פָתַח עְלַי אְלהָא / וַי לַה
+פִיגְרִין נְפַלוּ / בְנָהָא והַיְלהַ
+פְנַת לְכָל סְטַר / וְלֵית דִמְרַחֵים עלַה
+פרשה וג' [ציון בידיה ואין מנחם לה]
+צָדוּ אִשְתְּאַר / בֵית חְדֶותִי
+צְפַר ורְמַש / רְבַת אַנְחַתִי
+צִדְקָא וְזָכוּ / אִשְתכַח לְכַפָרָא על חוֹבְתִי
+צדיק וג' [הוא ה' כי פיהו מריתי]
+קָמוּ עְלַי שָׁנְאַי / וַחְבָלוּנִי
+קַצִיצוּ עָנְפִי / ובַדַּרו אִנְבִי ואִיתְּרוּנִי
+קָלִי אַרֵימִיְת / וַי דְאַחְרַמוּנִי
+קראתי למאהבי וג' [המה רמוני]
+רְגַז עַלַי מָרִי / וטַלְקִי מֵהֵיכְלִי
+רְחַק יָתִי לַארַע / דְלָא לִי
+רָחִם לָא אִשְיתַ'כְחֵת / למַהַוֵי לִי
+ראה יי וג' [כי צר לי] ישם א: כ>
+שִׁמְשִי הַעַל / ובַחשוֹכָא אותְבַנִי
+שְבָטַי אַגְלִי / ואַרְמַלוּ אַלְבְשַנִי
+שָלוּ כָל סַחְרָנֵי / וְחָדוּ בִדְווֹנִי
+שמעו כי נא[נחה אני]
+תְקַפוּ עְלַי / וגְרֵּיהוֹן רְמוֹ
+תְבָרַי כִי אַתְכַפִילוּ / אַתו וַחַמוֹ
+תַעַבִיד לְהוּן / כְמָה דָעַבַדוּ הִמּוֹ
+תבוא כל רעןתם לפניך ועולל למו]
+פז' אור מעונות
